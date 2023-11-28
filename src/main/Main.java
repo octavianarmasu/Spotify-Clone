@@ -1,6 +1,7 @@
 package main;
 
 import Album.SongsToAdd;
+import Album.ShowAlbums;
 import OnlineUsers.AddUser;
 import OnlineUsers.GetOnlineUsers;
 import checker.Checker;
@@ -13,6 +14,7 @@ import fileio.input.EpisodeInput;
 import fileio.input.LibraryInput;
 import fileio.input.SongInput;
 import java.io.File;
+import Album.ResultForAlbum;
 import Album.Album;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -744,6 +746,15 @@ public final class Main {
                     JsonNode selectNode = objectMapper.valueToTree(addAlbum);
                     outputs.add(selectNode);
                 }
+                if (command.getCommand().equals("showAlbums")) {
+                    ShowAlbums showAlbums = new ShowAlbums();
+                    showAlbums.setTimestamp(command.getTimestamp());
+                    showAlbums.setUser(command.getUsername());
+                    ResultForAlbum result = new ResultForAlbum();
+                    addResultForAlbum(users, command, result, showAlbums);
+                    JsonNode selectNode = objectMapper.valueToTree(showAlbums);
+                    outputs.add(selectNode);
+                }
 
 
                 previousCommand = command.getCommand();
@@ -771,6 +782,22 @@ public final class Main {
         objectWriter.writeValue(new File(filePathOutput), outputs);
     }
 
+    private static void addResultForAlbum(final ArrayList<User> users, final CommandInput command,
+                                          final ResultForAlbum result,
+                                          final ShowAlbums showAlbums) {
+        for (User user : users) {
+            if (user.getUsername().equals(command.getUsername())) {
+                for (Album album : user.getAlbum()) {
+                    result.setName(album.getName());
+                    for (Song song : album.getSongs()) {
+                        result.addSong(song.getName());
+                    }
+                    showAlbums.addResult(result);
+                }
+            }
+        }
+    }
+
     private static void AddAlbumFunc(final ArrayList<User> users,
                                      final CommandInput command, final OutputClass addAlbum) {
         int found = 0;
@@ -778,10 +805,22 @@ public final class Main {
             if (user.getUsername().equals(command.getUsername())) {
                 found = 1;
                 if (user.getUserType().equals("artist")) {
+                    int checkAlbum = checkDuplicateAlbum(user, command);
+                    if (checkAlbum == 0) {
+                        addAlbum.setMessage(command.getUsername()
+                                + " has another album with the same name.");
+                        break;
+                    }
                     ArrayList<Song> songForAlbum = new ArrayList<>();
                     for (SongsToAdd song : command.getSongs()) {
                         Song aux = new Song(song);
                         songForAlbum.add(aux);
+                    }
+                    int checkSongs = checkSongsForAlbum(songForAlbum);
+                    if (checkSongs == 0) {
+                        addAlbum.setMessage(command.getUsername()
+                                + " has the same song at least twice in this album.");
+                        break;
                     }
                     Album album = new Album(command.getName(), command.getReleaseYear(),
                             command.getDescription(), songForAlbum);
@@ -795,6 +834,26 @@ public final class Main {
         if (found == 0) {
             addAlbum.setMessage("The username " + command.getUsername() + " doesn't exist.");
         }
+    }
+
+    private static int checkSongsForAlbum(final ArrayList<Song> songForAlbum) {
+        for (int i = 0; i < songForAlbum.size() - 1; i++) {
+            for (int j = i + 1; j < songForAlbum.size(); j++) {
+                if (songForAlbum.get(i).getName().equals(songForAlbum.get(j).getName())) {
+                    return 0;
+                }
+            }
+        }
+        return 1;
+    }
+
+    private static int checkDuplicateAlbum(final User user, final CommandInput command) {
+        for (Album album : user.getAlbum()) {
+            if (album.getName().equals(command.getName())) {
+                return 0;
+            }
+        }
+        return 1;
     }
 
 

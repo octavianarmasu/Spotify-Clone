@@ -288,6 +288,10 @@ public class User {
     public final void addAlbum(final Album album) {
         this.album.add(album);
     }
+
+    public final ArrayList<Album> getAlbum() {
+        return this.album;
+    }
 }
 
 
