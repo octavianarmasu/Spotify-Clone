@@ -2,6 +2,7 @@ package main;
 
 import java.util.ArrayList;
 
+import Album.SongsToAdd;
 import fileio.input.SongInput;
 
 public class Song {
@@ -16,6 +17,17 @@ public class Song {
     private int nrOfLikes = 0;
 
     public Song(final SongInput song) {
+        this.name = song.getName();
+        this.duration = song.getDuration();
+        this.album = song.getAlbum();
+        this.tags = song.getTags();
+        this.lyrics = song.getLyrics();
+        this.genre = song.getGenre();
+        this.releaseYear = song.getReleaseYear();
+        this.artist = song.getArtist();
+    }
+
+    public Song(final SongsToAdd song) {
         this.name = song.getName();
         this.duration = song.getDuration();
         this.album = song.getAlbum();

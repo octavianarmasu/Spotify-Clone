@@ -82,4 +82,26 @@ public class CommandInput {
     public final int getSeed() {
         return seed;
     }
+
+    public final int getAge() {
+        return age;
+    }
+
+    public final String getCity() {
+        return city;
+    }
+
+    public final SongsToAdd[] getSongs() {
+        return songs;
+    }
+
+    public final String getName() {
+        return name;
+    }
+    public final int getReleaseYear() {
+        return releaseYear;
+    }
+    public final String getDescription() {
+        return description;
+    }
 }

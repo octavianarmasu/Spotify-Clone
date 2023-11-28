@@ -3,6 +3,7 @@ package main;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import Album.Album;
 
 public class User {
     private String username;
@@ -24,6 +25,8 @@ public class User {
     private int selectPlaylist;
     private MediaPlayer mediaPlayer = new MediaPlayer();
     private String connection = "online";
+    private String userType = "user";
+    private final ArrayList<Album> album = new ArrayList<>();
 
 
     public User() {
@@ -268,6 +271,22 @@ public class User {
         } else {
             this.connection = "online";
         }
+    }
+
+    public final String getUserType() {
+        return this.userType;
+    }
+
+    public final void setUserType(final String userType) {
+        this.userType = userType;
+    }
+
+    /**
+     * Adds an album to the user's list of albums.
+     * @param album the album to be added
+     */
+    public final void addAlbum(final Album album) {
+        this.album.add(album);
     }
 }
 

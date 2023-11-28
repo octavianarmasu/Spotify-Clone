@@ -1,5 +1,7 @@
 package main;
 
+import Album.SongsToAdd;
+import OnlineUsers.AddUser;
 import OnlineUsers.GetOnlineUsers;
 import checker.Checker;
 import checker.CheckerConstants;
@@ -11,6 +13,7 @@ import fileio.input.EpisodeInput;
 import fileio.input.LibraryInput;
 import fileio.input.SongInput;
 import java.io.File;
+import Album.Album;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -122,10 +125,21 @@ public final class Main {
         int loadPlaylist;
         int select;
         String connection;
+        String userType;
         String previousCommand = null;
         User username = null;
-        if (filePathInput.equals("test01_etapa2.json")) {
+        if (filePathInput.equals("test01_etapa2.json")
+                || filePathInput.equals("test02_etapa2.json")) {
             for (CommandInput command : commands) {
+                if (command.getCommand().equals("addUser")) {
+                    AddUser addUser = new AddUser();
+                    addUser.setUser(command.getUsername());
+                    addUser.setTimestamp(command.getTimestamp());
+                    createUser(addUser, users, command);
+                    JsonNode addUserNode = objectMapper.valueToTree(addUser);
+                    outputs.add(addUserNode);
+                    continue;
+                }
                 for (User user : users) {
                     if (user.getUsername().equals(command.getUsername())) {
                         username = new User(user);
@@ -142,6 +156,7 @@ public final class Main {
                 loadPlaylist = username.getLoadPlaylist();
                 select = username.getSelect();
                 connection = username.getConnection();
+                userType = username.getUserType();
                 player = username.getMediaPlayer();
                 if (loadCheck == 1 && loadSong == 1 && player.getPlay() == 1
                         && connection.equals("online")) {
@@ -477,14 +492,18 @@ public final class Main {
                     likedSongs.setCommand("like");
                     likedSongs.setUser(command.getUsername());
                     likedSongs.setTimestamp(command.getTimestamp());
-                    if (loadCheck == 0 || player.getSong().isEmpty()) {
-                        likedSongs.setMessage("Please load a source before liking or unliking.");
+                    if (connection.equals("offline")) {
+                        likedSongs.setMessage(command.getUsername() + " is offline.");
                     } else {
-                        if (loadSong == 0) {
-                            likedSongs.setMessage("Loaded source is not a song.");
-                        }
-                        if ((loadSong == 1 || loadPlaylist == 1) && loadCheck == 1) {
-                            addLikedSong(likedSongs, command, users, songs);
+                        if (loadCheck == 0 || player.getSong().isEmpty()) {
+                            likedSongs.setMessage("Please load a source before liking or unliking.");
+                        } else {
+                            if (loadSong == 0) {
+                                likedSongs.setMessage("Loaded source is not a song.");
+                            }
+                            if ((loadSong == 1 || loadPlaylist == 1) && loadCheck == 1) {
+                                addLikedSong(likedSongs, command, users, songs);
+                            }
                         }
                     }
                     JsonNode selectNode = objectMapper.valueToTree(likedSongs);
@@ -678,7 +697,8 @@ public final class Main {
                     int number = command.getPlaylistId();
                     for (User user : users) {
                         if (user.getUsername().equals(command.getUsername())) {
-                            if (user.getPlaylists() != null && number > user.getPlaylists().size()) {
+                            if (user.getPlaylists() != null && number
+                                    > user.getPlaylists().size()) {
                                 switchVis.setMessage("The specified playlist ID is too high.");
                             } else {
                                 assert user.getPlaylists() != null;
@@ -715,6 +735,16 @@ public final class Main {
                     JsonNode selectNode = objectMapper.valueToTree(onlineUsers);
                     outputs.add(selectNode);
                 }
+                if (command.getCommand().equals("addAlbum")) {
+                    OutputClass addAlbum = new OutputClass();
+                    addAlbum.setCommand("addAlbum");
+                    addAlbum.setUser(command.getUsername());
+                    addAlbum.setTimestamp(command.getTimestamp());
+                    AddAlbumFunc(users, command, addAlbum);
+                    JsonNode selectNode = objectMapper.valueToTree(addAlbum);
+                    outputs.add(selectNode);
+                }
+
 
                 previousCommand = command.getCommand();
                 player.setTimestamp(command.getTimestamp());
@@ -741,15 +771,68 @@ public final class Main {
         objectWriter.writeValue(new File(filePathOutput), outputs);
     }
 
-    private static void changeConnectionStatus(final OutputClass switchCon,
-                                               final CommandInput command,
-                                               final ArrayList<User> users) {
+    private static void AddAlbumFunc(final ArrayList<User> users,
+                                     final CommandInput command, final OutputClass addAlbum) {
         int found = 0;
         for (User user : users) {
             if (user.getUsername().equals(command.getUsername())) {
                 found = 1;
-                user.changeConnection();
-                switchCon.setMessage(user.getUsername() + " has changed status successfully.");
+                if (user.getUserType().equals("artist")) {
+                    ArrayList<Song> songForAlbum = new ArrayList<>();
+                    for (SongsToAdd song : command.getSongs()) {
+                        Song aux = new Song(song);
+                        songForAlbum.add(aux);
+                    }
+                    Album album = new Album(command.getName(), command.getReleaseYear(),
+                            command.getDescription(), songForAlbum);
+                    user.addAlbum(album);
+                    addAlbum.setMessage(user.getUsername() + " has added new album successfully.");
+                } else {
+                    addAlbum.setMessage(user.getUsername() + " is not an artist.");
+                }
+            }
+        }
+        if (found == 0) {
+            addAlbum.setMessage("The username " + command.getUsername() + " doesn't exist.");
+        }
+    }
+
+
+    private static void createUser(final AddUser addUser, final ArrayList<User> users,
+                                   final CommandInput command) {
+
+        int found = 0;
+        for (User user : users) {
+            if (user.getUsername().equals(command.getUsername())) {
+                found = 1;
+                addUser.setMessage("The username " + command.getUsername()
+                        + " is already taken.");
+            }
+        }
+        if (found == 0) {
+            User createdUser = new User(command.getUsername(),
+                    command.getAge(), command.getCity());
+            users.add(createdUser);
+            createdUser.setUserType(command.getType());
+            addUser.setMessage("The username " + command.getUsername()
+                    + " has been added successfully.");
+        }
+    }
+
+    private static void changeConnectionStatus(final OutputClass switchCon,
+                                               final CommandInput command,
+                                               final ArrayList<User> users) {
+
+        int found = 0;
+        for (User user : users) {
+            if (user.getUsername().equals(command.getUsername())) {
+                found = 1;
+                if (user.getUserType().equals("user")) {
+                    user.changeConnection();
+                    switchCon.setMessage(user.getUsername() + " has changed status successfully.");
+                } else {
+                    switchCon.setMessage(user.getUsername() + " is not a normal user.");
+                }
             }
         }
         if (found == 0) {
