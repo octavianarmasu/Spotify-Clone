@@ -742,7 +742,7 @@ public final class Main {
                     addAlbum.setCommand("addAlbum");
                     addAlbum.setUser(command.getUsername());
                     addAlbum.setTimestamp(command.getTimestamp());
-                    AddAlbumFunc(users, command, addAlbum);
+                    AddAlbumFunc(users, command, addAlbum, songs);
                     JsonNode selectNode = objectMapper.valueToTree(addAlbum);
                     outputs.add(selectNode);
                 }
@@ -753,6 +753,15 @@ public final class Main {
                     ResultForAlbum result = new ResultForAlbum();
                     addResultForAlbum(users, command, result, showAlbums);
                     JsonNode selectNode = objectMapper.valueToTree(showAlbums);
+                    outputs.add(selectNode);
+                }
+                if (command.getCommand().equals("printCurrentPage")) {
+                    OutputClass printPage = new OutputClass();
+                    printPage.setCommand("printCurrentPage");
+                    printPage.setUser(command.getUsername());
+                    printPage.setTimestamp(command.getTimestamp());
+                    printPageFunc(printPage, command, users);
+                    JsonNode selectNode = objectMapper.valueToTree(printPage);
                     outputs.add(selectNode);
                 }
 
@@ -782,12 +791,36 @@ public final class Main {
         objectWriter.writeValue(new File(filePathOutput), outputs);
     }
 
+    private static void printPageFunc(final OutputClass printPage,
+                                      final CommandInput command, final ArrayList<User> users) {
+        printPage.setMessage("Liked songs:\n\t[");
+        for (User user : users) {
+            if (user.getUsername().equals(command.getUsername())) {
+                for (int i = 0 ; i < user.getLikedSongs().size(); i++) {
+                    if (i == user.getLikedSongs().size() - 1) {
+                        printPage.setMessage(printPage.getMessage() + user.getLikedSongs().get(i));
+                        break;
+                    }
+                    printPage.setMessage(printPage.getMessage()
+                            + user.getLikedSongs().get(i) + ", ");
+                }
+                printPage.setMessage(printPage.getMessage()
+                        + "]\n\nFollowed playlists:\n\t[");
+                for (Playlist playlist : user.getPlaylists()) {
+                    printPage.setMessage(printPage.getMessage() + playlist.getName() + ", ");
+                }
+                printPage.setMessage(printPage.getMessage() + "]");
+            }
+        }
+    }
+
     private static void addResultForAlbum(final ArrayList<User> users, final CommandInput command,
-                                          final ResultForAlbum result,
+                                          ResultForAlbum result,
                                           final ShowAlbums showAlbums) {
         for (User user : users) {
             if (user.getUsername().equals(command.getUsername())) {
                 for (Album album : user.getAlbum()) {
+                    result = new ResultForAlbum();
                     result.setName(album.getName());
                     for (Song song : album.getSongs()) {
                         result.addSong(song.getName());
@@ -799,7 +832,8 @@ public final class Main {
     }
 
     private static void AddAlbumFunc(final ArrayList<User> users,
-                                     final CommandInput command, final OutputClass addAlbum) {
+                                     final CommandInput command, final OutputClass addAlbum,
+                                     final ArrayList<Song> songs) {
         int found = 0;
         for (User user : users) {
             if (user.getUsername().equals(command.getUsername())) {
@@ -814,6 +848,7 @@ public final class Main {
                     ArrayList<Song> songForAlbum = new ArrayList<>();
                     for (SongsToAdd song : command.getSongs()) {
                         Song aux = new Song(song);
+                        songs.add(aux);
                         songForAlbum.add(aux);
                     }
                     int checkSongs = checkSongsForAlbum(songForAlbum);
