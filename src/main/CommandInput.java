@@ -104,4 +104,8 @@ public class CommandInput {
     public final String getDescription() {
         return description;
     }
+
+    public final String getDate() {
+        return date;
+    }
 }

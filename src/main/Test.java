@@ -4,6 +4,7 @@ import checker.CheckerConstants;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -21,7 +22,7 @@ public final class Test {
      * @param args input files
      * @throws IOException in case of exceptions to reading / writing
      */
-    public static void main(final String[] args) throws IOException {
+    public static void main(final String[] args) throws IOException, ParseException {
         File directory = new File(CheckerConstants.TESTS_PATH);
         File[] inputDir = directory.listFiles();
 

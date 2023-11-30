@@ -2,6 +2,7 @@ package main;
 
 import Album.SongsToAdd;
 import Album.ShowAlbums;
+import Events.Event;
 import OnlineUsers.AddUser;
 import OnlineUsers.GetOnlineUsers;
 import checker.Checker;
@@ -23,6 +24,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 
@@ -51,7 +54,7 @@ public final class Main {
      * @param args from command line
      * @throws IOException in case of exceptions to reading / writing
      */
-    public static void main(final String[] args) throws IOException {
+    public static void main(final String[] args) throws IOException, ParseException {
         File directory = new File(CheckerConstants.TESTS_PATH);
         Path path = Paths.get(CheckerConstants.RESULT_PATH);
 
@@ -85,7 +88,7 @@ public final class Main {
      * @throws IOException in case of exceptions to reading / writing
      */
     public static <SelectFile> void action(final String filePathInput,
-                                           final String filePathOutput) throws IOException {
+                                           final String filePathOutput) throws IOException, ParseException {
         ObjectMapper objectMapper = new ObjectMapper();
         LibraryInput library = objectMapper.readValue(new File(LIBRARY_PATH), LibraryInput.class);
         String filePath = CheckerConstants.TESTS_PATH;
@@ -119,6 +122,8 @@ public final class Main {
             podcasts.add(new Podcasts(podcast.getName(), podcast.getOwner(), episodes));
         }
         ArrayList<Playlist> playlists = new ArrayList<>();
+        String currentPage;
+        int searchArtist = 0;
         int searchCount;
         int loadCheck;
         int loadSong;
@@ -141,7 +146,6 @@ public final class Main {
                 createUser(addUser, users, command);
                 JsonNode addUserNode = objectMapper.valueToTree(addUser);
                 outputs.add(addUserNode);
-                continue;
             }
             for (User user : users) {
                 if (user.getUsername().equals(command.getUsername())) {
@@ -162,6 +166,7 @@ public final class Main {
             loadPlaylist = username.getLoadPlaylist();
             select = username.getSelect();
             connection = username.getConnection();
+            currentPage = username.getCurrentPage();
             player = username.getMediaPlayer();
             if (loadCheck == 1 && loadSong == 1 && player.getPlay() == 1
                     && connection.equals("online")) {
@@ -192,6 +197,7 @@ public final class Main {
                     JsonNode searchNode = objectMapper.valueToTree(searchFile);
                     outputs.add(searchNode);
                 } else {
+                    searchArtist = 0;
                     select = 0;
                     searchCount++;
                     searchPlaylist = 0;
@@ -259,6 +265,23 @@ public final class Main {
                         JsonNode searchNode = objectMapper.valueToTree(searchFile);
                         outputs.add(searchNode);
                     }
+                    if (command.getType().equals("artist")) {
+                        searchArtist = 1;
+                        for (User user:users) {
+                            if (user.getUserType().equals("artist")) {
+                                if (user.getUsername().startsWith(command.getFilters().getName())) {
+                                    results.add(user.getUsername());
+                                }
+                            }
+                        }
+                        results = checkSize();
+                        String message = "Search returned " + results.size() + " results";
+                        selectResult = results;
+                        SearchFile searchFile = new SearchFile(command.getUsername(),
+                                command.getTimestamp(), message, results);
+                        JsonNode searchNode = objectMapper.valueToTree(searchFile);
+                        outputs.add(searchNode);
+                    }
                 }
             }
 
@@ -281,6 +304,11 @@ public final class Main {
                         select = 1;
                         player.setRepeat(0);
                         message = "Successfully selected " + selectResult.get(number - 1) + ".";
+                        if (searchArtist == 1) {
+                            message = "Successfully selected " + selectResult.get(number - 1)
+                                    + "'s page.";
+                            currentPage = selectResult.get(number - 1);
+                        }
                         selectOutput.setMessage(message);
                         selectOutput.setSuccessfulSelect(true);
                         if (searchSong == 1) {
@@ -733,7 +761,8 @@ public final class Main {
                 GetOnlineUsers onlineUsers = new GetOnlineUsers();
                 onlineUsers.setTimestamp(command.getTimestamp());
                 for (User user : users) {
-                    if (user.getConnection().equals("online")) {
+                    if (user.getConnection().equals("online")
+                            && user.getUserType().equals("user")) {
                         onlineUsers.addResult(user.getUsername());
                     }
                 }
@@ -767,6 +796,15 @@ public final class Main {
                 JsonNode selectNode = objectMapper.valueToTree(printPage);
                 outputs.add(selectNode);
             }
+            if (command.getCommand().equals("addEvent")) {
+                OutputClass addEvent = new OutputClass();
+                addEvent.setCommand("addEvent");
+                addEvent.setUser(command.getUsername());
+                addEvent.setTimestamp(command.getTimestamp());
+                addEventFunc(command, addEvent, users);
+                JsonNode selectNode = objectMapper.valueToTree(addEvent);
+                outputs.add(selectNode);
+            }
 
 
             previousCommand = command.getCommand();
@@ -783,6 +821,7 @@ public final class Main {
                     user.setLoadPodcast(loadPodcast);
                     user.setLoadPlaylist(loadPlaylist);
                     user.setSelect(select);
+                    user.setCurrentPage(currentPage);
                     user.setMediaPlayer(player);
                 }
             }
@@ -793,8 +832,86 @@ public final class Main {
         objectWriter.writeValue(new File(filePathOutput), outputs);
     }
 
+    private static void addEventFunc(final CommandInput command, final OutputClass addEvent,
+                                     final ArrayList<User> users) throws ParseException {
+        int found = 0;
+        for (User user : users) {
+            if (user.getUsername().equals(command.getUsername())) {
+                found = 1;
+                if (!user.getUserType().equals("artist")) {
+                    addEvent.setMessage(user.getUsername() + " is not an artist.");
+                    break;
+                }
+                int checkEvent = checkDuplicateEvent(user, command);
+                if (checkEvent == 0) {
+                    addEvent.setMessage(user.getUsername()
+                            + " has another event with the same name.");
+                    break;
+                }
+                int checkDate = checkDate(command);
+                if (checkDate == 0) {
+                    addEvent.setMessage("Event for " + command.getUsername()
+                            + " does not have a valid date.");
+                    break;
+                }
+                Event event = new Event(command.getName(), command.getDate(),
+                        command.getDescription());
+                user.addEvent(event);
+                addEvent.setMessage(command.getUsername() + " has added new event successfully.");
+            }
+        }
+        if (found == 0) {
+            addEvent.setMessage("The username " + command.getUsername() + " doesn't exist.");
+        }
+    }
+
+    /**
+     * check if the date is valid
+     * @param command the command that contains the event
+     * @return 1 if is valid, 0 otherwise
+     */
+    private static int checkDate(final CommandInput command) throws ParseException {
+        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+        Date date = format.parse(command.getDate());
+        int year = Integer.parseInt(command.getDate().substring(6));
+        int month = Integer.parseInt(command.getDate().substring(3, 5));
+        int day = Integer.parseInt(command.getDate().substring(0, 2));
+        if (year > 2023 || year < 1900) {
+            return 0;
+        }
+        if (month > 12 || month < 1) {
+            return 0;
+        }
+        if (month == 2) {
+            if (day > 28 || day < 1) {
+                return 0;
+            }
+        } else {
+            if (day > 31 || day < 1) {
+                return 0;
+            }
+        }
+        return 1;
+    }
+
+    /**
+     * check for duplicate events
+     * @param user the user that wants to add the event
+     * @param command the command that contains the event
+     * @return 1 if the event is not duplicate, 0 otherwise
+     */
+    private static int checkDuplicateEvent(final User user, final CommandInput command) {
+        for (Event event : user.getEvents()) {
+            if (event.getName().equals(command.getName())) {
+                return 0;
+            }
+        }
+        return 1;
+    }
+
     private static void printPageFunc(final OutputClass printPage,
                                       final CommandInput command, final ArrayList<User> users) {
+
         printPage.setMessage("Liked songs:\n\t[");
         for (User user : users) {
             if (user.getUsername().equals(command.getUsername())) {

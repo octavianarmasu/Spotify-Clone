@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import Album.Album;
+import Events.Event;
 
 public class User {
     private String username;
@@ -27,6 +28,8 @@ public class User {
     private String connection = "online";
     private String userType = "user";
     private final ArrayList<Album> album = new ArrayList<>();
+    private final ArrayList<Event> events = new ArrayList<>();
+    private String currentPage = "home";
 
 
     public User() {
@@ -56,6 +59,10 @@ public class User {
         this.selectPlaylist = user.getSelectPlaylist();
         this.mediaPlayer = user.getMediaPlayer();
         this.connection = user.getConnection();
+        this.userType = user.getUserType();
+        this.album.addAll(user.getAlbum());
+        this.events.addAll(user.getEvents());
+        this.currentPage = user.getCurrentPage();
 
     }
 
@@ -292,6 +299,25 @@ public class User {
     public final ArrayList<Album> getAlbum() {
         return this.album;
     }
+
+    /**
+     * Adds an event to the user's list of events.
+     * @param event the event to be added
+     */
+    public final void addEvent(final Event event) {
+        this.events.add(event);
+    }
+
+    public final ArrayList<Event> getEvents() {
+        return this.events;
+    }
+    public final String getCurrentPage() {
+        return this.currentPage;
+    }
+    public final void setCurrentPage(final String currentPage) {
+        this.currentPage = currentPage;
+    }
+
 }
 
 

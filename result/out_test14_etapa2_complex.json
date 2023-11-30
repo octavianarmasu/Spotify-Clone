@@ -159,6 +159,12 @@
   "timestamp" : 740,
   "message" : "Playback loaded successfully."
 }, {
+  "command" : "search",
+  "user" : "david27",
+  "timestamp" : 760,
+  "message" : "Search returned 1 results",
+  "results" : [ "sonicpainter" ]
+}, {
   "command" : "repeat",
   "user" : "carol19",
   "timestamp" : 965,
@@ -167,7 +173,7 @@
   "command" : "select",
   "user" : "david27",
   "timestamp" : 1225,
-  "message" : "The selected ID is too high."
+  "message" : "Successfully selected sonicpainter's page."
 }, {
   "command" : "repeat",
   "user" : "carol19",

@@ -19,6 +19,10 @@
   "timestamp" : 20,
   "message" : "The username harmonichero has been added successfully."
 }, {
+  "command" : "getOnlineUsers",
+  "timestamp" : 25,
+  "result" : [ "alice22", "bob35", "carol19", "david27", "emily30", "frank21", "grace25", "henry26", "irene33", "jack29" ]
+}, {
   "command" : "addAlbum",
   "user" : "melodymaster",
   "timestamp" : 35,
@@ -29,10 +33,36 @@
   "timestamp" : 40,
   "result" : [ ]
 }, {
+  "command" : "addEvent",
+  "user" : "melodymaster",
+  "timestamp" : 45,
+  "message" : "melodymaster has added new event successfully."
+}, {
+  "command" : "addEvent",
+  "user" : "melodymaster",
+  "timestamp" : 50,
+  "message" : "melodymaster has added new event successfully."
+}, {
+  "command" : "addEvent",
+  "user" : "alice23",
+  "timestamp" : 55,
+  "message" : "The username alice23 doesn't exist."
+}, {
+  "command" : "addEvent",
+  "user" : "bob35",
+  "timestamp" : 60,
+  "message" : "bob35 is not an artist."
+}, {
+  "command" : "search",
+  "user" : "alice22",
+  "timestamp" : 65,
+  "message" : "Search returned 1 results",
+  "results" : [ "melodymaster" ]
+}, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 70,
-  "message" : "The selected ID is too high."
+  "message" : "Successfully selected melodymaster's page."
 }, {
   "command" : "printCurrentPage",
   "user" : "alice22",
@@ -50,10 +80,16 @@
   "message" : "alice22 is offline.",
   "results" : [ ]
 }, {
+  "command" : "search",
+  "user" : "bob35",
+  "timestamp" : 105,
+  "message" : "Search returned 1 results",
+  "results" : [ "melodymaster" ]
+}, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 110,
-  "message" : "The selected ID is too high."
+  "message" : "Successfully selected melodymaster's page."
 }, {
   "command" : "printCurrentPage",
   "user" : "alice22",
