@@ -854,8 +854,8 @@ public final class Main {
                             + " does not have a valid date.");
                     break;
                 }
-                Event event = new Event(command.getName(), command.getDate(),
-                        command.getDescription());
+                Event event = new Event(command.getName(), command.getDescription(),
+                        command.getDate());
                 user.addEvent(event);
                 addEvent.setMessage(command.getUsername() + " has added new event successfully.");
             }
@@ -912,25 +912,71 @@ public final class Main {
     private static void printPageFunc(final OutputClass printPage,
                                       final CommandInput command, final ArrayList<User> users) {
 
-        printPage.setMessage("Liked songs:\n\t[");
+
         for (User user : users) {
             if (user.getUsername().equals(command.getUsername())) {
-                for (int i = 0; i < user.getLikedSongs().size(); i++) {
-                    if (i == user.getLikedSongs().size() - 1) {
-                        printPage.setMessage(printPage.getMessage() + user.getLikedSongs().get(i));
-                        break;
-                    }
-                    printPage.setMessage(printPage.getMessage()
-                            + user.getLikedSongs().get(i) + ", ");
+                if (user.getCurrentPage().equals("home")
+                        ||user.getCurrentPage().equals("LikedPage")) {
+                    printHomePage(printPage, user);
+                } else {
+                    printArtistHostPage(printPage, user, users);
                 }
-                printPage.setMessage(printPage.getMessage()
-                        + "]\n\nFollowed playlists:\n\t[");
-                for (Playlist playlist : user.getPlaylists()) {
-                    printPage.setMessage(printPage.getMessage() + playlist.getName() + ", ");
-                }
-                printPage.setMessage(printPage.getMessage() + "]");
             }
         }
+    }
+
+    private static void printArtistHostPage(final OutputClass printPage,final  User user,
+                                            final ArrayList<User> users) {
+        for (User user1:users) {
+            if (user.getCurrentPage().equals(user1.getUsername())) {
+                if (user1.getUserType().equals("artist")) {
+                    printPage.setMessage("Albums:\n\t[");
+                    for (int i = 0; i < user1.getAlbum().size(); i++) {
+                        if (i == user1.getAlbum().size() - 1) {
+                            printPage.setMessage(printPage.getMessage()
+                                    + user1.getAlbum().get(i).getName() + "]");
+                            break;
+                        }
+                        printPage.setMessage(printPage.getMessage()
+                                + user1.getAlbum().get(i).getName() + ", ");
+                    }
+                    printPage.setMessage(printPage.getMessage() + "Merch:\n\t[]\n\nEvents:\n\t[");
+                    for (int i = 0; i < user1.getEvents().size(); i++) {
+                        if (i == user1.getEvents().size() - 1) {
+                            printPage.setMessage(printPage.getMessage()
+                                    + user1.getEvents().get(i).getName() + " - "
+                                    + user1.getEvents().get(i).getDate() + ":\n\t");
+                            printPage.setMessage(printPage.getMessage()
+                                    + user1.getEvents().get(i).getDescription() + "]");
+                            break;
+                        }
+                        printPage.setMessage(printPage.getMessage()
+                                + user1.getEvents().get(i).getName() + " - "
+                                + user1.getEvents().get(i).getDate() + ":\n\t");
+                        printPage.setMessage(printPage.getMessage()
+                                + user1.getEvents().get(i).getDescription() + ", ");
+                    }
+                }
+            }
+        }
+    }
+
+    private static void printHomePage(final OutputClass printPage, final User user) {
+        printPage.setMessage("Liked songs:\n\t[");
+        for (int i = 0; i < user.getLikedSongs().size(); i++) {
+            if (i == user.getLikedSongs().size() - 1) {
+                printPage.setMessage(printPage.getMessage() + user.getLikedSongs().get(i));
+                break;
+            }
+            printPage.setMessage(printPage.getMessage()
+                    + user.getLikedSongs().get(i) + ", ");
+        }
+        printPage.setMessage(printPage.getMessage()
+                + "]\n\nFollowed playlists:\n\t[");
+        for (Playlist playlist : user.getPlaylists()) {
+            printPage.setMessage(printPage.getMessage() + playlist.getName() + ", ");
+        }
+        printPage.setMessage(printPage.getMessage() + "]");
     }
 
     private static void addResultForAlbum(final ArrayList<User> users, final CommandInput command,

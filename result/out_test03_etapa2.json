@@ -67,7 +67,7 @@
   "command" : "printCurrentPage",
   "user" : "alice22",
   "timestamp" : 75,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
+  "message" : "Albums:\n\t[Harmonic Horizons]Merch:\n\t[]\n\nEvents:\n\t[Harmonic Convergence - 15-06-2022:\n\tA night of mesmerizing melodies and soundscapes., Echoes of the Future - 23-09-2022:\n\tExploring futuristic sounds in a live performance.]"
 }, {
   "command" : "switchConnectionStatus",
   "user" : "alice22",
@@ -94,10 +94,10 @@
   "command" : "printCurrentPage",
   "user" : "alice22",
   "timestamp" : 115,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
+  "message" : "Albums:\n\t[Harmonic Horizons]Merch:\n\t[]\n\nEvents:\n\t[Harmonic Convergence - 15-06-2022:\n\tA night of mesmerizing melodies and soundscapes., Echoes of the Future - 23-09-2022:\n\tExploring futuristic sounds in a live performance.]"
 }, {
   "command" : "printCurrentPage",
   "user" : "bob35",
   "timestamp" : 120,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
+  "message" : "Albums:\n\t[Harmonic Horizons]Merch:\n\t[]\n\nEvents:\n\t[Harmonic Convergence - 15-06-2022:\n\tA night of mesmerizing melodies and soundscapes., Echoes of the Future - 23-09-2022:\n\tExploring futuristic sounds in a live performance.]"
 } ]
