@@ -1,6 +1,5 @@
 package fileio.input;
 
-
 import java.util.ArrayList;
 
 public final class PodcastInput {
@@ -15,7 +14,7 @@ public final class PodcastInput {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -23,7 +22,7 @@ public final class PodcastInput {
         return owner;
     }
 
-    public void setOwner(String owner) {
+    public void setOwner(final String owner) {
         this.owner = owner;
     }
 
@@ -31,16 +30,7 @@ public final class PodcastInput {
         return episodes;
     }
 
-    public void setEpisodes(ArrayList<EpisodeInput> episodes) {
+    public void setEpisodes(final ArrayList<EpisodeInput> episodes) {
         this.episodes = episodes;
-    }
-
-    @Override
-    public String toString() {
-        return "PodcastInput{" +
-                "name='" + name + '\'' +
-                ", owner='" + owner + '\'' +
-                ", episodes=" + episodes +
-                '}';
     }
 }
