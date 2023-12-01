@@ -2,7 +2,7 @@ package main;
 
 import java.util.ArrayList;
 
-import Album.SongsToAdd;
+import Artist.SongsToAdd;
 import fileio.input.SongInput;
 
 public class Song {

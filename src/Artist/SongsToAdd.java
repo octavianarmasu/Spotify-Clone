@@ -1,4 +1,4 @@
-package Album;
+package Artist;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

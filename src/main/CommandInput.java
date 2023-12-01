@@ -1,10 +1,8 @@
 package main;
 
-import Album.SongsToAdd;
+import Artist.SongsToAdd;
 import Podcast.EpisodesToAdd;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-import java.util.ArrayList;
 
 public class CommandInput {
     private String command;
@@ -107,5 +105,9 @@ public class CommandInput {
 
     public final String getDate() {
         return date;
+    }
+
+    public final int getPrice() {
+        return price;
     }
 }

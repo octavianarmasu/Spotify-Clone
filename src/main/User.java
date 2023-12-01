@@ -3,7 +3,7 @@ package main;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import Album.Album;
+import Artist.Album;
 import Events.Event;
 
 public class User {
@@ -27,8 +27,6 @@ public class User {
     private MediaPlayer mediaPlayer = new MediaPlayer();
     private String connection = "online";
     private String userType = "user";
-    private final ArrayList<Album> album = new ArrayList<>();
-    private final ArrayList<Event> events = new ArrayList<>();
     private String currentPage = "home";
 
 
@@ -60,8 +58,6 @@ public class User {
         this.mediaPlayer = user.getMediaPlayer();
         this.connection = user.getConnection();
         this.userType = user.getUserType();
-        this.album.addAll(user.getAlbum());
-        this.events.addAll(user.getEvents());
         this.currentPage = user.getCurrentPage();
 
     }
@@ -288,29 +284,6 @@ public class User {
         this.userType = userType;
     }
 
-    /**
-     * Adds an album to the user's list of albums.
-     * @param album the album to be added
-     */
-    public final void addAlbum(final Album album) {
-        this.album.add(album);
-    }
-
-    public final ArrayList<Album> getAlbum() {
-        return this.album;
-    }
-
-    /**
-     * Adds an event to the user's list of events.
-     * @param event the event to be added
-     */
-    public final void addEvent(final Event event) {
-        this.events.add(event);
-    }
-
-    public final ArrayList<Event> getEvents() {
-        return this.events;
-    }
     public final String getCurrentPage() {
         return this.currentPage;
     }

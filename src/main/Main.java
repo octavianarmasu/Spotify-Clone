@@ -1,7 +1,7 @@
 package main;
 
-import Album.SongsToAdd;
-import Album.ShowAlbums;
+import Artist.SongsToAdd;
+import Artist.ShowAlbums;
 import Events.Event;
 import OnlineUsers.AddUser;
 import OnlineUsers.GetOnlineUsers;
@@ -11,14 +11,13 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-import fileio.input.EpisodeInput;
-import fileio.input.LibraryInput;
-import fileio.input.SongInput;
-
+import fileio.input.*;
+import Artist.Artist;
 import java.io.File;
+import Artist.Merch;
 
-import Album.ResultForAlbum;
-import Album.Album;
+import Artist.ResultForAlbum;
+import Artist.Album;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -37,6 +36,7 @@ public final class Main {
     static final int MAGIGNUM = 5;
     static final int PODCASTNUM = 90;
     static ArrayList<String> selectResult = new ArrayList<>();
+    static ArrayList<Artist> artists = new ArrayList<>();
     static ArrayList<String> results = new ArrayList<>();
     static SelectOutput selectOutput = new SelectOutput();
     static MediaPlayer player = new MediaPlayer();
@@ -99,6 +99,8 @@ public final class Main {
         player.setPlaylist(null);
         player.setSong("");
         player.setEpisode("");
+        artists.clear();
+
 
         ArrayList<Song> songs = new ArrayList<>();
         for (SongInput song : library.getSongs()) {
@@ -106,7 +108,7 @@ public final class Main {
         }
 
         ArrayList<User> users = new ArrayList<>();
-        for (fileio.input.UserInput user : library.getUsers()) {
+        for (UserInput user : library.getUsers()) {
             users.add(new User(user.getUsername(), user.getAge(), user.getCity()));
         }
         for (User user : users) {
@@ -114,7 +116,7 @@ public final class Main {
         }
 
         ArrayList<Podcasts> podcasts = new ArrayList<>();
-        for (fileio.input.PodcastInput podcast : library.getPodcasts()) {
+        for (PodcastInput podcast : library.getPodcasts()) {
             ArrayList<Episode> episodes = new ArrayList<>();
             for (EpisodeInput episode : podcast.getEpisodes()) {
                 episodes.add(new Episode(episode));
@@ -783,7 +785,7 @@ public final class Main {
                 showAlbums.setTimestamp(command.getTimestamp());
                 showAlbums.setUser(command.getUsername());
                 ResultForAlbum result = new ResultForAlbum();
-                addResultForAlbum(users, command, result, showAlbums);
+                addResultForAlbum(command, result, showAlbums);
                 JsonNode selectNode = objectMapper.valueToTree(showAlbums);
                 outputs.add(selectNode);
             }
@@ -792,7 +794,11 @@ public final class Main {
                 printPage.setCommand("printCurrentPage");
                 printPage.setUser(command.getUsername());
                 printPage.setTimestamp(command.getTimestamp());
-                printPageFunc(printPage, command, users);
+                if (connection.equals("offline")) {
+                    printPage.setMessage(command.getUsername() + " is offline.");
+                } else {
+                    printPageFunc(printPage, command, users);
+                }
                 JsonNode selectNode = objectMapper.valueToTree(printPage);
                 outputs.add(selectNode);
             }
@@ -803,6 +809,15 @@ public final class Main {
                 addEvent.setTimestamp(command.getTimestamp());
                 addEventFunc(command, addEvent, users);
                 JsonNode selectNode = objectMapper.valueToTree(addEvent);
+                outputs.add(selectNode);
+            }
+            if (command.getCommand().equals("addMerch")) {
+                OutputClass addMerch = new OutputClass();
+                addMerch.setCommand("addMerch");
+                addMerch.setUser(command.getUsername());
+                addMerch.setTimestamp(command.getTimestamp());
+                addMerchFunc(command, addMerch, users);
+                JsonNode selectNode = objectMapper.valueToTree(addMerch);
                 outputs.add(selectNode);
             }
 
@@ -832,6 +847,52 @@ public final class Main {
         objectWriter.writeValue(new File(filePathOutput), outputs);
     }
 
+    private static void addMerchFunc(final CommandInput command, final OutputClass addMerch,
+                                     final ArrayList<User> users) {
+        int found = 0;
+        for (User user : users) {
+            if (user.getUsername().equals(command.getUsername())) {
+                found = 1;
+                if (!user.getUserType().equals("artist")) {
+                    addMerch.setMessage(user.getUsername() + " is not an artist.");
+                    break;
+                }
+            }
+        }
+        for (Artist artist : artists) {
+            if (artist.getUsername().equals(command.getUsername())) {
+                found = 1;
+                int checkMerch = checkDuplicateMerch(artist, command);
+                if (checkMerch == 0) {
+                    addMerch.setMessage(artist.getUsername()
+                            + " has merchandise with the same name.");
+                    break;
+                }
+                if (command.getPrice() < 0) {
+                    addMerch.setMessage("Price for merchandise can not be negative.");
+                    break;
+                }
+                Merch merch = new Merch(command.getName(), command.getPrice(),
+                        command.getDescription());
+                artist.addMerch(merch);
+                addMerch.setMessage(command.getUsername()
+                        + " has added new merchandise successfully.");
+            }
+        }
+        if (found == 0) {
+            addMerch.setMessage("The username " + command.getUsername() + " doesn't exist.");
+        }
+    }
+
+    private static int checkDuplicateMerch(final Artist artist, final CommandInput command) {
+        for (Merch merch : artist.getMerch()) {
+            if (merch.getName().equals(command.getName())) {
+                return 0;
+            }
+        }
+        return 1;
+    }
+
     private static void addEventFunc(final CommandInput command, final OutputClass addEvent,
                                      final ArrayList<User> users) throws ParseException {
         int found = 0;
@@ -842,9 +903,14 @@ public final class Main {
                     addEvent.setMessage(user.getUsername() + " is not an artist.");
                     break;
                 }
-                int checkEvent = checkDuplicateEvent(user, command);
+            }
+        }
+        for (Artist artist : artists) {
+            if (artist.getUsername().equals(command.getUsername())) {
+                found = 1;
+                int checkEvent = checkDuplicateEvent(artist, command);
                 if (checkEvent == 0) {
-                    addEvent.setMessage(user.getUsername()
+                    addEvent.setMessage(artist.getUsername()
                             + " has another event with the same name.");
                     break;
                 }
@@ -856,8 +922,9 @@ public final class Main {
                 }
                 Event event = new Event(command.getName(), command.getDescription(),
                         command.getDate());
-                user.addEvent(event);
-                addEvent.setMessage(command.getUsername() + " has added new event successfully.");
+                artist.addEvent(event);
+                addEvent.setMessage(command.getUsername()
+                        + " has added new event successfully.");
             }
         }
         if (found == 0) {
@@ -896,12 +963,12 @@ public final class Main {
 
     /**
      * check for duplicate events
-     * @param user the user that wants to add the event
+     * @param artist the artist that wants to add the event
      * @param command the command that contains the event
      * @return 1 if the event is not duplicate, 0 otherwise
      */
-    private static int checkDuplicateEvent(final User user, final CommandInput command) {
-        for (Event event : user.getEvents()) {
+    private static int checkDuplicateEvent(final Artist artist, final CommandInput command) {
+        for (Event event : artist.getEvents()) {
             if (event.getName().equals(command.getName())) {
                 return 0;
             }
@@ -919,43 +986,60 @@ public final class Main {
                         ||user.getCurrentPage().equals("LikedPage")) {
                     printHomePage(printPage, user);
                 } else {
-                    printArtistHostPage(printPage, user, users);
+                    printArtistHostPage(printPage, user);
                 }
             }
         }
     }
 
-    private static void printArtistHostPage(final OutputClass printPage,final  User user,
-                                            final ArrayList<User> users) {
-        for (User user1:users) {
-            if (user.getCurrentPage().equals(user1.getUsername())) {
-                if (user1.getUserType().equals("artist")) {
-                    printPage.setMessage("Albums:\n\t[");
-                    for (int i = 0; i < user1.getAlbum().size(); i++) {
-                        if (i == user1.getAlbum().size() - 1) {
+    private static void printArtistHostPage(final OutputClass printPage,final  User user) {
+
+        for (Artist artist : artists) {
+            if (user.getCurrentPage().equals(artist.getUsername())) {
+                printPage.setMessage("Albums:\n\t[");
+                for (int i = 0; i < artist.getAlbum().size(); i++) {
+                    if (i == artist.getAlbum().size() - 1) {
+                        printPage.setMessage(printPage.getMessage()
+                                + artist.getAlbum().get(i).getName() + "]\n\n");
+                        break;
+                    }
+                    printPage.setMessage(printPage.getMessage()
+                            + artist.getAlbum().get(i).getName() + ", ");
+                }
+
+                if (artist.getMerch().size() == 0) {
+                    printPage.setMessage(printPage.getMessage() + "Merch:\n\t[]\n\n");
+                } else {
+                    printPage.setMessage(printPage.getMessage() + "Merch:\n\t[");
+                    for (int i = 0; i < artist.getMerch().size(); i++) {
+                        if (i == artist.getMerch().size() - 1) {
                             printPage.setMessage(printPage.getMessage()
-                                    + user1.getAlbum().get(i).getName() + "]");
+                                    + artist.getMerch().get(i).getName() + " - "
+                                    + artist.getMerch().get(i).getPrice() + ":\n\t"
+                                    + artist.getMerch().get(i).getDescription() + "]\n\n");
                             break;
                         }
                         printPage.setMessage(printPage.getMessage()
-                                + user1.getAlbum().get(i).getName() + ", ");
+                                + artist.getMerch().get(i).getName() + " - "
+                                + artist.getMerch().get(i).getPrice() + ":\n\t"
+                                + artist.getMerch().get(i).getDescription() + ", ");
                     }
-                    printPage.setMessage(printPage.getMessage() + "Merch:\n\t[]\n\nEvents:\n\t[");
-                    for (int i = 0; i < user1.getEvents().size(); i++) {
-                        if (i == user1.getEvents().size() - 1) {
-                            printPage.setMessage(printPage.getMessage()
-                                    + user1.getEvents().get(i).getName() + " - "
-                                    + user1.getEvents().get(i).getDate() + ":\n\t");
-                            printPage.setMessage(printPage.getMessage()
-                                    + user1.getEvents().get(i).getDescription() + "]");
-                            break;
-                        }
+                }
+                printPage.setMessage(printPage.getMessage() + "Events:\n\t[");
+                for (int i = 0; i < artist.getEvents().size(); i++) {
+                    if (i == artist.getEvents().size() - 1) {
                         printPage.setMessage(printPage.getMessage()
-                                + user1.getEvents().get(i).getName() + " - "
-                                + user1.getEvents().get(i).getDate() + ":\n\t");
+                                + artist.getEvents().get(i).getName() + " - "
+                                + artist.getEvents().get(i).getDate() + ":\n\t");
                         printPage.setMessage(printPage.getMessage()
-                                + user1.getEvents().get(i).getDescription() + ", ");
+                                + artist.getEvents().get(i).getDescription() + "]");
+                        break;
                     }
+                    printPage.setMessage(printPage.getMessage()
+                            + artist.getEvents().get(i).getName() + " - "
+                            + artist.getEvents().get(i).getDate() + ":\n\t");
+                    printPage.setMessage(printPage.getMessage()
+                            + artist.getEvents().get(i).getDescription() + ", ");
                 }
             }
         }
@@ -979,12 +1063,11 @@ public final class Main {
         printPage.setMessage(printPage.getMessage() + "]");
     }
 
-    private static void addResultForAlbum(final ArrayList<User> users, final CommandInput command,
-                                          ResultForAlbum result,
+    private static void addResultForAlbum(final CommandInput command, ResultForAlbum result,
                                           final ShowAlbums showAlbums) {
-        for (User user : users) {
-            if (user.getUsername().equals(command.getUsername())) {
-                for (Album album : user.getAlbum()) {
+        for (Artist artist : artists) {
+            if (artist.getUsername().equals(command.getUsername())) {
+                for (Album album : artist.getAlbum()) {
                     result = new ResultForAlbum();
                     result.setName(album.getName());
                     for (Song song : album.getSongs()) {
@@ -1003,32 +1086,38 @@ public final class Main {
         for (User user : users) {
             if (user.getUsername().equals(command.getUsername())) {
                 found = 1;
-                if (user.getUserType().equals("artist")) {
-                    int checkAlbum = checkDuplicateAlbum(user, command);
-                    if (checkAlbum == 0) {
-                        addAlbum.setMessage(command.getUsername()
-                                + " has another album with the same name.");
-                        break;
-                    }
-                    ArrayList<Song> songForAlbum = new ArrayList<>();
-                    for (SongsToAdd song : command.getSongs()) {
-                        Song aux = new Song(song);
-                        songs.add(aux);
-                        songForAlbum.add(aux);
-                    }
-                    int checkSongs = checkSongsForAlbum(songForAlbum);
-                    if (checkSongs == 0) {
-                        addAlbum.setMessage(command.getUsername()
-                                + " has the same song at least twice in this album.");
-                        break;
-                    }
-                    Album album = new Album(command.getName(), command.getReleaseYear(),
-                            command.getDescription(), songForAlbum);
-                    user.addAlbum(album);
-                    addAlbum.setMessage(user.getUsername() + " has added new album successfully.");
-                } else {
+                if (!user.getUserType().equals("artist")) {
                     addAlbum.setMessage(user.getUsername() + " is not an artist.");
+                    break;
                 }
+            }
+        }
+        for (Artist artist : artists) {
+            if (artist.getUsername().equals(command.getUsername())) {
+                found = 1;
+                ArrayList<Song> songForAlbum = new ArrayList<>();
+                for (SongsToAdd song : command.getSongs()) {
+                    Song aux = new Song(song);
+                    songs.add(aux);
+                    songForAlbum.add(aux);
+                }
+                int checkAlbum = checkDuplicateAlbum(artist, command);
+                if (checkAlbum == 0) {
+                    addAlbum.setMessage(command.getUsername()
+                            + " has another album with the same name.");
+                    break;
+                }
+                int checkSongs = checkSongsForAlbum(songForAlbum);
+                if (checkSongs == 0) {
+                    addAlbum.setMessage(command.getUsername()
+                            + " has the same song at least twice in this album.");
+                    break;
+                }
+                Album album = new Album(command.getName(), command.getReleaseYear(),
+                        command.getDescription(), songForAlbum);
+                artist.addAlbum(album);
+                addAlbum.setMessage(artist.getUsername()
+                        + " has added new album successfully.");
             }
         }
         if (found == 0) {
@@ -1047,8 +1136,11 @@ public final class Main {
         return 1;
     }
 
-    private static int checkDuplicateAlbum(final User user, final CommandInput command) {
-        for (Album album : user.getAlbum()) {
+    private static int checkDuplicateAlbum(final Artist artist, final CommandInput command) {
+        if (artist.getAlbum() == null) {
+            return 1;
+        }
+        for (Album album : artist.getAlbum()) {
             if (album.getName().equals(command.getName())) {
                 return 0;
             }
@@ -1073,6 +1165,11 @@ public final class Main {
                     command.getAge(), command.getCity());
             users.add(createdUser);
             createdUser.setUserType(command.getType());
+            if (command.getType().equals("artist")) {
+                Artist artist = new Artist();
+                artists.add(artist);
+                artist.setUsername(command.getUsername());
+            }
             addUser.setMessage("The username " + command.getUsername()
                     + " has been added successfully.");
         }

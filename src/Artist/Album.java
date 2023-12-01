@@ -1,4 +1,4 @@
-package Album;
+package Artist;
 
 import main.Song;
 
