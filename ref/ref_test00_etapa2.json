@@ -17,95 +17,69 @@
 }, {
   "command" : "status",
   "user" : "alice22",
-  "timestamp" : 49,
+  "timestamp" : 59,
   "stats" : {
     "name" : "The Power of Design",
-    "remainedTime" : 3075,
+    "remainedTime" : 3065,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
   }
 }, {
-  "command" : "addUser",
-  "user" : "soundseeker",
-  "timestamp" : 50,
-  "message" : "The username soundseeker has been added successfully."
-}, {
-  "command" : "select",
-  "user" : "alice22",
-  "timestamp" : 57,
-  "message" : "The selected ID is too high."
-}, {
-  "command" : "printCurrentPage",
-  "user" : "alice22",
-  "timestamp" : 58,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
-}, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 60,
   "message" : "Search returned 1 results",
-  "results" : [ "TED Radio Hour" ]
+  "results" : [ "Stairway to Heaven" ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 65,
-  "message" : "Successfully selected TED Radio Hour."
+  "message" : "Successfully selected Stairway to Heaven."
 }, {
   "command" : "load",
   "user" : "alice22",
   "timestamp" : 70,
   "message" : "Playback loaded successfully."
 }, {
-  "command" : "status",
-  "user" : "alice22",
-  "timestamp" : 73,
-  "stats" : {
-    "name" : "The Power of Design",
-    "remainedTime" : 3066,
-    "repeat" : "No Repeat",
-    "shuffle" : false,
-    "paused" : false
-  }
-}, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 75,
-  "message" : "Search returned 0 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "TED Radio Hour" ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 80,
-  "message" : "The selected ID is too high."
+  "message" : "Successfully selected TED Radio Hour."
 }, {
   "command" : "load",
   "user" : "alice22",
   "timestamp" : 85,
-  "message" : "Please select a source before attempting to load."
+  "message" : "Playback loaded successfully."
 }, {
   "command" : "status",
   "user" : "alice22",
   "timestamp" : 86,
   "stats" : {
-    "name" : "",
-    "remainedTime" : 0,
+    "name" : "The Power of Design",
+    "remainedTime" : 3063,
     "repeat" : "No Repeat",
     "shuffle" : false,
-    "paused" : true
+    "paused" : false
   }
 }, {
   "command" : "playPause",
   "user" : "alice22",
   "timestamp" : 3200,
-  "message" : "Please load a source before attempting to pause or resume playback."
+  "message" : "Playback paused successfully."
 }, {
   "command" : "status",
   "user" : "alice22",
   "timestamp" : 3201,
   "stats" : {
-    "name" : "",
-    "remainedTime" : 0,
+    "name" : "The Science of Us",
+    "remainedTime" : 3081,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : true
@@ -153,16 +127,6 @@
   "timestamp" : 3245,
   "message" : "Playback loaded successfully."
 }, {
-  "command" : "addUser",
-  "user" : "magichost",
-  "timestamp" : 3247,
-  "message" : "The username magichost has been added successfully."
-}, {
-  "command" : "addUser",
-  "user" : "magichost",
-  "timestamp" : 3247,
-  "message" : "The username magichost is already taken."
-}, {
   "command" : "addRemoveInPlaylist",
   "user" : "alice22",
   "timestamp" : 3250,
@@ -194,11 +158,6 @@
     "shuffle" : false,
     "paused" : false
   }
-}, {
-  "command" : "printCurrentPage",
-  "user" : "alice22",
-  "timestamp" : 3275,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[2010 hits, ]"
 }, {
   "command" : "status",
   "user" : "alice22",

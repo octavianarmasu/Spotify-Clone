@@ -10,6 +10,12 @@
   "message" : "melodymaster has added new album successfully."
 }, {
   "command" : "search",
+  "user" : "bob35",
+  "timestamp" : 6,
+  "message" : "Search returned 1 results",
+  "results" : [ "Retro Rhythms" ]
+}, {
+  "command" : "search",
   "user" : "alice22",
   "timestamp" : 10,
   "message" : "Search returned 1 results",
@@ -24,6 +30,11 @@
   "user" : "alice22",
   "timestamp" : 20,
   "message" : "Playback loaded successfully."
+}, {
+  "command" : "select",
+  "user" : "bob35",
+  "timestamp" : 25,
+  "message" : "Successfully selected Night Pulse."
 }, {
   "command" : "status",
   "user" : "alice22",
@@ -40,6 +51,11 @@
   "user" : "alice22",
   "timestamp" : 31,
   "message" : "Repeat mode changed to repeat once."
+}, {
+  "command" : "createPlaylist",
+  "user" : "bob35",
+  "timestamp" : 31,
+  "message" : "Playlist created successfully."
 }, {
   "command" : "status",
   "user" : "alice22",
@@ -84,6 +100,11 @@
     "paused" : true
   }
 }, {
+  "command" : "load",
+  "user" : "bob35",
+  "timestamp" : 1000,
+  "message" : "Playback loaded successfully."
+}, {
   "command" : "createPlaylist",
   "user" : "alice22",
   "timestamp" : 1005,
@@ -119,6 +140,11 @@
   "user" : "alice22",
   "timestamp" : 1012,
   "message" : "Playback loaded successfully."
+}, {
+  "command" : "addRemoveInPlaylist",
+  "user" : "bob35",
+  "timestamp" : 1012,
+  "message" : "Successfully added to playlist."
 }, {
   "command" : "addRemoveInPlaylist",
   "user" : "alice22",
@@ -168,6 +194,12 @@
   "message" : "Successfully added to playlist."
 }, {
   "command" : "search",
+  "user" : "carol19",
+  "timestamp" : 1021,
+  "message" : "Search returned 1 results",
+  "results" : [ "My favourite songs" ]
+}, {
+  "command" : "search",
   "user" : "alice22",
   "timestamp" : 1022,
   "message" : "Search returned 1 results",
@@ -188,6 +220,11 @@
   "timestamp" : 1025,
   "message" : "Successfully added to playlist."
 }, {
+  "command" : "select",
+  "user" : "carol19",
+  "timestamp" : 1025,
+  "message" : "Successfully selected Dream Chaser."
+}, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 1026,
@@ -198,6 +235,11 @@
   "user" : "alice22",
   "timestamp" : 1027,
   "message" : "Successfully selected My favourite songs."
+}, {
+  "command" : "follow",
+  "user" : "carol19",
+  "timestamp" : 1027,
+  "message" : "Playlist followed successfully."
 }, {
   "command" : "load",
   "user" : "alice22",
@@ -231,6 +273,22 @@
     "paused" : false
   }
 }, {
+  "command" : "printCurrentPage",
+  "user" : "alice22",
+  "timestamp" : 1038,
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[My favourite songs, ]"
+}, {
+  "command" : "search",
+  "user" : "carol19",
+  "timestamp" : 1039,
+  "message" : "Search returned 0 results",
+  "results" : [ ]
+}, {
+  "command" : "printCurrentPage",
+  "user" : "carol19",
+  "timestamp" : 1040,
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
+}, {
   "command" : "status",
   "user" : "alice22",
   "timestamp" : 2099,
@@ -241,6 +299,11 @@
     "shuffle" : false,
     "paused" : false
   }
+}, {
+  "command" : "select",
+  "user" : "carol19",
+  "timestamp" : 2100,
+  "message" : "The selected ID is too high."
 }, {
   "command" : "repeat",
   "user" : "alice22",
@@ -269,6 +332,11 @@
     "paused" : false
   }
 }, {
+  "command" : "follow",
+  "user" : "carol19",
+  "timestamp" : 2335,
+  "message" : "Please select a source before following or unfollowing."
+}, {
   "command" : "repeat",
   "user" : "alice22",
   "timestamp" : 2335,
@@ -284,6 +352,11 @@
     "shuffle" : false,
     "paused" : false
   }
+}, {
+  "command" : "printCurrentPage",
+  "user" : "carol19",
+  "timestamp" : 2338,
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "status",
   "user" : "alice22",
