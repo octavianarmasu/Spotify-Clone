@@ -110,20 +110,26 @@
   "timestamp" : 1005,
   "message" : "Playlist created successfully."
 }, {
+  "command" : "search",
+  "user" : "alice22",
+  "timestamp" : 1006,
+  "message" : "Search returned 1 results",
+  "results" : [ "Harmonic Horizons" ]
+}, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 1007,
-  "message" : "The selected ID is too high."
+  "message" : "Successfully selected Harmonic Horizons."
 }, {
   "command" : "load",
   "user" : "alice22",
   "timestamp" : 1008,
-  "message" : "Please select a source before attempting to load."
+  "message" : "Playback loaded successfully."
 }, {
   "command" : "addRemoveInPlaylist",
   "user" : "alice22",
   "timestamp" : 1009,
-  "message" : "Please load a source before adding to or removing from the playlist."
+  "message" : null
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -251,7 +257,7 @@
   "timestamp" : 1035,
   "stats" : {
     "name" : "Hustle Hard",
-    "remainedTime" : 225,
+    "remainedTime" : 217,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -267,14 +273,14 @@
   "timestamp" : 1037,
   "stats" : {
     "name" : "Hustle Hard",
-    "remainedTime" : 223,
+    "remainedTime" : 213,
     "repeat" : "Repeat All",
     "shuffle" : false,
     "paused" : false
   }
 }, {
-  "command" : "printCurrentPage",
   "user" : "alice22",
+  "command" : "printCurrentPage",
   "timestamp" : 1038,
   "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[My favourite songs, ]"
 }, {
@@ -284,8 +290,8 @@
   "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
-  "command" : "printCurrentPage",
   "user" : "carol19",
+  "command" : "printCurrentPage",
   "timestamp" : 1040,
   "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
@@ -293,11 +299,11 @@
   "user" : "alice22",
   "timestamp" : 2099,
   "stats" : {
-    "name" : "Butterfly Effect",
-    "remainedTime" : 179,
+    "name" : "",
+    "remainedTime" : 0,
     "repeat" : "Repeat All",
     "shuffle" : false,
-    "paused" : false
+    "paused" : true
   }
 }, {
   "command" : "select",
@@ -308,28 +314,28 @@
   "command" : "repeat",
   "user" : "alice22",
   "timestamp" : 2100,
-  "message" : "Repeat mode changed to repeat current song."
+  "message" : "Please load a source before setting the repeat status."
 }, {
   "command" : "status",
   "user" : "alice22",
   "timestamp" : 2101,
   "stats" : {
-    "name" : "Butterfly Effect",
-    "remainedTime" : 177,
-    "repeat" : "Repeat Current Song",
+    "name" : "",
+    "remainedTime" : 0,
+    "repeat" : "Repeat All",
     "shuffle" : false,
-    "paused" : false
+    "paused" : true
   }
 }, {
   "command" : "status",
   "user" : "alice22",
   "timestamp" : 2334,
   "stats" : {
-    "name" : "Butterfly Effect",
-    "remainedTime" : 134,
-    "repeat" : "Repeat Current Song",
+    "name" : "",
+    "remainedTime" : 0,
+    "repeat" : "Repeat All",
     "shuffle" : false,
-    "paused" : false
+    "paused" : true
   }
 }, {
   "command" : "follow",
@@ -340,21 +346,21 @@
   "command" : "repeat",
   "user" : "alice22",
   "timestamp" : 2335,
-  "message" : "Repeat mode changed to no repeat."
+  "message" : "Please load a source before setting the repeat status."
 }, {
   "command" : "status",
   "user" : "alice22",
   "timestamp" : 2336,
   "stats" : {
-    "name" : "Butterfly Effect",
-    "remainedTime" : 132,
-    "repeat" : "No Repeat",
+    "name" : "",
+    "remainedTime" : 0,
+    "repeat" : "Repeat All",
     "shuffle" : false,
-    "paused" : false
+    "paused" : true
   }
 }, {
-  "command" : "printCurrentPage",
   "user" : "carol19",
+  "command" : "printCurrentPage",
   "timestamp" : 2338,
   "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
@@ -364,7 +370,7 @@
   "stats" : {
     "name" : "",
     "remainedTime" : 0,
-    "repeat" : "No Repeat",
+    "repeat" : "Repeat All",
     "shuffle" : false,
     "paused" : true
   }

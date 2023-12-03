@@ -1,5 +1,7 @@
 package main;
 
+import Artist.Album;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -18,6 +20,7 @@ public class MediaPlayer {
     private int shuffle;
     private Playlist oldPlaylist = new Playlist();
     private int timestamp;
+    private Album album = new Album();
 
     public MediaPlayer() {
 
@@ -214,5 +217,13 @@ public class MediaPlayer {
      */
     public final void prevEpisode() {
         this.episodeNumber--;
+    }
+
+    public final Album getAlbum() {
+        return this.album;
+    }
+
+    public final void setAlbum(final Album album) {
+        this.album = album;
     }
 }

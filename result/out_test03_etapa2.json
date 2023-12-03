@@ -64,8 +64,8 @@
   "timestamp" : 70,
   "message" : "Successfully selected melodymaster's page."
 }, {
-  "command" : "printCurrentPage",
   "user" : "alice22",
+  "command" : "printCurrentPage",
   "timestamp" : 75,
   "message" : "Albums:\n\t[Harmonic Horizons]\n\nMerch:\n\t[]\n\nEvents:\n\t[Harmonic Convergence - 15-06-2022:\n\tA night of mesmerizing melodies and soundscapes., Echoes of the Future - 23-09-2022:\n\tExploring futuristic sounds in a live performance.]"
 }, {
@@ -116,13 +116,13 @@
   "timestamp" : 110,
   "message" : "Successfully selected melodymaster's page."
 }, {
-  "command" : "printCurrentPage",
   "user" : "alice22",
+  "command" : "printCurrentPage",
   "timestamp" : 115,
   "message" : "alice22 is offline."
 }, {
-  "command" : "printCurrentPage",
   "user" : "bob35",
+  "command" : "printCurrentPage",
   "timestamp" : 120,
   "message" : "Albums:\n\t[Harmonic Horizons]\n\nMerch:\n\t[Harmonic T-Shirt - 25:\n\tLimited edition T-shirt featuring unique harmonic designs., Echoes Cap - 20:\n\tStylish cap with the 'Echoes of Harmony' album artwork.]\n\nEvents:\n\t[Harmonic Convergence - 15-06-2022:\n\tA night of mesmerizing melodies and soundscapes., Echoes of the Future - 23-09-2022:\n\tExploring futuristic sounds in a live performance.]"
 } ]

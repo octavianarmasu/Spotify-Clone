@@ -31,8 +31,8 @@
   "timestamp" : 50,
   "message" : "The username soundseeker has been added successfully."
 }, {
-  "command" : "printCurrentPage",
   "user" : "jack29",
+  "command" : "printCurrentPage",
   "timestamp" : 53,
   "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
@@ -95,8 +95,8 @@
     "paused" : true
   }
 }, {
-  "command" : "printCurrentPage",
   "user" : "jack29",
+  "command" : "printCurrentPage",
   "timestamp" : 90,
   "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
@@ -205,6 +205,11 @@
   "message" : "Search returned 1 results",
   "results" : [ "2010 hits" ]
 }, {
+  "command" : "deleteUser",
+  "user" : "david27",
+  "timestamp" : 3257,
+  "message" : "david27 was successfully deleted."
+}, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 3260,
@@ -274,6 +279,11 @@
     "followers" : 0
   } ]
 }, {
+  "command" : "deleteUser",
+  "user" : "soundseeker",
+  "timestamp" : 4010,
+  "message" : null
+}, {
   "command" : "status",
   "user" : "carol19",
   "timestamp" : 4500,
@@ -284,4 +294,9 @@
     "shuffle" : false,
     "paused" : true
   }
+}, {
+  "command" : "deleteUser",
+  "user" : "soundseeker",
+  "timestamp" : 100000,
+  "message" : null
 } ]

@@ -124,20 +124,26 @@
   "timestamp" : 430,
   "message" : "Successfully removed from playlist."
 }, {
-  "command" : "printCurrentPage",
   "user" : "david27",
+  "command" : "printCurrentPage",
   "timestamp" : 430,
   "message" : "Albums:\n\t[Harmonic Horizons]\n\nMerch:\n\t[]\n\nEvents:\n\t[Event1 - 01-01-2022:\n\tPrimul Event adaugat!]"
+}, {
+  "command" : "search",
+  "user" : "bob35",
+  "timestamp" : 431,
+  "message" : "Search returned 1 results",
+  "results" : [ "Harmonic Horizons" ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 432,
-  "message" : "The selected ID is too high."
+  "message" : "Successfully selected Harmonic Horizons."
 }, {
   "command" : "load",
   "user" : "bob35",
   "timestamp" : 433,
-  "message" : "Please select a source before attempting to load."
+  "message" : "Playback loaded successfully."
 }, {
   "command" : "addMerch",
   "user" : "melodymaster",
@@ -153,27 +159,27 @@
   "user" : "bob35",
   "timestamp" : 434,
   "stats" : {
-    "name" : "",
+    "name" : null,
     "remainedTime" : 0,
     "repeat" : "No Repeat",
     "shuffle" : false,
-    "paused" : true
+    "paused" : false
   }
 }, {
   "command" : "shuffle",
   "user" : "bob35",
   "timestamp" : 440,
-  "message" : "Please load a source before using the shuffle function."
+  "message" : "The loaded source is not a playlist."
 }, {
   "command" : "status",
   "user" : "bob35",
   "timestamp" : 446,
   "stats" : {
-    "name" : "",
+    "name" : null,
     "remainedTime" : 0,
     "repeat" : "No Repeat",
     "shuffle" : false,
-    "paused" : true
+    "paused" : false
   }
 }, {
   "command" : "repeat",
@@ -195,11 +201,11 @@
   "user" : "bob35",
   "timestamp" : 1000,
   "stats" : {
-    "name" : "",
+    "name" : null,
     "remainedTime" : 0,
     "repeat" : "No Repeat",
     "shuffle" : false,
-    "paused" : true
+    "paused" : false
   }
 }, {
   "command" : "like",
@@ -240,8 +246,8 @@
   "timestamp" : 2450,
   "message" : "Successfully selected I Don't Wanna Live Forever."
 }, {
-  "command" : "printCurrentPage",
   "user" : "carol19",
+  "command" : "printCurrentPage",
   "timestamp" : 2455,
   "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
@@ -383,8 +389,8 @@
     "paused" : true
   }
 }, {
-  "command" : "printCurrentPage",
   "user" : "david27",
+  "command" : "printCurrentPage",
   "timestamp" : 3900,
   "message" : "Albums:\n\t[Harmonic Horizons]\n\nMerch:\n\t[Merch1 - 100:\n\tPrimul Merch adaugat!]\n\nEvents:\n\t[Event1 - 01-01-2022:\n\tPrimul Event adaugat!, Event2 - 05-02-2021:\n\tAl doilea Event adaugat!]"
 }, {
@@ -431,8 +437,8 @@
   "timestamp" : 4360,
   "message" : "Shuffle function activated successfully."
 }, {
-  "command" : "printCurrentPage",
   "user" : "david27",
+  "command" : "printCurrentPage",
   "timestamp" : 4400,
   "message" : "Albums:\n\t[Harmonic Horizons]\n\nMerch:\n\t[Merch1 - 100:\n\tPrimul Merch adaugat!]\n\nEvents:\n\t[Event1 - 01-01-2022:\n\tPrimul Event adaugat!, Event2 - 05-02-2021:\n\tAl doilea Event adaugat!]"
 }, {
@@ -458,8 +464,8 @@
     "paused" : false
   }
 }, {
-  "command" : "printCurrentPage",
   "user" : "carol19",
+  "command" : "printCurrentPage",
   "timestamp" : 5000,
   "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {

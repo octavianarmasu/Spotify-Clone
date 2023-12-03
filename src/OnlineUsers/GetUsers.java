@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
 
-public class GetOnlineUsers {
+public class GetUsers {
     @JsonProperty ("command")
     private String command = "getOnlineUsers";
     @JsonProperty ("timestamp")
@@ -12,7 +12,7 @@ public class GetOnlineUsers {
     @JsonProperty ("result")
     private ArrayList<String> result = new ArrayList<>();
 
-    public GetOnlineUsers() {
+    public GetUsers() {
     }
 
     public final String getCommand() {

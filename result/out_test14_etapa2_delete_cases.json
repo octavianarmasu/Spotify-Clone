@@ -39,6 +39,10 @@
   "timestamp" : 80,
   "message" : "The username musicmaven has been added successfully."
 }, {
+  "command" : "getAllUsers",
+  "timestamp" : 85,
+  "result" : [ "alice22", "bob35", "carol19", "david27", "emily30", "frank21", "grace25", "henry26", "irene33", "jack29", "soundseeker21", "melodicwanderer", "sonicpainter", "echoexplorer", "rhythmweaver" ]
+}, {
   "command" : "createPlaylist",
   "user" : "melodicwanderer",
   "timestamp" : 305,
@@ -128,10 +132,15 @@
   "timestamp" : 480,
   "message" : "Repeat mode changed to repeat once."
 }, {
-  "command" : "printCurrentPage",
   "user" : "bob35",
+  "command" : "printCurrentPage",
   "timestamp" : 525,
   "message" : "Liked songs:\n\t[Aurora Harmony]\n\nFollowed playlists:\n\t[]"
+}, {
+  "command" : "deleteUser",
+  "user" : "sonicpainter",
+  "timestamp" : 620,
+  "message" : "sonicpainter can't be deleted."
 }, {
   "command" : "select",
   "user" : "soundseeker21",
@@ -165,28 +174,83 @@
   "message" : "Search returned 1 results",
   "results" : [ "sonicpainter" ]
 }, {
+  "command" : "deleteUser",
+  "user" : "sonicpainter",
+  "timestamp" : 900,
+  "message" : "sonicpainter can't be deleted."
+}, {
+  "command" : "deleteUser",
+  "user" : "audiosage",
+  "timestamp" : 930,
+  "message" : null
+}, {
+  "command" : "deleteUser",
+  "user" : "melodicwanderer",
+  "timestamp" : 960,
+  "message" : "melodicwanderer was successfully deleted."
+}, {
   "command" : "repeat",
   "user" : "carol19",
   "timestamp" : 965,
   "message" : "Repeat mode changed to repeat all."
+}, {
+  "command" : "deleteUser",
+  "user" : "sonicpainter",
+  "timestamp" : 975,
+  "message" : "sonicpainter can't be deleted."
+}, {
+  "command" : "deleteUser",
+  "user" : "audiosage",
+  "timestamp" : 1100,
+  "message" : null
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 1225,
   "message" : "Successfully selected sonicpainter's page."
 }, {
+  "command" : "deleteUser",
+  "user" : "melodicwanderer",
+  "timestamp" : 1500,
+  "message" : "melodicwanderer was successfully deleted."
+}, {
+  "command" : "deleteUser",
+  "user" : "musicmaven",
+  "timestamp" : 6900,
+  "message" : null
+}, {
   "command" : "repeat",
   "user" : "carol19",
   "timestamp" : 7200,
   "message" : "Repeat mode changed to repeat current song."
+}, {
+  "command" : "deleteUser",
+  "user" : "sonicpainter",
+  "timestamp" : 7225,
+  "message" : "sonicpainter can't be deleted."
 }, {
   "command" : "repeat",
   "user" : "carol19",
   "timestamp" : 7505,
   "message" : "Repeat mode changed to no repeat."
 }, {
-  "command" : "printCurrentPage",
+  "command" : "deleteUser",
+  "user" : "melodicwanderer",
+  "timestamp" : 7855,
+  "message" : "melodicwanderer was successfully deleted."
+}, {
+  "command" : "deleteUser",
+  "user" : "sonicpainter",
+  "timestamp" : 7860,
+  "message" : "sonicpainter can't be deleted."
+}, {
+  "command" : "deleteUser",
+  "user" : "sonicpainter",
+  "timestamp" : 7890,
+  "message" : "sonicpainter can't be deleted."
+}, {
   "user" : "bob35",
+  "command" : "printCurrentPage",
   "timestamp" : 7900,
   "message" : "Liked songs:\n\t[Aurora Harmony]\n\nFollowed playlists:\n\t[]"
 } ]

@@ -4,7 +4,8 @@ import Artist.SongsToAdd;
 import Artist.ShowAlbums;
 import Events.Event;
 import OnlineUsers.AddUser;
-import OnlineUsers.GetOnlineUsers;
+import OnlineUsers.GetUsers;
+import PrintCurrentPage.PrintPage;
 import checker.Checker;
 import checker.CheckerConstants;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -125,7 +126,7 @@ public final class Main {
         }
         ArrayList<Playlist> playlists = new ArrayList<>();
         String currentPage;
-        int searchArtist = 0;
+        int searchArtist;
         int searchCount;
         int loadCheck;
         int loadSong;
@@ -136,6 +137,8 @@ public final class Main {
         int loadPodcast;
         int loadPlaylist;
         int select;
+        int searchAlbum;
+        int loadAlbum;
         String connection;
         String userType;
         String previousCommand = null;
@@ -169,6 +172,9 @@ public final class Main {
             select = username.getSelect();
             connection = username.getConnection();
             currentPage = username.getCurrentPage();
+            searchArtist = username.getSearchArtist();
+            searchAlbum = username.getSearchAlbum();
+            loadAlbum = username.getLoadAlbum();
             player = username.getMediaPlayer();
             if (loadCheck == 1 && loadSong == 1 && player.getPlay() == 1
                     && connection.equals("online")) {
@@ -189,6 +195,13 @@ public final class Main {
                     loadPlaylist = 0;
                 }
             }
+            if (loadAlbum == 1 && player.getPlay() == 1 && connection.equals("online")) {
+                playAlbum(command.getTimestamp());
+                if (player.getPlaylist() == null || player.getTimeLeft() == 0) {
+                    loadCheck = 0;
+                    loadAlbum = 0;
+                }
+            }
 
             if (command.getCommand().equals("search")) {
                 results.clear();
@@ -200,6 +213,7 @@ public final class Main {
                     outputs.add(searchNode);
                 } else {
                     searchArtist = 0;
+                    searchAlbum = 0;
                     select = 0;
                     searchCount++;
                     searchPlaylist = 0;
@@ -284,6 +298,17 @@ public final class Main {
                         JsonNode searchNode = objectMapper.valueToTree(searchFile);
                         outputs.add(searchNode);
                     }
+                    if (command.getType().equals("album")) {
+                        searchAlbum = 1;
+                        conductSearchAlbum(command);
+                        results = checkSize();
+                        String message = "Search returned " + results.size() + " results";
+                        selectResult = results;
+                        SearchFile searchFile = new SearchFile(command.getUsername(),
+                                command.getTimestamp(), message, results);
+                        JsonNode searchNode = objectMapper.valueToTree(searchFile);
+                        outputs.add(searchNode);
+                    }
                 }
             }
 
@@ -311,6 +336,7 @@ public final class Main {
                                     + "'s page.";
                             currentPage = selectResult.get(number - 1);
                         }
+
                         selectOutput.setMessage(message);
                         selectOutput.setSuccessfulSelect(true);
                         if (searchSong == 1) {
@@ -322,6 +348,9 @@ public final class Main {
                             }
                             if (searchPodcast == 1) {
                                 choosePodcast(number, podcasts);
+                            }
+                            if (searchAlbum == 1) {
+                                chooseAlbum(number, artists);
                             }
                         }
                         searchCount = 0;
@@ -358,6 +387,9 @@ public final class Main {
                         }
                         if (searchPlaylist == 1) {
                             loadPlaylist = 1;
+                        }
+                        if (searchAlbum == 1) {
+                            loadAlbum = 1;
                         }
 
                         loadOutput.setMessage(message);
@@ -647,7 +679,8 @@ public final class Main {
                             + " to the previous track.");
                 } else {
                     player.setPlay(1);
-                    skipToPrev(prev, songs, loadSong, loadPodcast, loadPlaylist, podcasts);
+                    skipToPrev(prev, songs, loadSong, loadPodcast, loadPlaylist,
+                            podcasts, loadAlbum);
                 }
                 JsonNode selectNode = objectMapper.valueToTree(prev);
                 outputs.add(selectNode);
@@ -760,7 +793,7 @@ public final class Main {
                 outputs.add(selectNode);
             }
             if (command.getCommand().equals("getOnlineUsers")) {
-                GetOnlineUsers onlineUsers = new GetOnlineUsers();
+                GetUsers onlineUsers = new GetUsers();
                 onlineUsers.setTimestamp(command.getTimestamp());
                 for (User user : users) {
                     if (user.getConnection().equals("online")
@@ -790,9 +823,9 @@ public final class Main {
                 outputs.add(selectNode);
             }
             if (command.getCommand().equals("printCurrentPage")) {
-                OutputClass printPage = new OutputClass();
-                printPage.setCommand("printCurrentPage");
+                PrintPage printPage = new PrintPage();
                 printPage.setUser(command.getUsername());
+                printPage.setCommand("printCurrentPage");
                 printPage.setTimestamp(command.getTimestamp());
                 if (connection.equals("offline")) {
                     printPage.setMessage(command.getUsername() + " is offline.");
@@ -821,6 +854,30 @@ public final class Main {
                 outputs.add(selectNode);
             }
 
+            if (command.getCommand().equals("getAllUsers")) {
+                GetUsers getAllUsers = new GetUsers();
+                getAllUsers.setCommand("getAllUsers");
+                getAllUsers.setTimestamp(command.getTimestamp());
+                for (User user : users) {
+                    if (user.getUserType().equals("user")) {
+                        getAllUsers.addResult(user.getUsername());
+                    }
+                }
+                for (Artist artist : artists) {
+                    getAllUsers.addResult(artist.getUsername());
+                }
+                JsonNode selectNode = objectMapper.valueToTree(getAllUsers);
+                outputs.add(selectNode);
+            }
+            if (command.getCommand().equals("deleteUser")) {
+                OutputClass deleteUser = new OutputClass();
+                deleteUser.setCommand("deleteUser");
+                deleteUser.setUser(command.getUsername());
+                deleteUser.setTimestamp(command.getTimestamp());
+                deleteUserFunc(command, deleteUser, users, songs,filePathInput);
+                JsonNode selectNode = objectMapper.valueToTree(deleteUser);
+                outputs.add(selectNode);
+            }
 
             previousCommand = command.getCommand();
             player.setTimestamp(command.getTimestamp());
@@ -838,6 +895,9 @@ public final class Main {
                     user.setSelect(select);
                     user.setCurrentPage(currentPage);
                     user.setMediaPlayer(player);
+                    user.setSearchAlbum(searchAlbum);
+                    user.setSearchArtist(searchArtist);
+                    user.setLoadAlbum(loadAlbum);
                 }
             }
         }
@@ -845,6 +905,148 @@ public final class Main {
 
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
         objectWriter.writeValue(new File(filePathOutput), outputs);
+    }
+
+    private static void playAlbum(final int timestamp) {
+        if (player.getTimeLeft() > 0 ) {
+            int time = timestamp - player.getTimestamp();
+            player.delTime(time);
+        }
+        if (player.getTimeLeft() <= 0) {
+            int remainedTime = player.getTimeLeft() * (-1);
+            player.nextSong();
+            if (player.getAlbum().getSongs().size() - 1 >= player.getSongNumber()) {
+                player.setSong(player.getAlbum().getSongs()
+                        .get(player.getSongNumber()).getName());
+                player.setTimeLeft(player.getAlbum().getSongs().get(player.getSongNumber())
+                        .getDuration() - remainedTime);
+            }
+            while (player.getTimeLeft() < 0) {
+                remainedTime = player.getTimeLeft() * (-1);
+                player.nextSong();
+                if (player.getAlbum().getSongs().size() - 1 >= player.getSongNumber()) {
+                    player.setSong(player.getAlbum().getSongs()
+                            .get(player.getSongNumber()).getName());
+                    player.setTimeLeft(player.getAlbum().getSongs().get(player.getSongNumber())
+                            .getDuration() - remainedTime);
+                } else {
+                    player.setTimeLeft(0);
+                    player.setSong("");
+                    player.setPlay(0);
+                    break;
+                }
+            }
+        }
+    }
+
+    private static void chooseAlbum(final int number,final ArrayList<Artist> artists) {
+        for (Artist artist : artists) {
+            for (Album album : artist.getAlbum()) {
+                String aux = selectResult.get(number - 1);
+                if (album.getName().equals(aux)) {
+                    player.setAlbum(album);
+                    player.getAlbum().setName(album.getName());
+                    player.setSong(album.getSongs().get(0).getName());
+                    player.setSongNumber(0);
+                    player.setTimeLeft(album.getSongs().get(0).getDuration());
+                }
+            }
+        }
+    }
+
+    private static void conductSearchAlbum(final CommandInput command) {
+        int numFilters = verifyFiltersForAlbum(command);
+        for (Artist artist: artists) {
+            artist.verifyAll(command,results, numFilters);
+        }
+    }
+
+    private static int verifyFiltersForAlbum(final CommandInput command) {
+        int numFilters = 0;
+        if (command.getFilters().getOwner() != null) {
+            numFilters++;
+        }
+        if (command.getFilters().getName() != null) {
+            numFilters++;
+        }
+        if (command.getFilters().getDescription() != null) {
+            numFilters++;
+        }
+        return  numFilters;
+    }
+    private static User SearchUser(final CommandInput command, final ArrayList<User> users) {
+        for (User user: users) {
+            if (user.getUsername().equals(command.getUsername())) {
+                return new User(user);
+            }
+        }
+        return null;
+    }
+    private static void deleteUserFunc(final CommandInput command,
+                                       final OutputClass deleteUser, final ArrayList<User> users,
+                                       final ArrayList<Song> songs, String filepath) {
+        User user = SearchUser(command, users);
+        if (user == null) {
+            deleteUser.setMessage("The username " + command.getUsername() + " doesn't exist.");
+            return;
+        }
+        if (user.getUserType().equals("user")) {
+            deleteUser.setMessage(user.getUsername() + " was successfully deleted.");
+            users.remove(user);
+            return;
+        }
+        if (user.getUserType().equals("artist")) {
+            if (checkPlaying(command, users, songs, user,filepath) == 1) {
+                deleteUser.setMessage(user.getUsername() + " can't be deleted.");
+                return;
+            }
+            deleteUser.setMessage(user.getUsername() + " was successfully deleted.");
+            users.remove(user);
+            for (Artist artist : artists) {
+                if (artist.getUsername().equals(command.getUsername())) {
+                    artists.remove(artist);
+                    break;
+                }
+            }
+            Iterator<Song> iterator = songs.iterator();
+            while (iterator.hasNext()) {
+                Song song = iterator.next();
+                if (song.getArtist().equals(command.getUsername())) {
+                    for (User user1 : users) {
+                        user1.getLikedSongs().remove(song.getName());
+                    }
+                    iterator.remove();
+                }
+            }
+         }
+
+    }
+
+    private static int checkPlaying(final CommandInput command,
+                                    ArrayList<User> users, final ArrayList<Song> songs,
+                                    final User artist, String filepath) {
+        for (User user : users) {
+            if (user.getMediaPlayer() != null) {
+                if (user.getMediaPlayer().getSong() != null) {
+                    if (user.getLoadAlbum() == 1) {
+                        player = user.getMediaPlayer();
+                        playAlbum(command.getTimestamp());
+                    }
+                    if (user.getLoadSong() == 1) {
+                        player = user.getMediaPlayer();
+                        playSongs(songs, command.getTimestamp());
+                    }
+                    for (Song song : songs) {
+                        if (user.getMediaPlayer().getSong().equals(song.getName())) {
+                            if (song.getArtist().equals(artist.getUsername())) {
+                                return 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return 0;
     }
 
     private static void addMerchFunc(final CommandInput command, final OutputClass addMerch,
@@ -976,7 +1178,7 @@ public final class Main {
         return 1;
     }
 
-    private static void printPageFunc(final OutputClass printPage,
+    private static void printPageFunc(final PrintPage printPage,
                                       final CommandInput command, final ArrayList<User> users) {
 
 
@@ -992,7 +1194,7 @@ public final class Main {
         }
     }
 
-    private static void printArtistHostPage(final OutputClass printPage,final  User user) {
+    private static void printArtistHostPage(final PrintPage printPage,final  User user) {
 
         for (Artist artist : artists) {
             if (user.getCurrentPage().equals(artist.getUsername())) {
@@ -1007,7 +1209,7 @@ public final class Main {
                             + artist.getAlbum().get(i).getName() + ", ");
                 }
 
-                if (artist.getMerch().size() == 0) {
+                if (artist.getMerch().isEmpty()) {
                     printPage.setMessage(printPage.getMessage() + "Merch:\n\t[]\n\n");
                 } else {
                     printPage.setMessage(printPage.getMessage() + "Merch:\n\t[");
@@ -1045,7 +1247,7 @@ public final class Main {
         }
     }
 
-    private static void printHomePage(final OutputClass printPage, final User user) {
+    private static void printHomePage(final PrintPage printPage, final User user) {
         printPage.setMessage("Liked songs:\n\t[");
         for (int i = 0; i < user.getLikedSongs().size(); i++) {
             if (i == user.getLikedSongs().size() - 1) {
@@ -1395,7 +1597,7 @@ public final class Main {
     /**
      * plays playlist
      *
-     * @param songs            arraylist of songs
+     * @param songs arraylist of songs
      * @param currentTimestamp current timestamp
      */
     public static void playPlaylist(final ArrayList<Song> songs, final int currentTimestamp) {
@@ -1602,7 +1804,6 @@ public final class Main {
      * @param command command input
      */
     public static void searchSongs(final ArrayList<Song> songs, final CommandInput command) {
-        ArrayList<Song> resultsAsSongs = new ArrayList<>();
         int numFilters = verifyMultiple(command);
         for (Song song : songs) {
             song.verifyAll(command, results, numFilters);
@@ -1614,7 +1815,7 @@ public final class Main {
      * calculates the number of filters
      *
      * @param command the command input
-     * @return
+     * @return the number of filters
      */
 
     private static int verifyMultiple(final CommandInput command) {
@@ -1763,7 +1964,8 @@ public final class Main {
 
     private static void skipToPrev(final OutputClass prev, final ArrayList<Song> songs,
                                    final int loadsong, final int loadpodcast,
-                                   final int loadPlaylist, final ArrayList<Podcasts> podcasts) {
+                                   final int loadPlaylist, final ArrayList<Podcasts> podcasts,
+                                   final int loadAlbum) {
         if (loadsong == 1) {
             int duration;
             for (Song song : songs) {
@@ -1832,6 +2034,28 @@ public final class Main {
                             }
                         }
                     }
+                }
+            }
+        }
+        if (loadAlbum == 1) {
+            if (player.getTimeLeft() <
+                    player.getAlbum().getSongs().get(player.getSongNumber()).getDuration()) {
+                player.setTimeLeft(player.getAlbum().getSongs()
+                        .get(player.getSongNumber()).getDuration());
+                prev.setMessage("Returned to previous track successfully. "
+                        + "The current track is " + player.getSong() + ".");
+            } else {
+                if (player.getSongNumber() != 0) {
+                    player.prevSong();
+                    int num = player.getSongNumber();
+                    String songAux = player.getAlbum().getSongs().get(num).getName();
+                    player.setSong(songAux);
+                    player.setTimeLeft(player.getAlbum().getSongs().get(num).getDuration());
+                    prev.setMessage("Returned to previous track successfully. "
+                            + "The current track is " + player.getSong() + ".");
+                } else {
+                    prev.setMessage("Returned to previous track successfully. "
+                            + "The current track is " + player.getSong() + ".");
                 }
             }
         }

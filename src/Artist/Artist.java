@@ -2,6 +2,7 @@ package Artist;
 
 import Events.Event;
 import com.sun.jdi.ArrayReference;
+import main.CommandInput;
 import main.User;
 
 import java.util.ArrayList;
@@ -50,4 +51,32 @@ public class Artist extends User {
     }
 
 
+    public final void verifyAll(final CommandInput command, final ArrayList<String> results,
+                                final int numFilters) {
+        int checkPassed;
+        String nameFilter = command.getFilters().getName();
+        String ownerFilter = command.getFilters().getOwner();
+        String descriptionFilter = command.getFilters().getDescription();
+        for (Album album : this.album) {
+            checkPassed = 0;
+            if (nameFilter != null) {
+                if (album.getName().startsWith(nameFilter)) {
+                    checkPassed ++;
+                }
+            }
+            if (ownerFilter != null) {
+                if (this.getUsername().equals(ownerFilter)) {
+                    checkPassed ++;
+                }
+            }
+            if (descriptionFilter != null) {
+                if (album.getDescription().equals(descriptionFilter)) {
+                    checkPassed ++;
+                }
+            }
+            if (checkPassed == numFilters) {
+                results.add(album.getName());
+            }
+        }
+    }
 }

@@ -21,6 +21,8 @@ public class Filters {
     private String artist;
     @JsonProperty("owner")
     private String owner;
+    @JsonProperty("description")
+    private String description;
 
     public Filters() {
     }
@@ -55,6 +57,10 @@ public class Filters {
 
     public final String getOwner() {
         return owner;
+    }
+
+    public final String getDescription() {
+        return description;
     }
 
 

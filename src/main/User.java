@@ -24,10 +24,13 @@ public class User {
     private int loadPodcast;
     private int loadSong;
     private int selectPlaylist;
+    private int searchArtist;
+    private int searchAlbum;
     private MediaPlayer mediaPlayer = new MediaPlayer();
     private String connection = "online";
     private String userType = "user";
     private String currentPage = "home";
+    private int loadAlbum;
 
 
     public User() {
@@ -59,6 +62,9 @@ public class User {
         this.connection = user.getConnection();
         this.userType = user.getUserType();
         this.currentPage = user.getCurrentPage();
+        this.searchAlbum = user.getSearchAlbum();
+        this.searchArtist = user.getSearchArtist();
+        this.loadAlbum = user.getLoadAlbum();
 
     }
 
@@ -289,6 +295,25 @@ public class User {
     }
     public final void setCurrentPage(final String currentPage) {
         this.currentPage = currentPage;
+    }
+    public final int getSearchArtist() {
+        return this.searchArtist;
+    }
+    public final int getSearchAlbum() {
+        return this.searchAlbum;
+    }
+    public final void setSearchArtist(final int searchArtist) {
+        this.searchArtist = searchArtist;
+    }
+    public final void setSearchAlbum(final int searchAlbum) {
+        this.searchAlbum = searchAlbum;
+    }
+
+    public final int getLoadAlbum() {
+        return this.loadAlbum;
+    }
+    public final void setLoadAlbum(final int loadAlbum) {
+        this.loadAlbum = loadAlbum;
     }
 
 }
