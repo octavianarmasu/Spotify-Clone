@@ -878,6 +878,14 @@ public final class Main {
                 JsonNode selectNode = objectMapper.valueToTree(deleteUser);
                 outputs.add(selectNode);
             }
+            if (command.getCommand().equals("getTop5Albums")) {
+                GetTopSongs topAlbums = new GetTopSongs();
+                topAlbums.setCommand("getTop5Albums");
+                topAlbums.setTimestamp(command.getTimestamp());
+                showTop5Albums(topAlbums);
+                JsonNode selectNode = objectMapper.valueToTree(topAlbums);
+                outputs.add(selectNode);
+            }
 
             previousCommand = command.getCommand();
             player.setTimestamp(command.getTimestamp());
@@ -905,6 +913,36 @@ public final class Main {
 
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
         objectWriter.writeValue(new File(filePathOutput), outputs);
+    }
+
+    private static void showTop5Albums(final GetTopSongs topAlbums) {
+        ArrayList<Album> albumsToSort = new ArrayList<>();
+        for (Artist artist : artists) {
+            for (Album album : artist.getAlbum()) {
+                int likes = 0;
+                for (Song song : album.getSongs()) {
+                    likes += song.getLikes();
+                }
+                album.setTotalLikes(likes);
+                albumsToSort.add(album);
+            }
+        }
+        albumsToSort.sort(new Comparator<Album>() {
+            @Override
+            public int compare(final Album o1, final Album o2) {
+                return o2.getTotalLikes() - o1.getTotalLikes();
+            }
+        });
+        if (albumsToSort.size() < 5) {
+            for (Album album : albumsToSort) {
+                topAlbums.addResult(album.getName());
+            }
+        } else {
+            for (int i = 0; i < 5; i++) {
+                topAlbums.addResult(albumsToSort.get(i).getName());
+            }
+        }
+
     }
 
     private static void playAlbum(final int timestamp) {

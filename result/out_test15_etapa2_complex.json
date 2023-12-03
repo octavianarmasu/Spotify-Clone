@@ -23747,4 +23747,8 @@
   "command" : "getTop5Songs",
   "timestamp" : 14849,
   "result" : [ "Stairway to Heaven", "Whatever You Need", "Start Me Up", "Black Dog", "Sad But True" ]
+}, {
+  "command" : "getTop5Albums",
+  "timestamp" : 14849,
+  "result" : [ "Blue Dirt", "Heroic Harmonies", "Teen Technology", "Chill Hood", "Groovy Revolution" ]
 } ]

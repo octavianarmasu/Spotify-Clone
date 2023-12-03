@@ -23663,4 +23663,8 @@
   "command" : "getTop5Songs",
   "timestamp" : 14850,
   "result" : [ "Start Me Up", "Don't", "The Unforgiven", "Whatever You Need", "The Man" ]
+}, {
+  "command" : "getTop5Albums",
+  "timestamp" : 14850,
+  "result" : [ "Bad Dirt", "Teen Technology", "Electric View", "Teen Hood", "Alone View" ]
 } ]

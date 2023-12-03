@@ -17,6 +17,9 @@ public class GetTopSongs {
     }
 
 
+    public final void setCommand(final String command) {
+        this.command = command;
+    }
     public final int getTimestamp() {
         return timestamp;
     }

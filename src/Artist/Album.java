@@ -9,6 +9,7 @@ public class Album {
     private int releaseYear;
     private String description;
     private final ArrayList<Song> songs = new ArrayList<>();
+    private int totalLikes = 0;
 
     public Album() {
     }
@@ -60,4 +61,21 @@ public class Album {
     public final void setSongs(final ArrayList<Song> songs) {
         this.songs.addAll(songs);
     }
+
+    /**
+     * Add likes to the total likes of the album.
+     * @param likes the likes to be added
+     */
+    public final void addLikes(final int likes) {
+        this.totalLikes += likes;
+    }
+
+    public final int getTotalLikes() {
+        return totalLikes;
+    }
+
+    public final void setTotalLikes(final int totalLikes) {
+        this.totalLikes = totalLikes;
+    }
+
 }
