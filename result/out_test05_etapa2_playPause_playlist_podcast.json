@@ -31,15 +31,41 @@
   "timestamp" : 50,
   "message" : "The username soundseeker has been added successfully."
 }, {
+  "command" : "addPodcast",
+  "user" : "soundseeker",
+  "timestamp" : 51,
+  "message" : "soundseeker has added new podcast successfully."
+}, {
+  "command" : "addPodcast",
+  "user" : "alice22",
+  "timestamp" : 52,
+  "message" : "alice22 is not a host."
+}, {
+  "command" : "addPodcast",
+  "user" : "soundseeker",
+  "timestamp" : 53,
+  "message" : "soundseeker has added new podcast successfully."
+}, {
+  "command" : "addPodcast",
+  "user" : "soundseeker",
+  "timestamp" : 53,
+  "message" : "soundseekerhas another podcast with the same name."
+}, {
+  "command" : "search",
+  "user" : "alice22",
+  "timestamp" : 55,
+  "message" : "Search returned 1 results",
+  "results" : [ "soundseeker" ]
+}, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 57,
-  "message" : "The selected ID is too high."
+  "message" : "Successfully selected soundseeker's page."
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 58,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
+  "message" : null
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -50,7 +76,7 @@
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 65,
-  "message" : "Successfully selected TED Radio Hour."
+  "message" : "Successfully selected TED Radio Hour's page."
 }, {
   "command" : "load",
   "user" : "alice22",
@@ -71,28 +97,28 @@
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 75,
-  "message" : "Search returned 0 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Auditory Adventures" ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 80,
-  "message" : "The selected ID is too high."
+  "message" : "Successfully selected Auditory Adventures's page."
 }, {
   "command" : "load",
   "user" : "alice22",
   "timestamp" : 85,
-  "message" : "Please select a source before attempting to load."
+  "message" : "Playback loaded successfully."
 }, {
   "command" : "status",
   "user" : "alice22",
   "timestamp" : 86,
   "stats" : {
-    "name" : "",
-    "remainedTime" : 0,
+    "name" : "Exploring Sonic Landscapes",
+    "remainedTime" : 2699,
     "repeat" : "No Repeat",
     "shuffle" : false,
-    "paused" : true
+    "paused" : false
   }
 }, {
   "command" : "playPause",
@@ -104,8 +130,8 @@
   "user" : "alice22",
   "timestamp" : 3201,
   "stats" : {
-    "name" : "",
-    "remainedTime" : 0,
+    "name" : "The Future of Music Technology",
+    "remainedTime" : 2785,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : true
@@ -125,7 +151,7 @@
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 3220,
-  "message" : "Successfully selected Freedom."
+  "message" : "Successfully selected Freedom's page."
 }, {
   "command" : "load",
   "user" : "alice22",
@@ -146,7 +172,7 @@
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 3240,
-  "message" : "Successfully selected Happier."
+  "message" : "Successfully selected Happier's page."
 }, {
   "command" : "load",
   "user" : "alice22",
@@ -177,7 +203,7 @@
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 3260,
-  "message" : "Successfully selected 2010 hits."
+  "message" : "Successfully selected 2010 hits's page."
 }, {
   "command" : "load",
   "user" : "alice22",
@@ -198,7 +224,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 3275,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[2010 hits, ]"
+  "message" : null
 }, {
   "command" : "status",
   "user" : "alice22",

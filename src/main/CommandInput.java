@@ -110,4 +110,8 @@ public class CommandInput {
     public final int getPrice() {
         return price;
     }
+
+    public final EpisodesToAdd[] getEpisodes() {
+        return this.episodes;
+    }
 }

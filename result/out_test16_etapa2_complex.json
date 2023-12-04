@@ -23654,7 +23654,7 @@
 }, {
   "command" : "getAllUsers",
   "timestamp" : 14850,
-  "result" : [ "alice22", "bob35", "carol19", "david27", "emily30", "frank21", "grace25", "henry26", "irene33", "jack29", "jsimpson", "mccarthyluis", "glester", "anthony22", "jacobdean", "amanda16", "cbutler" ]
+  "result" : [ "alice22", "bob35", "carol19", "david27", "emily30", "frank21", "grace25", "henry26", "irene33", "jack29", "jsimpson", "mccarthyluis", "glester", "anthony22", "jacobdean", "amanda16", "cbutler", "barmstrong", "charlesgarcia", "john99", "jenningsbeth", "fwebb", "matthewporter" ]
 }, {
   "command" : "getTop5Playlists",
   "timestamp" : 14850,

@@ -1,5 +1,6 @@
 package main;
 
+import Podcast.EpisodesToAdd;
 import fileio.input.EpisodeInput;
 
 public class Episode {
@@ -11,6 +12,17 @@ public class Episode {
         this.name = episodeInput.getName();
         this.duration = episodeInput.getDuration();
         this.description = episodeInput.getDescription();
+    }
+
+    public Episode(final EpisodesToAdd episodeInput) {
+        this.name = episodeInput.getName();
+        this.duration = episodeInput.getDuration();
+        this.description = episodeInput.getDescription();
+    }
+    public Episode(final String name, final Integer duration, final String description) {
+        this.name = name;
+        this.duration = duration;
+        this.description = description;
     }
 
 

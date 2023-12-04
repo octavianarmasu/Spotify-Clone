@@ -31,6 +31,7 @@ public class User {
     private String userType = "user";
     private String currentPage = "home";
     private int loadAlbum;
+    private int searchHost;
 
 
     public User() {
@@ -65,6 +66,7 @@ public class User {
         this.searchAlbum = user.getSearchAlbum();
         this.searchArtist = user.getSearchArtist();
         this.loadAlbum = user.getLoadAlbum();
+        this.searchHost = user.getSearchHost();
 
     }
 
@@ -316,6 +318,13 @@ public class User {
         this.loadAlbum = loadAlbum;
     }
 
+    public final int getSearchHost() {
+        return this.searchHost;
+    }
+
+    public final void setSearchHost(final int searchHost) {
+        this.searchHost = searchHost;
+    }
 }
 
 
