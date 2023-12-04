@@ -33,4 +33,13 @@ public class Host extends User {
     public final ArrayList<Announcements> getAnnouncements(){
         return announcements;
     }
+
+    public final void removeAnnouncement(final String name) {
+        for (int i = 0; i < announcements.size(); i++) {
+            if (announcements.get(i).getName().equals(name)) {
+                announcements.remove(i);
+                break;
+            }
+        }
+    }
 }

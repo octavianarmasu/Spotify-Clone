@@ -52,6 +52,17 @@
   "timestamp" : 53,
   "message" : "soundseeker has added new podcast successfully."
 }, {
+  "command" : "showPodcasts",
+  "user" : "soundseeker",
+  "timestamp" : 53,
+  "result" : [ {
+    "name" : "Auditory Adventures",
+    "episodes" : [ "Exploring Sonic Landscapes", "The Future of Music Technology", "Cultural Beats" ]
+  }, {
+    "name" : "Harmony & History",
+    "episodes" : [ "The Roots of Blues", "Classical Music's Modern Impact", "Jazz Journeys", "The Folk Revival" ]
+  } ]
+}, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 53,
@@ -60,7 +71,7 @@
   "command" : "addPodcast",
   "user" : "soundseeker",
   "timestamp" : 53,
-  "message" : "soundseekerhas another podcast with the same name."
+  "message" : "soundseeker has another podcast with the same name."
 }, {
   "command" : "select",
   "user" : "jack29",
@@ -134,7 +145,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 90,
-  "message" : "Podcasts:\n\t[Auditory Adventures:\n\t[Exploring Sonic Landscapes - Journey through the world's most unique auditory experiences., The Future of Music Technology - A look into the innovations shaping the future of music production and listening., Cultural Beats - An exploration of how different cultures influence music genres.], Harmony & History]\n\nAnnouncements:\n\t[Announcement1:\n\tPrimul anunt adaugat!\n]"
+  "message" : "Podcasts:\n\t[Auditory Adventures:\n\t[Exploring Sonic Landscapes - Journey through the world's most unique auditory experiences., The Future of Music Technology - A look into the innovations shaping the future of music production and listening., Cultural Beats - An exploration of how different cultures influence music genres.]\n, Harmony & History:\n\t[The Roots of Blues - Tracing the origins and evolution of blues music., Classical Music's Modern Impact - Discussing how classical music continues to influence contemporary artists., Jazz Journeys - Exploring the rich history and vibrant present of jazz music., The Folk Revival - Examining the resurgence of folk music in modern times.]\n]\n\nAnnouncements:\n\t[Announcement1:\n\tPrimul anunt adaugat!\n]"
 }, {
   "command" : "playPause",
   "user" : "alice22",
@@ -214,6 +225,17 @@
   "user" : "magichost",
   "timestamp" : 3247,
   "message" : "The username magichost is already taken."
+}, {
+  "command" : "showPodcasts",
+  "user" : "soundseeker",
+  "timestamp" : 3250,
+  "result" : [ {
+    "name" : "Auditory Adventures",
+    "episodes" : [ "Exploring Sonic Landscapes", "The Future of Music Technology", "Cultural Beats" ]
+  }, {
+    "name" : "Harmony & History",
+    "episodes" : [ "The Roots of Blues", "Classical Music's Modern Impact", "Jazz Journeys", "The Folk Revival" ]
+  } ]
 }, {
   "command" : "follow",
   "user" : "david27",

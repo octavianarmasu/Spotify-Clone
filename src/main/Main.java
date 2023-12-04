@@ -16,7 +16,8 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import fileio.input.*;
 import Artist.Artist;
-import Announcements.Announcements;
+import Host.ShowPodcasts;
+import Host.ResultForPodcast;
 
 import java.io.File;
 
@@ -845,7 +846,7 @@ public final class Main {
                 showAlbums.setTimestamp(command.getTimestamp());
                 showAlbums.setUser(command.getUsername());
                 ResultForAlbum result = new ResultForAlbum();
-                addResultForAlbum(command, result, showAlbums);
+                addResultForAlbum(command, showAlbums);
                 JsonNode selectNode = objectMapper.valueToTree(showAlbums);
                 outputs.add(selectNode);
             }
@@ -936,6 +937,23 @@ public final class Main {
                 JsonNode selectNode = objectMapper.valueToTree(addAnnouncement);
                 outputs.add(selectNode);
             }
+            if (command.getCommand().equals("showPodcasts")) {
+                ShowPodcasts showPodcasts = new ShowPodcasts();
+                showPodcasts.setUser(command.getUsername());
+                showPodcasts.setTimestamp(command.getTimestamp());
+                showPodcastsFunc(showPodcasts, command);
+                JsonNode selectNode = objectMapper.valueToTree(showPodcasts);
+                outputs.add(selectNode);
+            }
+            if (command.getCommand().equals("removeAnnouncement")) {
+                OutputClass removeAnnouncement = new OutputClass();
+                removeAnnouncement.setCommand("removeAnnouncement");
+                removeAnnouncement.setUser(command.getUsername());
+                removeAnnouncement.setTimestamp(command.getTimestamp());
+                removeAnnouncementFunc(command, removeAnnouncement, users);
+                JsonNode selectNode = objectMapper.valueToTree(removeAnnouncement);
+                outputs.add(selectNode);
+            }
 
             previousCommand = command.getCommand();
             player.setTimestamp(command.getTimestamp());
@@ -964,6 +982,63 @@ public final class Main {
 
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
         objectWriter.writeValue(new File(filePathOutput), outputs);
+    }
+
+    private static void removeAnnouncementFunc(final CommandInput command,
+                                               final OutputClass removeAnnouncement,
+                                               final ArrayList<User> users) {
+        int found = 0;
+        for (User user : users) {
+            if (user.getUsername().equals(command.getUsername())) {
+                found = 1;
+                if (!user.getUserType().equals("host")) {
+                    removeAnnouncement.setMessage(command.getUsername() + " is not a host.");
+                    return;
+                }
+            }
+        }
+        for (Host host : hosts) {
+            if (host.getUsername().equals(command.getUsername())) {
+                found = 1;
+                if (checkAnnouncement(host, command) == 0) {
+                    removeAnnouncement.setMessage(command.getUsername()
+                            + " has no announcement with the given name.");
+                    break;
+                }
+                host.removeAnnouncement(command.getName());
+                removeAnnouncement.setMessage(command.getUsername()
+                        + " has successfully deleted the announcement.");
+            }
+        }
+        if (found == 0) {
+            removeAnnouncement.setMessage("The username " + command.getUsername()
+                    + " doesn't exist.");
+        }
+    }
+
+    private static int checkAnnouncement(final Host host, final CommandInput command) {
+        for (Announcements announcement : host.getAnnouncements()) {
+            if (announcement.getName().equals(command.getName())) {
+                return 1;
+            }
+        }
+        return 0;
+    }
+
+    private static void showPodcastsFunc(final ShowPodcasts showPodcasts,
+                                         final CommandInput command) {
+        for (Host host : hosts) {
+            if (host.getUsername().equals(command.getUsername())) {
+                for (Podcasts podcast : host.getPodcasts()) {
+                    ResultForPodcast result = new ResultForPodcast();
+                    result.setName(podcast.getName());
+                    for (Episode episode : podcast.getEpisodes()) {
+                        result.addEpisode(episode.getName());
+                    }
+                    showPodcasts.addResult(result);
+                }
+            }
+        }
     }
 
     private static void addAnnouncementFunc(final CommandInput command,
@@ -1032,7 +1107,7 @@ public final class Main {
                 }
                 if (checkDuplicatePodcast(host, command) == 0) {
                     addPodcast.setMessage(command.getUsername()
-                            + "has another podcast with the same name.");
+                            + " has another podcast with the same name.");
                     break;
                 }
                 if (checkDuplicateEpisode(episodesForPodcast) == 0) {
@@ -1389,12 +1464,15 @@ public final class Main {
                         || user.getCurrentPage().equals("LikedPage")) {
                     printHomePage(printPage, user);
                 } else {
-                    if (user.getSearchArtist() == 1) {
-                        printArtistPage(printPage, user);
-
+                    for (Artist artist : artists) {
+                        if (user.getCurrentPage().equals(artist.getUsername())) {
+                            printArtistPage(printPage, user);
+                        }
                     }
-                    if (user.getSearchHost() == 1) {
-                        printHostPage(printPage, user);
+                    for (Host host : hosts) {
+                        if (user.getCurrentPage().equals(host.getUsername())) {
+                            printHostPage(printPage, user);
+                        }
                     }
                 }
             }
@@ -1407,11 +1485,6 @@ public final class Main {
             if (host.getUsername().equals(user.getCurrentPage())) {
                 printPage.setMessage("Podcasts:\n\t[");
                 for (int i = 0; i < host.getPodcasts().size(); i++) {
-                    if (i == host.getPodcasts().size() - 1) {
-                        printPage.setMessage(printPage.getMessage()
-                                + host.getPodcasts().get(i).getName() + "]\n\n");
-                        break;
-                    }
                     printPage.setMessage(printPage.getMessage()
                             + host.getPodcasts().get(i).getName() + ":\n\t[");
                     for (Podcasts podcast : host.getPodcasts()) {
@@ -1421,7 +1494,7 @@ public final class Main {
                                     printPage.setMessage(printPage.getMessage()
                                             + podcast.getEpisodes().get(j).getName() + " - "
                                             + podcast.getEpisodes().get(j).getDescription()
-                                            + "]");
+                                            + "]\n");
                                     break;
                                 }
                                 printPage.setMessage(printPage.getMessage()
@@ -1432,6 +1505,8 @@ public final class Main {
                     }
                     if (i != host.getPodcasts().size() - 1) {
                         printPage.setMessage(printPage.getMessage() + ", ");
+                    } else {
+                        printPage.setMessage(printPage.getMessage() + "]\n\n");
                     }
                 }
                 printPage.setMessage(printPage.getMessage() + "Announcements:\n\t[");
@@ -1520,12 +1595,12 @@ public final class Main {
         printPage.setMessage(printPage.getMessage() + "]");
     }
 
-    private static void addResultForAlbum(final CommandInput command, ResultForAlbum result,
+    private static void addResultForAlbum(final CommandInput command,
                                           final ShowAlbums showAlbums) {
         for (Artist artist : artists) {
             if (artist.getUsername().equals(command.getUsername())) {
                 for (Album album : artist.getAlbum()) {
-                    result = new ResultForAlbum();
+                    ResultForAlbum result = new ResultForAlbum();
                     result.setName(album.getName());
                     for (Song song : album.getSongs()) {
                         result.addSong(song.getName());
