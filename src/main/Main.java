@@ -1,5 +1,6 @@
 package main;
 
+import Announcements.Announcements;
 import Artist.SongsToAdd;
 import Artist.ShowAlbums;
 import Events.Event;
@@ -15,6 +16,7 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import fileio.input.*;
 import Artist.Artist;
+import Announcements.Announcements;
 
 import java.io.File;
 
@@ -232,6 +234,7 @@ public final class Main {
                     loadSong = 0;
                     loadPodcast = 0;
                     loadPlaylist = 0;
+                    searchHost = 0;
                     if (command.getType().equals("song")) {
                         searchSong = 1;
                         searchSongs(songs, command);
@@ -445,11 +448,12 @@ public final class Main {
                         message = "Playback resumed successfully.";
                         selectPlay.setMessage(message);
                     }
-                } else {
+                }
+                if (loadCheck == 0) {
                     message = "Please load a source before attempting to pause or resume playback";
                     selectPlay.setMessage(message);
                 }
-                if (player.getTimeLeft() == 0) {
+                if (player.getTimeLeft() == 0 && player.getTimeEpisode() == 0) {
                     message = "Please load a source before attempting"
                             + " to pause or resume playback.";
                     selectPlay.setMessage(message);
@@ -923,6 +927,16 @@ public final class Main {
                 outputs.add(selectNode);
             }
 
+            if (command.getCommand().equals("addAnnouncement")) {
+                OutputClass addAnnouncement = new OutputClass();
+                addAnnouncement.setCommand("addAnnouncement");
+                addAnnouncement.setUser(command.getUsername());
+                addAnnouncement.setTimestamp(command.getTimestamp());
+                addAnnouncementFunc(command, addAnnouncement, users);
+                JsonNode selectNode = objectMapper.valueToTree(addAnnouncement);
+                outputs.add(selectNode);
+            }
+
             previousCommand = command.getCommand();
             player.setTimestamp(command.getTimestamp());
             for (User user : users) {
@@ -950,6 +964,48 @@ public final class Main {
 
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
         objectWriter.writeValue(new File(filePathOutput), outputs);
+    }
+
+    private static void addAnnouncementFunc(final CommandInput command,
+                                            final OutputClass addAnnouncement,
+                                            final ArrayList<User> users) {
+        int found = 0;
+        for (User user : users) {
+            if (user.getUsername().equals(command.getUsername())) {
+                found = 1;
+                if (!user.getUserType().equals("host")) {
+                    addAnnouncement.setMessage(command.getUsername() + " is not a host.");
+                    return;
+                }
+            }
+        }
+        for (Host host : hosts) {
+            if (host.getUsername().equals(command.getUsername())) {
+                found = 1;
+                if (checkDuplicateAnnouncement(host, command) == 0) {
+                    addAnnouncement.setMessage(command.getUsername()
+                            + " has already added an announcement with this name.");
+                    break;
+                }
+                Announcements announcement = new Announcements(command.getName(),
+                        command.getDescription());
+                host.addAnnouncement(announcement);
+                addAnnouncement.setMessage(command.getUsername()
+                        + " has successfully added new announcement.");
+            }
+        }
+        if (found == 0) {
+            addAnnouncement.setMessage("User " + command.getUsername() + " doesn't exist.");
+        }
+    }
+
+    private static int checkDuplicateAnnouncement(final Host host, final CommandInput command) {
+        for (Announcements announcement : host.getAnnouncements()) {
+            if (announcement.getName().equals(command.getName())) {
+                return 0;
+            }
+        }
+        return 1;
     }
 
     private static void addPodcastFunc(final CommandInput command, final OutputClass addPodcast,
@@ -1335,6 +1391,7 @@ public final class Main {
                 } else {
                     if (user.getSearchArtist() == 1) {
                         printArtistPage(printPage, user);
+
                     }
                     if (user.getSearchHost() == 1) {
                         printHostPage(printPage, user);
@@ -1347,7 +1404,7 @@ public final class Main {
     private static void printHostPage(final PrintPage printPage, final User user) {
 
         for (Host host : hosts) {
-            if (host.getUsername().equals(user.getUsername())) {
+            if (host.getUsername().equals(user.getCurrentPage())) {
                 printPage.setMessage("Podcasts:\n\t[");
                 for (int i = 0; i < host.getPodcasts().size(); i++) {
                     if (i == host.getPodcasts().size() - 1) {
@@ -1377,8 +1434,17 @@ public final class Main {
                         printPage.setMessage(printPage.getMessage() + ", ");
                     }
                 }
-                printPage.setMessage(printPage.getMessage() + "Announcements\n\t[");
-                
+                printPage.setMessage(printPage.getMessage() + "Announcements:\n\t[");
+                for (int i = 0; i <host.getAnnouncements().size() ; i++) {
+                    printPage.setMessage(printPage.getMessage()
+                            + host.getAnnouncements().get(i).getName() + ":\n\t"
+                            + host.getAnnouncements().get(i).getDescription() + "\n");
+                    if (i != host.getAnnouncements().size() - 1) {
+                        printPage.setMessage(printPage.getMessage() + ", ");
+                    } else {
+                        printPage.setMessage(printPage.getMessage() + "]");
+                    }
+                }
             }
         }
     }

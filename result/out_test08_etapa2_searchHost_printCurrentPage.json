@@ -78,6 +78,11 @@
   "timestamp" : 65,
   "message" : "Successfully selected TED Radio Hour."
 }, {
+  "command" : "addAnnouncement",
+  "user" : "alice22",
+  "timestamp" : 67,
+  "message" : "alice22 is not a host."
+}, {
   "command" : "load",
   "user" : "alice22",
   "timestamp" : 70,
@@ -93,6 +98,11 @@
     "shuffle" : false,
     "paused" : false
   }
+}, {
+  "command" : "addAnnouncement",
+  "user" : "soundseeker",
+  "timestamp" : 74,
+  "message" : "soundseeker has successfully added new announcement."
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -124,12 +134,12 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 90,
-  "message" : null
+  "message" : "Podcasts:\n\t[Auditory Adventures:\n\t[Exploring Sonic Landscapes - Journey through the world's most unique auditory experiences., The Future of Music Technology - A look into the innovations shaping the future of music production and listening., Cultural Beats - An exploration of how different cultures influence music genres.], Harmony & History]\n\nAnnouncements:\n\t[Announcement1:\n\tPrimul anunt adaugat!\n]"
 }, {
   "command" : "playPause",
   "user" : "alice22",
   "timestamp" : 3200,
-  "message" : "Please load a source before attempting to pause or resume playback."
+  "message" : "Playback paused successfully."
 }, {
   "command" : "status",
   "user" : "alice22",
