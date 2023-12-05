@@ -114,4 +114,8 @@ public class CommandInput {
     public final EpisodesToAdd[] getEpisodes() {
         return this.episodes;
     }
+
+    public final String getNextPage() {
+        return this.nextPage;
+    }
 }

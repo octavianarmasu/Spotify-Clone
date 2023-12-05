@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import Artist.Album;
+import Artist.Merch;
 import Events.Event;
 
 public class User {
@@ -338,6 +339,8 @@ public class User {
         List<String> aux = Collections.unmodifiableList(resultToSet);
         this.result = new ArrayList<>(aux);
     }
+
+
 }
 
 

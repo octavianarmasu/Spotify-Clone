@@ -815,7 +815,7 @@ public class CommandRunner {
                 if (connection.equals("offline")) {
                     printPage.setMessage(command.getUsername() + " is offline.");
                 } else {
-                    printPageFunc(printPage, command, users);
+                    printPageFunc(printPage, command, users, songs);
                 }
                 JsonNode selectNode = objectMapper.valueToTree(printPage);
                 outputs.add(selectNode);
@@ -920,6 +920,16 @@ public class CommandRunner {
                 JsonNode selectNode = objectMapper.valueToTree(removeAlbum);
                 outputs.add(selectNode);
             }
+            if (command.getCommand().equals("changePage")) {
+                OutputClass changePage = new OutputClass();
+                changePage.setCommand("changePage");
+                changePage.setUser(command.getUsername());
+                changePage.setTimestamp(command.getTimestamp());
+                currentPage = command.getNextPage();
+                changePageFunc(command, changePage, users);
+                JsonNode selectNode = objectMapper.valueToTree(changePage);
+                outputs.add(selectNode);
+            }
 
             previousCommand = command.getCommand();
             player.setTimestamp(command.getTimestamp());
@@ -942,6 +952,25 @@ public class CommandRunner {
                     user.setLoadAlbum(loadAlbum);
                     user.setSearchHost(searchHost);
                     user.setResult(selectResult);
+                }
+            }
+        }
+    }
+
+    private static void changePageFunc(final CommandInput command, final OutputClass changePage,
+                                       final ArrayList<User> users) {
+        for (User user : users) {
+            if (command.getUsername().equals(user.getUsername())) {
+                if (command.getNextPage().equals("Home")) {
+                    changePage.setMessage(user.getUsername() + " accessed Home successfully.");
+                } else {
+                    if (command.getNextPage().equals("LikedContent")) {
+                        changePage.setMessage(user.getUsername()
+                                + " accessed LikedContent successfully.");;
+                    } else {
+                        changePage.setMessage(user.getUsername()
+                                + " is trying to access a non-existent page.");
+                    }
                 }
             }
         }
@@ -1468,24 +1497,81 @@ public class CommandRunner {
     }
 
     private static void printPageFunc(final PrintPage printPage,
-                                      final CommandInput command, final ArrayList<User> users) {
+                                      final CommandInput command, final ArrayList<User> users,
+                                      final ArrayList<Song> songs) {
 
 
         for (User user : users) {
             if (user.getUsername().equals(command.getUsername())) {
-                if (user.getCurrentPage().equals("home")
-                        || user.getCurrentPage().equals("LikedPage")) {
+                if (user.getCurrentPage().equals("home")) {
                     printHomePage(printPage, user);
                 } else {
-                    for (Artist artist : artists) {
-                        if (user.getCurrentPage().equals(artist.getUsername())) {
-                            printArtistPage(printPage, user);
+                    if (user.getCurrentPage().equals("LikedContent")) {
+                        printLikedContentPage(printPage, user, users, songs);
+                    } else {
+                        for (Artist artist : artists) {
+                            if (user.getCurrentPage().equals(artist.getUsername())) {
+                                printArtistPage(printPage, user);
+                            }
+                        }
+                        for (Host host : hosts) {
+                            if (user.getCurrentPage().equals(host.getUsername())) {
+                                printHostPage(printPage, user);
+                            }
                         }
                     }
-                    for (Host host : hosts) {
-                        if (user.getCurrentPage().equals(host.getUsername())) {
-                            printHostPage(printPage, user);
+                }
+            }
+        }
+    }
+
+    private static void printLikedContentPage(final PrintPage printPage, final User user,
+                                              final ArrayList<User> users,
+                                              final ArrayList<Song> songs) {
+        printPage.setMessage("Liked songs:\n\t[");
+        for (int i = 0; i< user.getLikedSongs().size(); i++) {
+            if (i == user.getLikedSongs().size() - 1) {
+                printPage.setMessage(printPage.getMessage() + user.getLikedSongs().get(i) + " - ");
+                for (Song song : songs) {
+                    if (song.getName().equals(user.getLikedSongs().get(i))) {
+                        printPage.setMessage(printPage.getMessage() + song.getArtist() + "]\n\n");
+                    }
+                }
+                break;
+            }
+            printPage.setMessage(printPage.getMessage() + user.getLikedSongs().get(i) + " - ");
+            for (Song song : songs) {
+                if (song.getName().equals(user.getLikedSongs().get(i))) {
+                    printPage.setMessage(printPage.getMessage() + song.getArtist() + ", ");
+                }
+            }
+        }
+        if (user.getLikedSongs().isEmpty()) {
+            printPage.setMessage(printPage.getMessage() + "]\n\n");
+        }
+        printPage.setMessage(printPage.getMessage() + "Followed playlists:\n\t[");
+        for (int i = 0; i < user.getFollowedPlaylists().size(); i++) {
+            if (i == user.getFollowedPlaylists().size() - 1) {
+                printPage.setMessage(printPage.getMessage()
+                        + user.getFollowedPlaylists().get(i).getName()
+                        + " - ");
+                for (User user1 : users) {
+                    for (Playlist playlist : user1.getPlaylists()) {
+                        if (playlist.getName().equals(user.getFollowedPlaylists().get(i).getName())) {
+                            printPage.setMessage(printPage.getMessage()
+                                    + user1.getUsername() + "]");
                         }
+                    }
+                }
+                break;
+            }
+            printPage.setMessage(printPage.getMessage()
+                    + user.getFollowedPlaylists().get(i).getName()
+                    + " - ");
+            for (User user1 : users) {
+                for (Playlist playlist : user1.getPlaylists()) {
+                    if (playlist.getName().equals(user.getFollowedPlaylists().get(i).getName())) {
+                        printPage.setMessage(printPage.getMessage() + user1.getUsername() + ", ");
                     }
                 }
             }
