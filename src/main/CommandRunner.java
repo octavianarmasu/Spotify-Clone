@@ -925,7 +925,10 @@ public class CommandRunner {
                 changePage.setCommand("changePage");
                 changePage.setUser(command.getUsername());
                 changePage.setTimestamp(command.getTimestamp());
-                currentPage = command.getNextPage();
+                if (command.getNextPage().equals("Home")
+                        || command.getNextPage().equals("LikedContent")) {
+                    currentPage = command.getNextPage();
+                }
                 changePageFunc(command, changePage, users);
                 JsonNode selectNode = objectMapper.valueToTree(changePage);
                 outputs.add(selectNode);
@@ -1308,6 +1311,13 @@ public class CommandRunner {
         }
         if (user.getUserType().equals("user")) {
             deleteUser.setMessage(user.getUsername() + " was successfully deleted.");
+            if (user.getPlaylists() != null) {
+                for (User user1 : users) {
+                    for (Playlist playlist : user.getPlaylists()) {
+                        user1.getFollowedPlaylists().remove(playlist);
+                    }
+                }
+            }
             users.remove(user);
             return;
         }
@@ -1503,7 +1513,8 @@ public class CommandRunner {
 
         for (User user : users) {
             if (user.getUsername().equals(command.getUsername())) {
-                if (user.getCurrentPage().equals("home")) {
+                if (user.getCurrentPage().equals("Home")
+                        || user.getCurrentPage().equals("home")) {
                     printHomePage(printPage, user);
                 } else {
                     if (user.getCurrentPage().equals("LikedContent")) {

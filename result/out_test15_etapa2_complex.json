@@ -8945,7 +8945,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10279,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "bob35",
@@ -9006,7 +9006,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10289,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -9067,7 +9067,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10299,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -9128,7 +9128,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10309,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "emily30",
@@ -9189,7 +9189,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10319,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -9250,7 +9250,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10329,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -9311,7 +9311,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10339,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -9372,7 +9372,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10349,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -9433,7 +9433,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10359,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -9494,7 +9494,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10369,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -9555,7 +9555,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10379,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "bob35",
@@ -9616,7 +9616,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10389,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -9677,7 +9677,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10399,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -9738,7 +9738,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10409,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "emily30",
@@ -9799,7 +9799,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10419,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -9860,7 +9860,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10429,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -9921,7 +9921,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10439,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -9982,7 +9982,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10449,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -10043,7 +10043,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10459,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -10104,7 +10104,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10469,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -10165,7 +10165,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10479,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "bob35",
@@ -10226,7 +10226,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10489,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -10287,7 +10287,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10499,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -10348,7 +10348,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10509,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "emily30",
@@ -10409,7 +10409,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10519,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -10470,7 +10470,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10529,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -10531,7 +10531,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10539,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -10592,7 +10592,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10549,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -10653,7 +10653,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10559,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -10714,7 +10714,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10569,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -10775,7 +10775,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10579,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "bob35",
@@ -10836,7 +10836,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10589,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -10897,7 +10897,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10599,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -10958,7 +10958,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10609,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "emily30",
@@ -11019,7 +11019,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10619,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -11080,7 +11080,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10629,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -11141,7 +11141,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10639,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -11202,7 +11202,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10649,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -11263,7 +11263,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10659,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -11324,7 +11324,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10669,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -11385,7 +11385,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10679,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "bob35",
@@ -11446,7 +11446,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10689,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -11507,7 +11507,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10699,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -11568,7 +11568,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10709,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "emily30",
@@ -11629,7 +11629,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10719,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -11690,7 +11690,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10729,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -11751,7 +11751,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10739,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -11812,7 +11812,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10749,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -11873,7 +11873,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10759,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -11934,7 +11934,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10769,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -11995,7 +11995,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10779,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "bob35",
@@ -12056,7 +12056,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10789,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -12117,7 +12117,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10799,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -12178,7 +12178,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10809,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "emily30",
@@ -12239,7 +12239,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10819,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -12300,7 +12300,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10829,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -12361,7 +12361,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10839,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -12422,7 +12422,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10849,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -12483,7 +12483,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10859,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -12544,7 +12544,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10869,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -12605,7 +12605,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10879,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "bob35",
@@ -12666,7 +12666,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10889,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -12727,7 +12727,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10899,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -12788,7 +12788,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10909,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "emily30",
@@ -12849,7 +12849,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10919,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -12910,7 +12910,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10929,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -12971,7 +12971,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10939,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -13032,7 +13032,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10949,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -13093,7 +13093,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10959,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -13154,7 +13154,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10969,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -13215,7 +13215,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10979,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "bob35",
@@ -13276,7 +13276,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10989,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -13337,7 +13337,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10999,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -13398,7 +13398,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11009,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "emily30",
@@ -13459,7 +13459,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11019,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -13520,7 +13520,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11029,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -13581,7 +13581,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11039,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -13642,7 +13642,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11049,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -13703,7 +13703,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11059,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -13764,7 +13764,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11069,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -13825,7 +13825,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11079,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "bob35",
@@ -13886,7 +13886,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11089,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -13947,7 +13947,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11099,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -14008,7 +14008,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11109,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "emily30",
@@ -14069,7 +14069,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11119,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -14130,7 +14130,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11129,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -14191,7 +14191,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11139,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -14252,7 +14252,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11149,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -14313,7 +14313,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11159,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -14374,7 +14374,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11169,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -14435,7 +14435,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11179,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "bob35",
@@ -14496,7 +14496,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11189,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -14557,7 +14557,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11199,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -14618,7 +14618,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11209,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "emily30",
@@ -14679,7 +14679,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11219,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -14740,7 +14740,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11229,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -14801,7 +14801,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11239,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -14862,7 +14862,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11249,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -14923,7 +14923,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11259,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -14984,7 +14984,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11269,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -15045,7 +15045,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11279,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "bob35",
@@ -15106,7 +15106,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11289,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -15167,7 +15167,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11299,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -15228,7 +15228,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11309,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "emily30",
@@ -15289,7 +15289,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11319,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -15350,7 +15350,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11329,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -15411,7 +15411,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11339,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -15472,7 +15472,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11349,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -15533,7 +15533,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11359,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -15594,7 +15594,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11369,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -15655,7 +15655,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11379,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "bob35",
@@ -15716,7 +15716,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11389,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -15777,7 +15777,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11399,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -15838,7 +15838,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11409,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "emily30",
@@ -15899,7 +15899,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11419,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -15960,7 +15960,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11429,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -16021,7 +16021,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11439,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -16082,7 +16082,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11449,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -16143,7 +16143,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11459,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -16204,7 +16204,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11469,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -16265,7 +16265,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11479,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "bob35",
@@ -16326,7 +16326,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11489,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -16387,7 +16387,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11499,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -16448,7 +16448,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11509,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "emily30",
@@ -16509,7 +16509,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11519,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -16570,7 +16570,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11529,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -16631,7 +16631,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11539,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -16692,7 +16692,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11549,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -16753,7 +16753,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11559,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -16814,7 +16814,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11569,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -16875,7 +16875,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11579,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "bob35",
@@ -16936,7 +16936,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11589,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -16997,7 +16997,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11599,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -17058,7 +17058,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11609,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "emily30",
@@ -17119,7 +17119,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11619,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -17180,7 +17180,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11629,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -17241,7 +17241,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11639,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -17302,7 +17302,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11649,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -17363,7 +17363,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11659,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -17424,7 +17424,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11669,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -17485,7 +17485,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11679,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "bob35",
@@ -17546,7 +17546,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11689,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -17607,7 +17607,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11699,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -17668,7 +17668,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11709,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "emily30",
@@ -17729,7 +17729,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11719,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -17790,7 +17790,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11729,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -17851,7 +17851,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11739,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -17912,7 +17912,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11749,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -17973,7 +17973,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11759,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -18034,7 +18034,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11769,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -18070,7 +18070,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11769,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -18106,7 +18106,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11779,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -18142,7 +18142,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11789,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -18178,7 +18178,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11799,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -18214,7 +18214,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11809,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -18230,7 +18230,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11819,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -18240,7 +18240,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11819,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -18250,7 +18250,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11819,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -18286,7 +18286,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11829,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -18322,7 +18322,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11839,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -18358,7 +18358,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11849,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -18394,7 +18394,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11859,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -18410,7 +18410,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11869,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -18420,7 +18420,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11869,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -18430,7 +18430,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11869,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -18466,7 +18466,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11879,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -18502,7 +18502,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11889,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -18538,7 +18538,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11899,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -18574,7 +18574,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11909,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -18610,7 +18610,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11919,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -18646,7 +18646,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11929,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -18682,7 +18682,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11939,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -18698,7 +18698,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11949,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -18708,7 +18708,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11949,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -18718,7 +18718,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11949,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -18754,7 +18754,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11959,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -18790,7 +18790,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11969,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -18826,7 +18826,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11979,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -18862,7 +18862,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11989,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -18898,7 +18898,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11999,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -18934,7 +18934,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 12009,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -18970,7 +18970,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 12019,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -19006,7 +19006,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 12029,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -19022,7 +19022,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12039,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -19032,7 +19032,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12039,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -19042,7 +19042,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12039,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -19078,7 +19078,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 12049,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -19114,7 +19114,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 12059,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -19150,7 +19150,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 12069,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -19186,7 +19186,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 12079,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -19202,7 +19202,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 12089,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -19212,7 +19212,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 12089,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -19222,7 +19222,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 12089,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -19258,7 +19258,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 12099,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -19294,7 +19294,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 12109,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -19310,7 +19310,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 12119,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -19320,7 +19320,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 12119,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -19330,7 +19330,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 12119,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -19366,7 +19366,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 12129,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -19382,7 +19382,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12139,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -19392,7 +19392,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12139,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -19402,7 +19402,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12139,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -19438,7 +19438,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 12149,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -19454,7 +19454,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 12159,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -19464,7 +19464,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 12159,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -19474,7 +19474,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 12159,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -19510,7 +19510,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 12169,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -19546,7 +19546,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 12179,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -19582,7 +19582,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 12189,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -19618,7 +19618,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 12199,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -19654,7 +19654,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 12209,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -19690,7 +19690,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 12219,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -19726,7 +19726,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 12229,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -19762,7 +19762,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12239,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -19798,7 +19798,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 12249,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -19814,7 +19814,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 12259,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -19824,7 +19824,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 12259,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "jack29",
@@ -19834,7 +19834,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 12259,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -19870,7 +19870,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 12269,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -19906,7 +19906,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 12279,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -19922,7 +19922,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 12289,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -19932,7 +19932,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 12289,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "carol19",
@@ -19942,7 +19942,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 12289,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -19958,7 +19958,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 12299,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "jenningsbeth",
@@ -19968,7 +19968,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 12299,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -19978,7 +19978,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 12299,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -20014,7 +20014,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 12309,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -20050,7 +20050,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 12319,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -20086,7 +20086,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 12329,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -20102,7 +20102,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12339,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -20112,7 +20112,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12339,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -20122,7 +20122,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12339,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -20158,7 +20158,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 12349,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -20194,7 +20194,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 12359,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -20230,7 +20230,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 12369,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -20246,7 +20246,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 12379,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -20256,7 +20256,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 12379,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "bob35",
@@ -20266,7 +20266,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 12379,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -20302,7 +20302,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 12389,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -20338,7 +20338,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 12399,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -20374,7 +20374,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 12409,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -20410,7 +20410,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 12419,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -20446,7 +20446,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 12429,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -20482,7 +20482,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12439,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -20518,7 +20518,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 12449,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -20554,7 +20554,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 12459,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -20570,7 +20570,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 12469,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -20580,7 +20580,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 12469,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -20590,7 +20590,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 12469,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -20626,7 +20626,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 12479,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -20662,7 +20662,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 12489,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -20678,7 +20678,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 12499,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -20688,7 +20688,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 12499,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -20698,7 +20698,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 12499,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -20714,7 +20714,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 12509,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -20724,7 +20724,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 12509,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "emily30",
@@ -20734,7 +20734,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 12509,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -20770,7 +20770,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 12519,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -20806,7 +20806,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 12529,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -20822,7 +20822,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12539,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -20832,7 +20832,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12539,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -20842,7 +20842,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12539,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -20858,7 +20858,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 12549,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -20868,7 +20868,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 12549,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "irene33",
@@ -20878,7 +20878,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 12549,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -20914,7 +20914,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 12559,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -20950,7 +20950,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 12569,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -20986,7 +20986,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 12579,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -21022,7 +21022,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 12589,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -21058,7 +21058,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 12599,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -21094,7 +21094,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 12609,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -21130,7 +21130,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 12619,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -21166,7 +21166,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 12629,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -21182,7 +21182,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12639,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -21192,7 +21192,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12639,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "henry26",
@@ -21202,7 +21202,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12639,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -21238,7 +21238,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 12649,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -21274,7 +21274,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 12659,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -21310,7 +21310,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 12669,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -21346,7 +21346,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 12679,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -21382,7 +21382,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 12689,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -21418,7 +21418,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 12699,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -21454,7 +21454,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 12709,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -21490,7 +21490,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 12719,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -21506,7 +21506,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 12729,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -21516,7 +21516,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 12729,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -21526,7 +21526,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 12729,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -21562,7 +21562,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12739,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -21598,7 +21598,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 12749,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -21634,7 +21634,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 12759,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -21670,7 +21670,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 12769,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -21706,7 +21706,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 12779,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -21742,7 +21742,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 12789,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -21778,7 +21778,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 12799,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -21814,7 +21814,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 12809,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -21850,7 +21850,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 12819,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -21886,7 +21886,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 12829,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -21922,7 +21922,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12839,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -21958,7 +21958,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 12849,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -21994,7 +21994,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 12859,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -22010,7 +22010,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 12869,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -22020,7 +22020,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 12869,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -22030,7 +22030,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 12869,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -22066,7 +22066,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 12879,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -22102,7 +22102,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 12889,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -22138,7 +22138,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 12899,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -22174,7 +22174,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 12909,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -22210,7 +22210,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 12919,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -22246,7 +22246,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 12929,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -22282,7 +22282,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 12939,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -22318,7 +22318,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 12949,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -22354,7 +22354,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 12959,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -22370,7 +22370,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 12969,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -22380,7 +22380,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 12969,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "alice22",
@@ -22390,7 +22390,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 12969,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -22426,7 +22426,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 12979,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -22462,7 +22462,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 12989,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -22478,7 +22478,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 12999,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -22488,7 +22488,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 12999,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -22498,7 +22498,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 12999,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -22534,7 +22534,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 13009,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -22570,7 +22570,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 13019,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -22606,7 +22606,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 13029,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -22642,7 +22642,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 13039,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -22678,7 +22678,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 13049,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -22714,7 +22714,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 13059,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -22750,7 +22750,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 13069,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -22786,7 +22786,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 13079,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -22822,7 +22822,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 13089,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -22858,7 +22858,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 13099,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -22894,7 +22894,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 13109,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -22910,7 +22910,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 13119,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "conniealvarez",
@@ -22920,7 +22920,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 13119,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "frank21",
@@ -22930,7 +22930,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 13119,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -22946,7 +22946,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 13129,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "jenningsbeth",
@@ -22956,7 +22956,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 13129,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "changePage",
   "user" : "grace25",
@@ -22966,7 +22966,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 13129,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -23002,7 +23002,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 13139,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -23038,7 +23038,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 13149,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -23074,7 +23074,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 13159,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -23110,7 +23110,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 13169,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -23146,7 +23146,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 13179,
-  "message" : null
+  "message" : "Liked songs:\n\t[Black Dog, Sad But True]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -23182,7 +23182,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 13189,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -23218,7 +23218,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 13199,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -23254,7 +23254,7 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 13209,
-  "message" : null
+  "message" : "Liked songs:\n\t[Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -23290,7 +23290,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 13219,
-  "message" : null
+  "message" : "Liked songs:\n\t[Stairway to Heaven, Whatever You Need]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -23326,7 +23326,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 13229,
-  "message" : null
+  "message" : "Liked songs:\n\t[Under Pressure, Dream On]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -23362,7 +23362,7 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 13239,
-  "message" : null
+  "message" : "Liked songs:\n\t[Angie]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -23398,7 +23398,7 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 13249,
-  "message" : null
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -23434,7 +23434,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 13259,
-  "message" : null
+  "message" : "Liked songs:\n\t[The Man, Money Trees]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
