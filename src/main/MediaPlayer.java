@@ -226,4 +226,5 @@ public class MediaPlayer {
     public final void setAlbum(final Album album) {
         this.album = album;
     }
+
 }
