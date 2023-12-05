@@ -160,7 +160,7 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 525,
-  "message" : "Liked songs:\n\t[Aurora Harmony]\n\nFollowed playlists:\n\t[]"
+  "message" : "Liked songs:\n\t[Aurora Harmony]\n\nFollowed playlists:\n\t[Playlist bengos]"
 }, {
   "command" : "deleteUser",
   "user" : "sonicpainter",
@@ -283,5 +283,5 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 7900,
-  "message" : "Liked songs:\n\t[Aurora Harmony]\n\nFollowed playlists:\n\t[]"
+  "message" : "Liked songs:\n\t[Aurora Harmony]\n\nFollowed playlists:\n\t[Playlist bengos]"
 } ]

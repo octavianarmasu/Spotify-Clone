@@ -4893,6 +4893,11 @@
   "timestamp" : 5430,
   "message" : "Please load a source before using the shuffle function."
 }, {
+  "command" : "removeAlbum",
+  "user" : "fwebb",
+  "timestamp" : 5434,
+  "message" : "fwebb is not an artist."
+}, {
   "command" : "status",
   "user" : "alice22",
   "timestamp" : 5435,
@@ -4986,6 +4991,11 @@
   "user" : "bob35",
   "timestamp" : 5741,
   "message" : "Please load a source before using the shuffle function."
+}, {
+  "command" : "removeAlbum",
+  "user" : "barmstrong",
+  "timestamp" : 5745,
+  "message" : "barmstrong is not an artist."
 }, {
   "command" : "status",
   "user" : "bob35",
@@ -5081,6 +5091,11 @@
   "timestamp" : 6052,
   "message" : "Please load a source before using the shuffle function."
 }, {
+  "command" : "removeAlbum",
+  "user" : "john99",
+  "timestamp" : 6056,
+  "message" : "john99 is not an artist."
+}, {
   "command" : "status",
   "user" : "carol19",
   "timestamp" : 6057,
@@ -5174,6 +5189,11 @@
   "user" : "david27",
   "timestamp" : 6363,
   "message" : "Please load a source before using the shuffle function."
+}, {
+  "command" : "removeAlbum",
+  "user" : "john99",
+  "timestamp" : 6367,
+  "message" : "john99 is not an artist."
 }, {
   "command" : "status",
   "user" : "david27",
@@ -5269,6 +5289,11 @@
   "timestamp" : 6674,
   "message" : "The loaded source is not a playlist."
 }, {
+  "command" : "removeAlbum",
+  "user" : "jacobdean",
+  "timestamp" : 6678,
+  "message" : "jacobdean can't delete this album."
+}, {
   "command" : "status",
   "user" : "emily30",
   "timestamp" : 6679,
@@ -5362,6 +5387,11 @@
   "user" : "frank21",
   "timestamp" : 6985,
   "message" : "The loaded source is not a playlist."
+}, {
+  "command" : "removeAlbum",
+  "user" : "jacobdean",
+  "timestamp" : 6989,
+  "message" : "jacobdean can't delete this album."
 }, {
   "command" : "status",
   "user" : "frank21",
@@ -5457,6 +5487,11 @@
   "timestamp" : 7296,
   "message" : "The loaded source is not a playlist."
 }, {
+  "command" : "removeAlbum",
+  "user" : "jsimpson",
+  "timestamp" : 7300,
+  "message" : "jsimpson can't delete this album."
+}, {
   "command" : "status",
   "user" : "grace25",
   "timestamp" : 7301,
@@ -5550,6 +5585,11 @@
   "user" : "henry26",
   "timestamp" : 7607,
   "message" : "Please load a source before using the shuffle function."
+}, {
+  "command" : "removeAlbum",
+  "user" : "charlesgarcia",
+  "timestamp" : 7611,
+  "message" : "charlesgarcia is not an artist."
 }, {
   "command" : "status",
   "user" : "henry26",
@@ -5645,6 +5685,11 @@
   "timestamp" : 7918,
   "message" : "The loaded source is not a playlist."
 }, {
+  "command" : "removeAlbum",
+  "user" : "mccarthyluis",
+  "timestamp" : 7922,
+  "message" : "mccarthyluis can't delete this album."
+}, {
   "command" : "status",
   "user" : "irene33",
   "timestamp" : 7923,
@@ -5738,6 +5783,11 @@
   "user" : "jack29",
   "timestamp" : 8229,
   "message" : "Please load a source before using the shuffle function."
+}, {
+  "command" : "removeAlbum",
+  "user" : "matthewporter",
+  "timestamp" : 8233,
+  "message" : "matthewporter is not an artist."
 }, {
   "command" : "status",
   "user" : "jack29",
@@ -6160,7 +6210,7 @@
   "timestamp" : 8830,
   "stats" : {
     "name" : "Start Me Up",
-    "remainedTime" : 15,
+    "remainedTime" : 114,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : true
@@ -6192,7 +6242,7 @@
   "timestamp" : 8850,
   "stats" : {
     "name" : "Start Me Up",
-    "remainedTime" : 297,
+    "remainedTime" : 212,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -6223,8 +6273,8 @@
   "user" : "irene33",
   "timestamp" : 8870,
   "stats" : {
-    "name" : "Sunset Celestial",
-    "remainedTime" : 281,
+    "name" : "The Man",
+    "remainedTime" : 92,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : true
@@ -6332,7 +6382,7 @@
   "timestamp" : 8930,
   "stats" : {
     "name" : "Start Me Up",
-    "remainedTime" : 15,
+    "remainedTime" : 114,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : true
@@ -6348,7 +6398,7 @@
   "timestamp" : 8940,
   "stats" : {
     "name" : "Sad But True",
-    "remainedTime" : 124,
+    "remainedTime" : 224,
     "repeat" : "No Repeat",
     "shuffle" : true,
     "paused" : false
@@ -6395,8 +6445,8 @@
   "user" : "irene33",
   "timestamp" : 8970,
   "stats" : {
-    "name" : "Sunset Celestial",
-    "remainedTime" : 281,
+    "name" : "The Man",
+    "remainedTime" : 92,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : true
@@ -6406,8 +6456,8 @@
   "user" : "irene33",
   "timestamp" : 8970,
   "stats" : {
-    "name" : "Sunset Celestial",
-    "remainedTime" : 281,
+    "name" : "The Man",
+    "remainedTime" : 92,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : true
@@ -6508,7 +6558,7 @@
   "timestamp" : 9030,
   "stats" : {
     "name" : "Start Me Up",
-    "remainedTime" : 15,
+    "remainedTime" : 114,
     "repeat" : "Repeat All",
     "shuffle" : false,
     "paused" : true
@@ -6523,8 +6573,8 @@
   "user" : "frank21",
   "timestamp" : 9040,
   "stats" : {
-    "name" : "Adventure Reflection",
-    "remainedTime" : 130,
+    "name" : "Sad But True",
+    "remainedTime" : 124,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -6540,7 +6590,7 @@
   "timestamp" : 9050,
   "stats" : {
     "name" : "Delicate",
-    "remainedTime" : 32,
+    "remainedTime" : 132,
     "repeat" : "No Repeat",
     "shuffle" : true,
     "paused" : false
@@ -6565,14 +6615,14 @@
   "command" : "prev",
   "user" : "irene33",
   "timestamp" : 9070,
-  "message" : "Returned to previous track successfully. The current track is Night Aurora."
+  "message" : "Returned to previous track successfully. The current track is The Man."
 }, {
   "command" : "status",
   "user" : "irene33",
   "timestamp" : 9070,
   "stats" : {
-    "name" : "Night Aurora",
-    "remainedTime" : 275,
+    "name" : "The Man",
+    "remainedTime" : 190,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -6673,7 +6723,7 @@
   "timestamp" : 9130,
   "stats" : {
     "name" : "Start Me Up",
-    "remainedTime" : 15,
+    "remainedTime" : 114,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : true
@@ -6683,8 +6733,8 @@
   "user" : "frank21",
   "timestamp" : 9140,
   "stats" : {
-    "name" : "Lullaby Starlight",
-    "remainedTime" : 221,
+    "name" : "Sad But True",
+    "remainedTime" : 24,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -6694,8 +6744,8 @@
   "user" : "frank21",
   "timestamp" : 9140,
   "stats" : {
-    "name" : "Lullaby Starlight",
-    "remainedTime" : 221,
+    "name" : "Sad But True",
+    "remainedTime" : 24,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -6710,8 +6760,8 @@
   "user" : "grace25",
   "timestamp" : 9150,
   "stats" : {
-    "name" : "Money Trees",
-    "remainedTime" : 219,
+    "name" : "Delicate",
+    "remainedTime" : 32,
     "repeat" : "No Repeat",
     "shuffle" : true,
     "paused" : true
@@ -6736,7 +6786,7 @@
   "command" : "prev",
   "user" : "irene33",
   "timestamp" : 9170,
-  "message" : "Returned to previous track successfully. The current track is Night Aurora."
+  "message" : "Returned to previous track successfully. The current track is The Man."
 }, {
   "command" : "prev",
   "user" : "irene33",
@@ -6748,7 +6798,7 @@
   "timestamp" : 9170,
   "stats" : {
     "name" : "The Man",
-    "remainedTime" : 275,
+    "remainedTime" : 190,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -6850,7 +6900,7 @@
   "timestamp" : 9230,
   "stats" : {
     "name" : "Start Me Up",
-    "remainedTime" : 275,
+    "remainedTime" : 212,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : false
@@ -6859,14 +6909,14 @@
   "command" : "prev",
   "user" : "frank21",
   "timestamp" : 9240,
-  "message" : "Returned to previous track successfully. The current track is Adventure Reflection."
+  "message" : "Returned to previous track successfully. The current track is Love Story."
 }, {
   "command" : "status",
   "user" : "frank21",
   "timestamp" : 9240,
   "stats" : {
-    "name" : "Adventure Reflection",
-    "remainedTime" : 206,
+    "name" : "Love Story",
+    "remainedTime" : 236,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -6886,8 +6936,8 @@
   "user" : "grace25",
   "timestamp" : 9250,
   "stats" : {
-    "name" : "Money Trees",
-    "remainedTime" : 219,
+    "name" : "Delicate",
+    "remainedTime" : 32,
     "repeat" : "No Repeat",
     "shuffle" : true,
     "paused" : false
@@ -6919,7 +6969,7 @@
   "timestamp" : 9270,
   "stats" : {
     "name" : "The Man",
-    "remainedTime" : 75,
+    "remainedTime" : 90,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -7010,7 +7060,7 @@
   "timestamp" : 9330,
   "stats" : {
     "name" : "Start Me Up",
-    "remainedTime" : 75,
+    "remainedTime" : 112,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : false
@@ -7021,7 +7071,7 @@
   "timestamp" : 9330,
   "stats" : {
     "name" : "Start Me Up",
-    "remainedTime" : 75,
+    "remainedTime" : 112,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : false
@@ -7031,8 +7081,8 @@
   "user" : "frank21",
   "timestamp" : 9340,
   "stats" : {
-    "name" : "Adventure Reflection",
-    "remainedTime" : 6,
+    "name" : "Love Story",
+    "remainedTime" : 136,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -7042,8 +7092,8 @@
   "user" : "frank21",
   "timestamp" : 9340,
   "stats" : {
-    "name" : "Adventure Reflection",
-    "remainedTime" : 6,
+    "name" : "Love Story",
+    "remainedTime" : 136,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -7059,7 +7109,7 @@
   "timestamp" : 9350,
   "stats" : {
     "name" : "Money Trees",
-    "remainedTime" : 19,
+    "remainedTime" : 319,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : false
@@ -7096,7 +7146,7 @@
   "timestamp" : 9370,
   "stats" : {
     "name" : "Delicate",
-    "remainedTime" : 107,
+    "remainedTime" : 222,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : true
@@ -7195,14 +7245,14 @@
   "command" : "next",
   "user" : "emily30",
   "timestamp" : 9430,
-  "message" : "Skipped to next track successfully. The current track is Dream On."
+  "message" : "Skipped to next track successfully. The current track is Love Story."
 }, {
   "command" : "status",
   "user" : "emily30",
   "timestamp" : 9430,
   "stats" : {
-    "name" : "Dream On",
-    "remainedTime" : 267,
+    "name" : "Love Story",
+    "remainedTime" : 236,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : false
@@ -7217,8 +7267,8 @@
   "user" : "frank21",
   "timestamp" : 9440,
   "stats" : {
-    "name" : "Shape of You",
-    "remainedTime" : 39,
+    "name" : "Love Story",
+    "remainedTime" : 36,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -7228,8 +7278,8 @@
   "user" : "frank21",
   "timestamp" : 9440,
   "stats" : {
-    "name" : "Shape of You",
-    "remainedTime" : 39,
+    "name" : "Love Story",
+    "remainedTime" : 36,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -7239,8 +7289,8 @@
   "user" : "grace25",
   "timestamp" : 9450,
   "stats" : {
-    "name" : "Paint It Black",
-    "remainedTime" : 21,
+    "name" : "Money Trees",
+    "remainedTime" : 219,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : false
@@ -7250,8 +7300,8 @@
   "user" : "grace25",
   "timestamp" : 9450,
   "stats" : {
-    "name" : "Paint It Black",
-    "remainedTime" : 21,
+    "name" : "Money Trees",
+    "remainedTime" : 219,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : false
@@ -7289,7 +7339,7 @@
   "timestamp" : 9470,
   "stats" : {
     "name" : "Delicate",
-    "remainedTime" : 288,
+    "remainedTime" : 232,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -7384,8 +7434,8 @@
   "user" : "emily30",
   "timestamp" : 9530,
   "stats" : {
-    "name" : "Dream On",
-    "remainedTime" : 67,
+    "name" : "Love Story",
+    "remainedTime" : 136,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : true
@@ -7394,19 +7444,19 @@
   "command" : "prev",
   "user" : "frank21",
   "timestamp" : 9540,
-  "message" : "Returned to previous track successfully. The current track is Lullaby Starlight."
+  "message" : "Returned to previous track successfully. The current track is The Unforgiven."
 }, {
   "command" : "prev",
   "user" : "frank21",
   "timestamp" : 9540,
-  "message" : "Returned to previous track successfully. The current track is Euphoria Harmonize."
+  "message" : "Returned to previous track successfully. The current track is Love Story."
 }, {
   "command" : "status",
   "user" : "frank21",
   "timestamp" : 9540,
   "stats" : {
-    "name" : "Euphoria Harmonize",
-    "remainedTime" : 213,
+    "name" : "Love Story",
+    "remainedTime" : 236,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -7420,14 +7470,14 @@
   "command" : "prev",
   "user" : "grace25",
   "timestamp" : 9550,
-  "message" : "Returned to previous track successfully. The current track is Harmony Crescendo."
+  "message" : "Returned to previous track successfully. The current track is Money Trees."
 }, {
   "command" : "status",
   "user" : "grace25",
   "timestamp" : 9550,
   "stats" : {
-    "name" : "Harmony Crescendo",
-    "remainedTime" : 252,
+    "name" : "Money Trees",
+    "remainedTime" : 387,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : false
@@ -7454,7 +7504,7 @@
   "timestamp" : 9570,
   "stats" : {
     "name" : "Delicate",
-    "remainedTime" : 88,
+    "remainedTime" : 132,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -7465,7 +7515,7 @@
   "timestamp" : 9570,
   "stats" : {
     "name" : "Delicate",
-    "remainedTime" : 88,
+    "remainedTime" : 132,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -7571,8 +7621,8 @@
   "user" : "emily30",
   "timestamp" : 9630,
   "stats" : {
-    "name" : "Dream On",
-    "remainedTime" : 67,
+    "name" : "Love Story",
+    "remainedTime" : 136,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : false
@@ -7582,8 +7632,8 @@
   "user" : "frank21",
   "timestamp" : 9640,
   "stats" : {
-    "name" : "Euphoria Harmonize",
-    "remainedTime" : 13,
+    "name" : "Love Story",
+    "remainedTime" : 136,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -7593,8 +7643,8 @@
   "user" : "frank21",
   "timestamp" : 9640,
   "stats" : {
-    "name" : "Euphoria Harmonize",
-    "remainedTime" : 13,
+    "name" : "Love Story",
+    "remainedTime" : 136,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -7609,8 +7659,8 @@
   "user" : "grace25",
   "timestamp" : 9650,
   "stats" : {
-    "name" : "Harmony Crescendo",
-    "remainedTime" : 52,
+    "name" : "Money Trees",
+    "remainedTime" : 287,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : false
@@ -7620,8 +7670,8 @@
   "user" : "grace25",
   "timestamp" : 9650,
   "stats" : {
-    "name" : "Harmony Crescendo",
-    "remainedTime" : 52,
+    "name" : "Money Trees",
+    "remainedTime" : 287,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : false
@@ -7652,8 +7702,8 @@
   "user" : "irene33",
   "timestamp" : 9670,
   "stats" : {
-    "name" : "Gimme Shelter",
-    "remainedTime" : 159,
+    "name" : "Delicate",
+    "remainedTime" : 32,
     "repeat" : "Repeat All",
     "shuffle" : false,
     "paused" : false
@@ -7759,19 +7809,19 @@
   "command" : "prev",
   "user" : "emily30",
   "timestamp" : 9730,
-  "message" : "Returned to previous track successfully. The current track is Paradox Pulse."
+  "message" : "Returned to previous track successfully. The current track is Love Story."
 }, {
   "command" : "prev",
   "user" : "emily30",
   "timestamp" : 9730,
-  "message" : "Returned to previous track successfully. The current track is Night Ethereal."
+  "message" : "Returned to previous track successfully. The current track is Start Me Up."
 }, {
   "command" : "status",
   "user" : "emily30",
   "timestamp" : 9730,
   "stats" : {
-    "name" : "Night Ethereal",
-    "remainedTime" : 275,
+    "name" : "Start Me Up",
+    "remainedTime" : 212,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : false
@@ -7786,8 +7836,8 @@
   "user" : "frank21",
   "timestamp" : 9740,
   "stats" : {
-    "name" : "The Unforgiven",
-    "remainedTime" : 199,
+    "name" : "Love Story",
+    "remainedTime" : 36,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -7802,8 +7852,8 @@
   "user" : "grace25",
   "timestamp" : 9750,
   "stats" : {
-    "name" : "Under Pressure",
-    "remainedTime" : 96,
+    "name" : "Money Trees",
+    "remainedTime" : 187,
     "repeat" : "Repeat All",
     "shuffle" : false,
     "paused" : false
@@ -7834,8 +7884,8 @@
   "user" : "irene33",
   "timestamp" : 9770,
   "stats" : {
-    "name" : "Dream Radiance",
-    "remainedTime" : 199,
+    "name" : "Gimme Shelter",
+    "remainedTime" : 203,
     "repeat" : "Repeat Current Song",
     "shuffle" : false,
     "paused" : false
@@ -7924,14 +7974,14 @@
   "command" : "like",
   "user" : "emily30",
   "timestamp" : 9830,
-  "message" : "Like registered successfully."
+  "message" : "Unlike registered successfully."
 }, {
   "command" : "status",
   "user" : "emily30",
   "timestamp" : 9830,
   "stats" : {
-    "name" : "Night Ethereal",
-    "remainedTime" : 75,
+    "name" : "Start Me Up",
+    "remainedTime" : 112,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : false
@@ -7945,14 +7995,14 @@
   "command" : "next",
   "user" : "frank21",
   "timestamp" : 9840,
-  "message" : "Skipped to next track successfully. The current track is Maps."
+  "message" : "Skipped to next track successfully. The current track is Shape of You."
 }, {
   "command" : "status",
   "user" : "frank21",
   "timestamp" : 9840,
   "stats" : {
-    "name" : "Maps",
-    "remainedTime" : 190,
+    "name" : "Shape of You",
+    "remainedTime" : 233,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -7973,7 +8023,7 @@
   "timestamp" : 9850,
   "stats" : {
     "name" : "Money Trees",
-    "remainedTime" : 283,
+    "remainedTime" : 87,
     "repeat" : "Repeat All",
     "shuffle" : false,
     "paused" : true
@@ -8009,8 +8059,8 @@
   "user" : "irene33",
   "timestamp" : 9870,
   "stats" : {
-    "name" : "Odyssey Cascade",
-    "remainedTime" : 220,
+    "name" : "Gimme Shelter",
+    "remainedTime" : 103,
     "repeat" : "Repeat Current Song",
     "shuffle" : true,
     "paused" : false
@@ -8104,14 +8154,14 @@
   "command" : "prev",
   "user" : "emily30",
   "timestamp" : 9930,
-  "message" : "Returned to previous track successfully. The current track is Night Ethereal."
+  "message" : "Returned to previous track successfully. The current track is Start Me Up."
 }, {
   "command" : "status",
   "user" : "emily30",
   "timestamp" : 9930,
   "stats" : {
-    "name" : "Night Ethereal",
-    "remainedTime" : 275,
+    "name" : "Start Me Up",
+    "remainedTime" : 212,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : false
@@ -8121,8 +8171,8 @@
   "user" : "frank21",
   "timestamp" : 9940,
   "stats" : {
-    "name" : "Pandora Adventure",
-    "remainedTime" : 171,
+    "name" : "Shape of You",
+    "remainedTime" : 133,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -8132,8 +8182,8 @@
   "user" : "frank21",
   "timestamp" : 9940,
   "stats" : {
-    "name" : "Pandora Adventure",
-    "remainedTime" : 171,
+    "name" : "Shape of You",
+    "remainedTime" : 133,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -8149,7 +8199,7 @@
   "timestamp" : 9950,
   "stats" : {
     "name" : "Money Trees",
-    "remainedTime" : 283,
+    "remainedTime" : 87,
     "repeat" : "Repeat All",
     "shuffle" : true,
     "paused" : true
@@ -8174,19 +8224,19 @@
   "command" : "prev",
   "user" : "irene33",
   "timestamp" : 9970,
-  "message" : "Returned to previous track successfully. The current track is Dream Radiance."
+  "message" : "Returned to previous track successfully. The current track is Gimme Shelter."
 }, {
   "command" : "prev",
   "user" : "irene33",
   "timestamp" : 9970,
-  "message" : "Returned to previous track successfully. The current track is Sunset Celestial."
+  "message" : "Returned to previous track successfully. The current track is Gimme Shelter."
 }, {
   "command" : "status",
   "user" : "irene33",
   "timestamp" : 9970,
   "stats" : {
-    "name" : "Sunset Celestial",
-    "remainedTime" : 288,
+    "name" : "Gimme Shelter",
+    "remainedTime" : 271,
     "repeat" : "Repeat Current Song",
     "shuffle" : true,
     "paused" : false
@@ -8301,17 +8351,17 @@
   "command" : "next",
   "user" : "frank21",
   "timestamp" : 10040,
-  "message" : "Please load a source before skipping to the next track."
+  "message" : "Skipped to next track successfully. The current track is Maps."
 }, {
   "command" : "status",
   "user" : "frank21",
   "timestamp" : 10040,
   "stats" : {
-    "name" : "",
-    "remainedTime" : 0,
+    "name" : "Maps",
+    "remainedTime" : 190,
     "repeat" : "No Repeat",
     "shuffle" : false,
-    "paused" : true
+    "paused" : false
   }
 }, {
   "command" : "next",
@@ -8355,8 +8405,8 @@
   "user" : "irene33",
   "timestamp" : 10070,
   "stats" : {
-    "name" : "Sunset Celestial",
-    "remainedTime" : 88,
+    "name" : "Gimme Shelter",
+    "remainedTime" : 171,
     "repeat" : "Repeat Current Song",
     "shuffle" : true,
     "paused" : true
@@ -8463,7 +8513,7 @@
   "timestamp" : 10130,
   "stats" : {
     "name" : "Love Story",
-    "remainedTime" : 36,
+    "remainedTime" : 136,
     "repeat" : "Repeat All",
     "shuffle" : false,
     "paused" : false
@@ -8473,22 +8523,22 @@
   "user" : "frank21",
   "timestamp" : 10140,
   "stats" : {
-    "name" : "",
-    "remainedTime" : 0,
+    "name" : "Maps",
+    "remainedTime" : 90,
     "repeat" : "No Repeat",
     "shuffle" : false,
-    "paused" : true
+    "paused" : false
   }
 }, {
   "command" : "status",
   "user" : "frank21",
   "timestamp" : 10140,
   "stats" : {
-    "name" : "",
-    "remainedTime" : 0,
+    "name" : "Maps",
+    "remainedTime" : 90,
     "repeat" : "No Repeat",
     "shuffle" : false,
-    "paused" : true
+    "paused" : false
   }
 }, {
   "command" : "repeat",
@@ -8501,7 +8551,7 @@
   "timestamp" : 10150,
   "stats" : {
     "name" : "Start Me Up",
-    "remainedTime" : 12,
+    "remainedTime" : 112,
     "repeat" : "Repeat Current Song",
     "shuffle" : true,
     "paused" : false
@@ -8531,14 +8581,14 @@
   "command" : "next",
   "user" : "irene33",
   "timestamp" : 10170,
-  "message" : "Skipped to next track successfully. The current track is Sunset Celestial."
+  "message" : "Skipped to next track successfully. The current track is Gimme Shelter."
 }, {
   "command" : "status",
   "user" : "irene33",
   "timestamp" : 10170,
   "stats" : {
-    "name" : "Sunset Celestial",
-    "remainedTime" : 288,
+    "name" : "Gimme Shelter",
+    "remainedTime" : 271,
     "repeat" : "Repeat Current Song",
     "shuffle" : true,
     "paused" : false
@@ -8638,8 +8688,8 @@
   "user" : "emily30",
   "timestamp" : 10230,
   "stats" : {
-    "name" : "Blank Space",
-    "remainedTime" : 67,
+    "name" : "Love Story",
+    "remainedTime" : 36,
     "repeat" : "Repeat All",
     "shuffle" : false,
     "paused" : false
@@ -8649,8 +8699,8 @@
   "user" : "emily30",
   "timestamp" : 10230,
   "stats" : {
-    "name" : "Blank Space",
-    "remainedTime" : 67,
+    "name" : "Love Story",
+    "remainedTime" : 36,
     "repeat" : "Repeat All",
     "shuffle" : false,
     "paused" : false
@@ -8664,17 +8714,17 @@
   "command" : "shuffle",
   "user" : "frank21",
   "timestamp" : 10240,
-  "message" : "Please load a source before using the shuffle function."
+  "message" : "Shuffle function activated successfully."
 }, {
   "command" : "status",
   "user" : "frank21",
   "timestamp" : 10240,
   "stats" : {
-    "name" : "",
-    "remainedTime" : 0,
+    "name" : "Delicate",
+    "remainedTime" : 222,
     "repeat" : "No Repeat",
-    "shuffle" : false,
-    "paused" : true
+    "shuffle" : true,
+    "paused" : false
   }
 }, {
   "command" : "switchVisibility",
@@ -8692,7 +8742,7 @@
   "timestamp" : 10250,
   "stats" : {
     "name" : "Start Me Up",
-    "remainedTime" : 24,
+    "remainedTime" : 12,
     "repeat" : "Repeat Current Song",
     "shuffle" : false,
     "paused" : false
@@ -8717,14 +8767,14 @@
   "command" : "next",
   "user" : "irene33",
   "timestamp" : 10270,
-  "message" : "Skipped to next track successfully. The current track is Sunset Celestial."
+  "message" : "Skipped to next track successfully. The current track is Gimme Shelter."
 }, {
   "command" : "status",
   "user" : "irene33",
   "timestamp" : 10270,
   "stats" : {
-    "name" : "Sunset Celestial",
-    "remainedTime" : 288,
+    "name" : "Gimme Shelter",
+    "remainedTime" : 271,
     "repeat" : "Repeat Current Song",
     "shuffle" : true,
     "paused" : false
@@ -8755,7 +8805,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10280,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -8796,17 +8846,17 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10280,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10280,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10290,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -8847,17 +8897,17 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10290,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10290,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10300,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -8898,17 +8948,17 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10300,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10300,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10310,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -8949,17 +8999,17 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10310,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10310,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10320,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -9000,17 +9050,17 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10320,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10320,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10330,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -9051,17 +9101,17 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10330,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10330,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10340,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -9102,17 +9152,17 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10340,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10340,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10350,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -9153,17 +9203,17 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10350,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10350,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10360,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -9204,17 +9254,17 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10360,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10360,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10370,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -9255,17 +9305,17 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10370,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10370,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10380,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -9306,17 +9356,17 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10380,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10380,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10390,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -9357,17 +9407,17 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10390,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10390,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10400,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -9408,17 +9458,17 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10400,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10400,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10410,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -9459,17 +9509,17 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10410,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10410,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10420,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -9510,17 +9560,17 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10420,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10420,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10430,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -9561,17 +9611,17 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10430,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10430,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10440,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -9612,17 +9662,17 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10440,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10440,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10450,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -9663,17 +9713,17 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10450,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10450,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10460,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -9714,17 +9764,17 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10460,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10460,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10470,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -9765,17 +9815,17 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10470,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10470,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10480,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -9816,17 +9866,17 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10480,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10480,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10490,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -9867,17 +9917,17 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10490,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10490,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10500,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -9918,17 +9968,17 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10500,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10500,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10510,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -9969,17 +10019,17 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10510,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10510,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10520,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -10020,17 +10070,17 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10520,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10520,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10530,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -10071,17 +10121,17 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10530,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10530,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10540,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -10122,17 +10172,17 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10540,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10540,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10550,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -10173,17 +10223,17 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10550,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10550,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10560,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -10224,17 +10274,17 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10560,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10560,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10570,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -10275,17 +10325,17 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10570,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10570,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10580,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -10326,17 +10376,17 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10580,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10580,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10590,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -10377,17 +10427,17 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10590,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10590,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10600,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -10428,17 +10478,17 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10600,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10600,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10610,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -10479,17 +10529,17 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10610,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10610,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10620,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -10530,17 +10580,17 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10620,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10620,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10630,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -10581,17 +10631,17 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10630,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10630,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10640,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -10632,17 +10682,17 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10640,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10640,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10650,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -10683,17 +10733,17 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10650,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10650,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10660,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -10734,17 +10784,17 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10660,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10660,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10670,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -10785,17 +10835,17 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10670,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10670,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10680,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -10836,17 +10886,17 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10680,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10680,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10690,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -10887,17 +10937,17 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10690,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10690,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10700,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -10938,17 +10988,17 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10700,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10700,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10710,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -10989,17 +11039,17 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10710,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10710,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10720,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -11040,17 +11090,17 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10720,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10720,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10730,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -11091,17 +11141,17 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10730,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10730,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10740,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -11142,17 +11192,17 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10740,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10740,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10750,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -11193,17 +11243,17 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10750,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10750,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10760,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -11244,17 +11294,17 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10760,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10760,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10770,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -11295,17 +11345,17 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10770,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10770,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10780,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -11346,17 +11396,17 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10780,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10780,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10790,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -11397,17 +11447,17 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10790,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10790,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10800,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -11448,17 +11498,17 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10800,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10800,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10810,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -11499,17 +11549,17 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10810,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10810,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10820,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -11550,17 +11600,17 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10820,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10820,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10830,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -11601,17 +11651,17 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10830,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10830,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10840,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -11652,17 +11702,17 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10840,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10840,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10850,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -11703,17 +11753,17 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10850,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10850,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10860,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -11754,17 +11804,17 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10860,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10860,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10870,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -11805,17 +11855,17 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10870,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10870,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10880,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -11856,17 +11906,17 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10880,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10880,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10890,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -11907,17 +11957,17 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10890,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10890,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10900,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -11958,17 +12008,17 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10900,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 10900,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10910,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -12009,17 +12059,17 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10910,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 10910,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10920,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -12060,17 +12110,17 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10920,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 10920,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10930,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -12111,17 +12161,17 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10930,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 10930,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10940,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -12162,17 +12212,17 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10940,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 10940,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10950,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -12213,17 +12263,17 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10950,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 10950,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10960,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -12264,17 +12314,17 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10960,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 10960,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10970,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -12315,17 +12365,17 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10970,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 10970,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10980,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -12366,17 +12416,17 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10980,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 10980,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10990,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -12417,17 +12467,17 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10990,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 10990,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11000,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -12468,17 +12518,17 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11000,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11000,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11010,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -12519,17 +12569,17 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11010,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11010,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11020,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -12570,17 +12620,17 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11020,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11020,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11030,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -12621,17 +12671,17 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11030,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11030,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11040,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -12672,17 +12722,17 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11040,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11040,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11050,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -12723,17 +12773,17 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11050,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11050,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11060,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -12774,17 +12824,17 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11060,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11060,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11070,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -12825,17 +12875,17 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11070,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11070,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11080,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -12876,17 +12926,17 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11080,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11080,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11090,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -12927,17 +12977,17 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11090,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11090,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11100,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -12978,17 +13028,17 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11100,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11100,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11110,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -13029,17 +13079,17 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11110,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11110,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11120,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -13080,17 +13130,17 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11120,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11120,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11130,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -13131,17 +13181,17 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11130,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11130,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11140,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -13182,17 +13232,17 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11140,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11140,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11150,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -13233,17 +13283,17 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11150,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11150,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11160,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -13284,17 +13334,17 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11160,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11160,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11170,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -13335,17 +13385,17 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11170,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11170,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11180,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -13386,17 +13436,17 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11180,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11180,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11190,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -13437,17 +13487,17 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11190,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11190,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11200,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -13488,17 +13538,17 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11200,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11200,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11210,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -13539,17 +13589,17 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11210,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11210,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11220,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -13590,17 +13640,17 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11220,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11220,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11230,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -13641,17 +13691,17 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11230,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11230,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11240,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -13692,17 +13742,17 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11240,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11240,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11250,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -13743,17 +13793,17 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11250,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11250,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11260,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -13794,17 +13844,17 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11260,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11260,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11270,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -13845,17 +13895,17 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11270,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11270,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11280,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -13896,17 +13946,17 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11280,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11280,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11290,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -13947,17 +13997,17 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11290,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11290,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11300,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -13998,17 +14048,17 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11300,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11300,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11310,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -14049,17 +14099,17 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11310,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11310,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11320,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -14100,17 +14150,17 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11320,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11320,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11330,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -14151,17 +14201,17 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11330,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11330,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11340,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -14202,17 +14252,17 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11340,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11340,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11350,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -14253,17 +14303,17 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11350,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11350,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11360,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -14304,17 +14354,17 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11360,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11360,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11370,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -14355,17 +14405,17 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11370,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11370,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11380,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -14406,17 +14456,17 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11380,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11380,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11390,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -14457,17 +14507,17 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11390,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11390,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11400,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -14508,17 +14558,17 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11400,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11400,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11410,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -14559,17 +14609,17 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11410,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11410,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11420,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -14610,17 +14660,17 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11420,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11420,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11430,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -14661,17 +14711,17 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11430,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11430,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11440,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -14712,17 +14762,17 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11440,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11440,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11450,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -14763,17 +14813,17 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11450,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11450,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11460,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -14814,17 +14864,17 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11460,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11460,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11470,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -14865,17 +14915,17 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11470,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11470,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11480,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -14916,17 +14966,17 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11480,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11480,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11490,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -14967,17 +15017,17 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11490,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11490,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11500,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -15018,17 +15068,17 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11500,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11500,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11510,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -15069,17 +15119,17 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11510,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11510,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11520,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -15120,17 +15170,17 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11520,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11520,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11530,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -15171,17 +15221,17 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11530,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11530,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11540,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -15222,17 +15272,17 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11540,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11540,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11550,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -15273,17 +15323,17 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11550,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11550,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11560,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -15324,17 +15374,17 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11560,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11560,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11570,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -15375,17 +15425,17 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11570,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11570,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11580,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -15426,17 +15476,17 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11580,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11580,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11590,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -15477,17 +15527,17 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11590,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11590,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11600,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -15528,17 +15578,17 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11600,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11600,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11610,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -15579,17 +15629,17 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11610,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11610,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11620,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -15630,17 +15680,17 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11620,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11620,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11630,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -15681,17 +15731,17 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11630,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11630,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11640,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -15732,17 +15782,17 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11640,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11640,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11650,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -15783,17 +15833,17 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11650,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11650,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11660,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -15834,17 +15884,17 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11660,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11660,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11670,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -15885,17 +15935,17 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11670,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11670,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11680,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -15936,17 +15986,17 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11680,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11680,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11690,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -15987,17 +16037,17 @@
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11690,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 11690,
-  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[Mellow Tunes Trek #1, Breezy Tracks Journey #2, ]"
+  "message" : "Liked songs:\n\t[Paint It Black]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11700,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "carol19",
@@ -16038,17 +16088,17 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11700,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11700,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11710,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -16089,17 +16139,17 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11710,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11710,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11720,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -16140,17 +16190,17 @@
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11720,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "emily30",
   "command" : "printCurrentPage",
   "timestamp" : 11720,
-  "message" : "Liked songs:\n\t[Start Me Up, Night Ethereal]\n\nFollowed playlists:\n\t[Groovy Tunes Journey #1, Dynamic Vibes Quest #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11730,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "frank21",
@@ -16191,17 +16241,17 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11730,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11730,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11740,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -16242,17 +16292,17 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11740,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11740,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11750,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -16293,17 +16343,17 @@
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11750,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "henry26",
   "command" : "printCurrentPage",
   "timestamp" : 11750,
-  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[Dynamic Melodies Dream #1, Electric Beats Dream #2, ]"
+  "message" : "Liked songs:\n\t[Happier]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11760,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -16344,17 +16394,17 @@
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11760,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "irene33",
   "command" : "printCurrentPage",
   "timestamp" : 11760,
-  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[Dynamic Grooves Voyage #1, Stellar Bangers Safari #2, ]"
+  "message" : "Liked songs:\n\t[The Man]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11770,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -16395,12 +16445,12 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11770,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11770,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -16416,7 +16466,7 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11770,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "fwebb",
@@ -16426,12 +16476,12 @@
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11770,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "alice22",
   "command" : "printCurrentPage",
   "timestamp" : 11770,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Electric Rhythms Adventure #1, Mellow Melodies Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -16478,7 +16528,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11790,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "matthewporter",
@@ -16488,12 +16538,12 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11790,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11790,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -16509,7 +16559,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11800,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "john99",
@@ -16519,12 +16569,12 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11800,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11800,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -16571,7 +16621,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11820,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "fwebb",
@@ -16581,12 +16631,12 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11820,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11820,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -16602,7 +16652,7 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11830,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "john99",
@@ -16612,12 +16662,12 @@
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11830,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "grace25",
   "command" : "printCurrentPage",
   "timestamp" : 11830,
-  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[Dynamic Bangers Voyage #1, Classic Rhythms Trek #2, ]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -16695,7 +16745,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11860,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "fwebb",
@@ -16705,12 +16755,12 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11860,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11860,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -16788,7 +16838,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11890,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "charlesgarcia",
@@ -16798,12 +16848,12 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11890,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11890,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -16819,7 +16869,7 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11900,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "john99",
@@ -16829,12 +16879,12 @@
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11900,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
   "timestamp" : 11900,
-  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[Epic Melodies Odyssey #1, Groovy Rhythms Adventure #2, ]"
+  "message" : "Liked songs:\n\t[Don't]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -16881,7 +16931,7 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11920,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "matthewporter",
@@ -16891,12 +16941,12 @@
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11920,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "frank21",
   "command" : "printCurrentPage",
   "timestamp" : 11920,
-  "message" : "Liked songs:\n\t[The Unforgiven]\n\nFollowed playlists:\n\t[Dynamic Sounds Odyssey #1, Dynamic Sounds Dream #2, ]"
+  "message" : "Liked songs:\n\t[Love Story]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -17005,7 +17055,7 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11960,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "charlesgarcia",
@@ -17015,12 +17065,12 @@
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11960,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "jack29",
   "command" : "printCurrentPage",
   "timestamp" : 11960,
-  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[Stellar Tunes Expedition #1, Dynamic Vibes Odyssey #2, ]"
+  "message" : "Liked songs:\n\t[Delicate, Start Me Up]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "alice22",
@@ -17098,7 +17148,7 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11990,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "addAlbum",
   "user" : "matthewporter",
@@ -17108,12 +17158,12 @@
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11990,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "user" : "carol19",
   "command" : "printCurrentPage",
   "timestamp" : 11990,
-  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[Classic Tunes Expedition #1, Vibey Sounds Voyage #2, ]"
+  "message" : "Liked songs:\n\t[Whatever You Need, Blank Space]\n\nFollowed playlists:\n\t[]"
 }, {
   "command" : "search",
   "user" : "david27",
@@ -23550,7 +23600,7 @@
   "command" : "showPreferredSongs",
   "user" : "emily30",
   "timestamp" : 14800,
-  "result" : [ "Start Me Up", "Night Ethereal" ]
+  "result" : [ ]
 }, {
   "command" : "showPlaylists",
   "user" : "frank21",
@@ -23570,7 +23620,7 @@
   "command" : "showPreferredSongs",
   "user" : "frank21",
   "timestamp" : 14810,
-  "result" : [ "The Unforgiven" ]
+  "result" : [ "Love Story" ]
 }, {
   "command" : "showPlaylists",
   "user" : "grace25",
@@ -23662,9 +23712,9 @@
 }, {
   "command" : "getTop5Songs",
   "timestamp" : 14850,
-  "result" : [ "Start Me Up", "Don't", "The Unforgiven", "Whatever You Need", "The Man" ]
+  "result" : [ "Don't", "Whatever You Need", "Start Me Up", "The Man", "Delicate" ]
 }, {
   "command" : "getTop5Albums",
   "timestamp" : 14850,
-  "result" : [ "Bad Dirt", "Teen Technology", "Electric View", "Teen Hood", "Alone View" ]
+  "result" : [ "Teen Technology", "Electric View", "Teen Hood", "Alone View", "Teen Funeral " ]
 } ]

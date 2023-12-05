@@ -1,4 +1,5 @@
 package main;
+
 import Announcements.Announcements;
 import Artist.SongsToAdd;
 import Artist.ShowAlbums;
@@ -7,18 +8,14 @@ import OnlineUsers.AddUser;
 import OnlineUsers.GetUsers;
 import Podcast.EpisodesToAdd;
 import PrintCurrentPage.PrintPage;
-import checker.Checker;
-import checker.CheckerConstants;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import fileio.input.*;
 import Artist.Artist;
 import Host.ShowPodcasts;
 import Host.ResultForPodcast;
 
-import java.io.File;
 
 import Artist.Merch;
 import Host.Host;
@@ -26,17 +23,14 @@ import Host.Host;
 import Artist.ResultForAlbum;
 import Artist.Album;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+
 public class CommandRunner {
-    static final int MAGIGNUM = 5;
+    static final int MAGICNUM = 5;
     static final int PODCASTNUM = 90;
-    static ArrayList<String> selectResult = new ArrayList<>();
+    //static ArrayList<String> selectResult = new ArrayList<>();
     static ArrayList<Artist> artists = new ArrayList<>();
     static ArrayList<Host> hosts = new ArrayList<>();
     static ArrayList<String> results = new ArrayList<>();
@@ -47,7 +41,6 @@ public class CommandRunner {
     }
 
     public static void setVariables() {
-        selectResult.clear();
         artists.clear();
         hosts.clear();
         results.clear();
@@ -59,9 +52,10 @@ public class CommandRunner {
 
     /**
      * Solve the homework
+     *
      * @param commands the list of commands
-     * @param outputs the list of outputs
-     * @param library the library
+     * @param outputs  the list of outputs
+     * @param library  the library
      * @throws ParseException in case of exceptions to parsing
      */
     public static void Solution(final CommandInput[] commands, final ArrayNode outputs,
@@ -107,7 +101,7 @@ public class CommandRunner {
         int loadAlbum;
         String connection;
         int searchHost;
-        String userType;
+        ArrayList<String> selectResult;
         String previousCommand = null;
         User username = null;
         for (CommandInput command : commands) {
@@ -144,6 +138,7 @@ public class CommandRunner {
             loadAlbum = username.getLoadAlbum();
             searchHost = username.getSearchHost();
             player = username.getMediaPlayer();
+            selectResult = username.getResult();
             if (loadCheck == 1 && loadSong == 1 && player.getPlay() == 1
                     && connection.equals("online")) {
                 playSongs(songs, command.getTimestamp());
@@ -156,7 +151,8 @@ public class CommandRunner {
             if (loadPodcast == 1 && player.getPlay() == 1 && connection.equals("online")) {
                 loadPodcasts(command.getTimestamp());
             }
-            if (loadPlaylist == 1 && player.getPlay() == 1 && connection.equals("online")) {
+            if (loadCheck == 1 && loadPlaylist == 1
+                    && player.getPlay() == 1 && connection.equals("online")) {
                 playPlaylist(songs, command.getTimestamp());
                 if (player.getPlaylist() == null || player.getTimeLeft() == 0) {
                     loadCheck = 0;
@@ -170,7 +166,6 @@ public class CommandRunner {
                     loadAlbum = 0;
                 }
             }
-
             if (command.getCommand().equals("search")) {
                 results.clear();
                 if (connection.equals("offline")) {
@@ -180,6 +175,7 @@ public class CommandRunner {
                     JsonNode searchNode = objectMapper.valueToTree(searchFile);
                     outputs.add(searchNode);
                 } else {
+                    selectResult.clear();
                     searchArtist = 0;
                     searchAlbum = 0;
                     select = 0;
@@ -193,6 +189,7 @@ public class CommandRunner {
                     loadPodcast = 0;
                     loadPlaylist = 0;
                     searchHost = 0;
+                    loadAlbum = 0;
                     if (command.getType().equals("song")) {
                         searchSong = 1;
                         searchSongs(songs, command);
@@ -223,7 +220,8 @@ public class CommandRunner {
                         String owner = command.getFilters().getOwner();
                         for (User user : users) {
                             for (Playlist playlist : user.getPlaylists()) {
-                                playlist.verifyName(command, results, user, command.getUsername());
+                                playlist.verifyName(command, results, user,
+                                        command.getUsername());
                             }
                         }
                         if (owner != null) {
@@ -270,7 +268,7 @@ public class CommandRunner {
                     if (command.getType().equals("host")) {
                         searchHost = 1;
                         for (Host host : hosts) {
-                            if(host.getUsername().startsWith(command.getFilters().getName())) {
+                            if (host.getUsername().startsWith(command.getFilters().getName())) {
                                 results.add(host.getUsername());
                             }
                         }
@@ -313,6 +311,7 @@ public class CommandRunner {
 
                     } else {
                         select = 1;
+                        player.setPlay(0);
                         player.setRepeat(0);
                         message = "Successfully selected " + selectResult.get(number - 1) + ".";
                         if (searchArtist == 1 || searchHost == 1) {
@@ -324,17 +323,17 @@ public class CommandRunner {
                         selectOutput.setMessage(message);
                         selectOutput.setSuccessfulSelect(true);
                         if (searchSong == 1) {
-                            chooseSong(number, songs);
+                            chooseSong(number, songs, selectResult);
                         } else {
                             if (searchPlaylist == 1) {
-                                choosePlaylist(number, users, playlists, songs);
+                                choosePlaylist(number, users, songs, selectResult);
                                 selectPlaylist = 1;
                             }
                             if (searchPodcast == 1) {
-                                choosePodcast(number, podcasts);
+                                choosePodcast(number, podcasts, selectResult);
                             }
                             if (searchAlbum == 1) {
-                                chooseAlbum(number, artists);
+                                chooseAlbum(number, selectResult);
                             }
                         }
                         searchCount = 0;
@@ -506,11 +505,13 @@ public class CommandRunner {
                 }
                 if (loadSong == 0 && (loadPlaylist == 1 || loadPodcast == 1)) {
                     addRemovePlaylist.setMessage("The loaded source is not a song.");
+                    break;
                 }
-                if (loadCheck == 1 && loadSong == 1) {
+                if (loadCheck == 1) {
                     for (User user : users) {
                         if (user.getUsername().equals(command.getUsername())) {
-                            if (user.getPlaylists() != null && command.getPlaylistId() > user.getPlaylists().size()) {
+                            if (user.getPlaylists() != null
+                                    && command.getPlaylistId() > user.getPlaylists().size()) {
                                 addRemovePlaylist.setMessage("The specified "
                                         + "playlist does not exist.");
                             } else {
@@ -910,6 +911,15 @@ public class CommandRunner {
                 JsonNode selectNode = objectMapper.valueToTree(removeAnnouncement);
                 outputs.add(selectNode);
             }
+            if (command.getCommand().equals("removeAlbum")) {
+                OutputClass removeAlbum = new OutputClass();
+                removeAlbum.setCommand("removeAlbum");
+                removeAlbum.setUser(command.getUsername());
+                removeAlbum.setTimestamp(command.getTimestamp());
+                removeAlbumFunc(command, removeAlbum, users, songs);
+                JsonNode selectNode = objectMapper.valueToTree(removeAlbum);
+                outputs.add(selectNode);
+            }
 
             previousCommand = command.getCommand();
             player.setTimestamp(command.getTimestamp());
@@ -931,10 +941,63 @@ public class CommandRunner {
                     user.setSearchArtist(searchArtist);
                     user.setLoadAlbum(loadAlbum);
                     user.setSearchHost(searchHost);
+                    user.setResult(selectResult);
                 }
             }
         }
     }
+
+    private static void removeAlbumFunc(final CommandInput command,
+                                        final OutputClass removeAlbum,
+                                        final ArrayList<User> users, final ArrayList<Song> songs) {
+        int found = 0;
+        User artistFound = null;
+        for (User user : users) {
+            if (user.getUsername().equals(command.getUsername())) {
+                found = 1;
+                if (!user.getUserType().equals("artist")) {
+                    removeAlbum.setMessage(command.getUsername() + " is not an artist.");
+                    return;
+                } else {
+                    artistFound = new User(user);
+                }
+            }
+        }
+        for (Artist artist : artists) {
+            if (artist.getUsername().equals(command.getUsername())) {
+                found = 1;
+                if (checkAlbum(artist, command) == 0) {
+                    removeAlbum.setMessage(command.getUsername()
+                            + " doesn't have an album with the given name.  ");
+                    break;
+                }
+
+                if (checkPlaying(command, users, songs, artistFound) == 1) {
+                    removeAlbum.setMessage(command.getUsername()
+                            + " can't delete this album.");
+                    break;
+                }
+                artist.removeAlbum(command.getName());
+                removeAlbum.setMessage(command.getUsername()
+                        + " deleted the album successfully.");
+            }
+        }
+        if (found == 0) {
+            removeAlbum.setMessage("The username " + command.getUsername()
+                    + " doesn't exist.");
+        }
+
+    }
+
+    private static int checkAlbum(final Artist artist, final CommandInput command) {
+        for (Album album : artist.getAlbum()) {
+            if (album.getName().equals(command.getName())) {
+                return 1;
+            }
+        }
+        return 0;
+    }
+
     private static void removeAnnouncementFunc(final CommandInput command,
                                                final OutputClass removeAnnouncement,
                                                final ArrayList<User> users) {
@@ -1162,13 +1225,12 @@ public class CommandRunner {
         }
     }
 
-    private static void chooseAlbum(final int number, final ArrayList<Artist> artists) {
+    private static void chooseAlbum(final int number, final ArrayList<String> selectResult ) {
         for (Artist artist : artists) {
             for (Album album : artist.getAlbum()) {
                 String aux = selectResult.get(number - 1);
                 if (album.getName().equals(aux)) {
                     player.setAlbum(album);
-                    player.getAlbum().setName(album.getName());
                     player.setSong(album.getSongs().get(0).getName());
                     player.setSongNumber(0);
                     player.setTimeLeft(album.getSongs().get(0).getDuration());
@@ -1461,7 +1523,7 @@ public class CommandRunner {
                     }
                 }
                 printPage.setMessage(printPage.getMessage() + "Announcements:\n\t[");
-                for (int i = 0; i <host.getAnnouncements().size() ; i++) {
+                for (int i = 0; i < host.getAnnouncements().size(); i++) {
                     printPage.setMessage(printPage.getMessage()
                             + host.getAnnouncements().get(i).getName() + ":\n\t"
                             + host.getAnnouncements().get(i).getDescription() + "\n");
@@ -1540,10 +1602,18 @@ public class CommandRunner {
         }
         printPage.setMessage(printPage.getMessage()
                 + "]\n\nFollowed playlists:\n\t[");
-        for (Playlist playlist : user.getPlaylists()) {
-            printPage.setMessage(printPage.getMessage() + playlist.getName() + ", ");
+        for (int i = 0; i < user.getFollowedPlaylists().size(); i++) {
+            if (i == user.getFollowedPlaylists().size() - 1) {
+                printPage.setMessage(printPage.getMessage()
+                        + user.getFollowedPlaylists().get(i).getName() + "]");
+                break;
+            }
+            printPage.setMessage(printPage.getMessage()
+                    + user.getFollowedPlaylists().get(i).getName() + ", ");
         }
-        printPage.setMessage(printPage.getMessage() + "]");
+        if (user.getFollowedPlaylists().isEmpty()) {
+            printPage.setMessage(printPage.getMessage() + "]");
+        }
     }
 
     private static void addResultForAlbum(final CommandInput command,
@@ -1684,7 +1754,8 @@ public class CommandRunner {
         }
     }
 
-    private static void choosePodcast(final int number, final ArrayList<Podcasts> podcasts) {
+    private static void choosePodcast(final int number, final ArrayList<Podcasts> podcasts,
+                                      final ArrayList<String> selectResult) {
         for (Podcasts podcast : podcasts) {
             if (podcast.getName().equals(selectResult.get(number - 1))) {
                 if (player.getPodcast() != null) {
@@ -1704,7 +1775,8 @@ public class CommandRunner {
         }
     }
 
-    private static void chooseSong(final int number, final ArrayList<Song> songs) {
+    private static void chooseSong(final int number, final ArrayList<Song> songs,
+                                   final ArrayList<String> selectResult) {
         player.setSong(selectResult.get(number - 1));
         for (Song song : songs) {
             if (song.getName().equals(selectResult.get(number - 1))) {
@@ -1714,8 +1786,8 @@ public class CommandRunner {
     }
 
     private static void choosePlaylist(final int number, final ArrayList<User> users,
-                                       final ArrayList<Playlist> playlists,
-                                       final ArrayList<Song> songs) {
+                                       final ArrayList<Song> songs,
+                                       final ArrayList<String> selectResult) {
         int found = 0;
         for (User user : users) {
             for (Playlist playlist : user.getPlaylists()) {
@@ -1745,8 +1817,8 @@ public class CommandRunner {
         List<Song> copySong = new ArrayList<>(songs);
         copySong.sort(Comparator.comparingInt(Song::getLikes).reversed());
 
-        if (copySong.size() > MAGIGNUM) {
-            copySong = copySong.subList(0, MAGIGNUM);
+        if (copySong.size() > MAGICNUM) {
+            copySong = copySong.subList(0, MAGICNUM);
         }
         for (Song song : copySong) {
             topSongs.addResult(song.getName());
@@ -1781,8 +1853,8 @@ public class CommandRunner {
             }
         }
         List<Playlist> copyPlaylist1 = copyPlaylist;
-        if (copyPlaylist.size() > MAGIGNUM) {
-            copyPlaylist1 = copyPlaylist.subList(0, MAGIGNUM);
+        if (copyPlaylist.size() > MAGICNUM) {
+            copyPlaylist1 = copyPlaylist.subList(0, MAGICNUM);
         }
         for (Playlist playlist : copyPlaylist1) {
             topPlaylist.addResult(playlist.getName());
@@ -1874,16 +1946,15 @@ public class CommandRunner {
      * changes the length of the result array to 5
      */
     public static ArrayList<String> checkSize() {
-        if (results.size() > MAGIGNUM) {
-            return new ArrayList<String>(results.subList(0, MAGIGNUM));
+        if (results.size() > MAGICNUM) {
+            return new ArrayList<String>(results.subList(0, MAGICNUM));
         }
         return results;
     }
 
     /**
      * plays playlist
-     *
-     * @param songs            arraylist of songs
+     * @param songs arraylist of songs
      * @param currentTimestamp current timestamp
      */
     public static void playPlaylist(final ArrayList<Song> songs, final int currentTimestamp) {
@@ -1892,6 +1963,9 @@ public class CommandRunner {
             player.delTime(time);
         }
         if (player.getTimeLeft() <= 0) {
+            if (currentTimestamp == 1035){
+                System.out.println("Nu ar treb sa intre aici");
+            }
             if (player.getRepeat() == 0) {
                 int remainedTime = player.getTimeLeft() * (-1);
                 player.nextSong();

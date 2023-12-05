@@ -233,7 +233,7 @@
   "user" : "rhythmicrider58",
   "command" : "printCurrentPage",
   "timestamp" : 3300,
-  "message" : "Liked songs:\n\t[Synth Symphony]\n\nFollowed playlists:\n\t[]"
+  "message" : "Liked songs:\n\t[Synth Symphony]\n\nFollowed playlists:\n\t[My favourite songs]"
 }, {
   "command" : "status",
   "user" : "emily30",
@@ -322,5 +322,5 @@
   "user" : "rhythmicrider58",
   "command" : "printCurrentPage",
   "timestamp" : 7000,
-  "message" : "Liked songs:\n\t[Shape of You]\n\nFollowed playlists:\n\t[]"
+  "message" : "Liked songs:\n\t[Shape of You]\n\nFollowed playlists:\n\t[My favourite songs]"
 } ]

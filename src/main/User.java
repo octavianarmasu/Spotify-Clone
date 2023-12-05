@@ -1,6 +1,7 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import Artist.Album;
@@ -32,6 +33,7 @@ public class User {
     private String currentPage = "home";
     private int loadAlbum;
     private int searchHost;
+    private ArrayList<String> result = new ArrayList<>();
 
 
     public User() {
@@ -67,6 +69,7 @@ public class User {
         this.searchArtist = user.getSearchArtist();
         this.loadAlbum = user.getLoadAlbum();
         this.searchHost = user.getSearchHost();
+        this.result = user.getResult();
 
     }
 
@@ -324,6 +327,16 @@ public class User {
 
     public final void setSearchHost(final int searchHost) {
         this.searchHost = searchHost;
+    }
+
+    public final ArrayList<String> getResult() {
+        return this.result;
+    }
+
+    public final void setResult(final ArrayList<String> resultToSet) {
+
+        List<String> aux = Collections.unmodifiableList(resultToSet);
+        this.result = new ArrayList<>(aux);
     }
 }
 

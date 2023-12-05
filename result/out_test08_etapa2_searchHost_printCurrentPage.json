@@ -219,7 +219,7 @@
   "command" : "select",
   "user" : "david27",
   "timestamp" : 3247,
-  "message" : "Successfully selected Happier."
+  "message" : "Successfully selected 2010 hits."
 }, {
   "command" : "addUser",
   "user" : "magichost",
@@ -254,7 +254,7 @@
     "name" : "2010 hits",
     "songs" : [ "Freedom", "Happier" ],
     "visibility" : "public",
-    "followers" : 0
+    "followers" : 1
   } ]
 }, {
   "command" : "search",
@@ -334,7 +334,7 @@
     "name" : "2010 hits",
     "songs" : [ "Freedom", "Happier" ],
     "visibility" : "public",
-    "followers" : 0
+    "followers" : 1
   } ]
 }, {
   "command" : "deleteUser",

@@ -79,4 +79,13 @@ public class Artist extends User {
             }
         }
     }
+
+    public final void removeAlbum(final String name) {
+        for (Album album : this.album) {
+            if (album.getName().equals(name)) {
+                this.album.remove(album);
+                break;
+            }
+        }
+    }
 }
