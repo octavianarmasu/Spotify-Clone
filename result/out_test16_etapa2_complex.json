@@ -5247,8 +5247,8 @@
   "user" : "emily30",
   "timestamp" : 6649,
   "stats" : {
-    "name" : null,
-    "remainedTime" : 0,
+    "name" : "Soul Pandora",
+    "remainedTime" : 192,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5263,8 +5263,8 @@
   "user" : "emily30",
   "timestamp" : 6659,
   "stats" : {
-    "name" : null,
-    "remainedTime" : 0,
+    "name" : "Soul Pandora",
+    "remainedTime" : 187,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5298,8 +5298,8 @@
   "user" : "emily30",
   "timestamp" : 6679,
   "stats" : {
-    "name" : null,
-    "remainedTime" : 0,
+    "name" : "Soul Pandora",
+    "remainedTime" : 172,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5314,8 +5314,8 @@
   "user" : "emily30",
   "timestamp" : 6934,
   "stats" : {
-    "name" : null,
-    "remainedTime" : 0,
+    "name" : "Adventure Infinity",
+    "remainedTime" : 125,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5346,8 +5346,8 @@
   "user" : "frank21",
   "timestamp" : 6960,
   "stats" : {
-    "name" : null,
-    "remainedTime" : 0,
+    "name" : "Crescendo Twilight",
+    "remainedTime" : 225,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5362,8 +5362,8 @@
   "user" : "frank21",
   "timestamp" : 6970,
   "stats" : {
-    "name" : null,
-    "remainedTime" : 0,
+    "name" : "Crescendo Twilight",
+    "remainedTime" : 220,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5397,8 +5397,8 @@
   "user" : "frank21",
   "timestamp" : 6990,
   "stats" : {
-    "name" : null,
-    "remainedTime" : 0,
+    "name" : "Crescendo Twilight",
+    "remainedTime" : 205,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5413,8 +5413,8 @@
   "user" : "frank21",
   "timestamp" : 7245,
   "stats" : {
-    "name" : null,
-    "remainedTime" : 0,
+    "name" : "Odyssey Reflection",
+    "remainedTime" : 222,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5445,8 +5445,8 @@
   "user" : "grace25",
   "timestamp" : 7271,
   "stats" : {
-    "name" : null,
-    "remainedTime" : 0,
+    "name" : "Harmony Love",
+    "remainedTime" : 292,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5461,8 +5461,8 @@
   "user" : "grace25",
   "timestamp" : 7281,
   "stats" : {
-    "name" : null,
-    "remainedTime" : 0,
+    "name" : "Harmony Love",
+    "remainedTime" : 287,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5496,8 +5496,8 @@
   "user" : "grace25",
   "timestamp" : 7301,
   "stats" : {
-    "name" : null,
-    "remainedTime" : 0,
+    "name" : "Harmony Love",
+    "remainedTime" : 272,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5512,8 +5512,8 @@
   "user" : "grace25",
   "timestamp" : 7556,
   "stats" : {
-    "name" : null,
-    "remainedTime" : 0,
+    "name" : "Harmony Love",
+    "remainedTime" : 17,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5643,8 +5643,8 @@
   "user" : "irene33",
   "timestamp" : 7893,
   "stats" : {
-    "name" : null,
-    "remainedTime" : 0,
+    "name" : "Night Aurora",
+    "remainedTime" : 270,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5659,8 +5659,8 @@
   "user" : "irene33",
   "timestamp" : 7903,
   "stats" : {
-    "name" : null,
-    "remainedTime" : 0,
+    "name" : "Night Aurora",
+    "remainedTime" : 265,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5694,8 +5694,8 @@
   "user" : "irene33",
   "timestamp" : 7923,
   "stats" : {
-    "name" : null,
-    "remainedTime" : 0,
+    "name" : "Night Aurora",
+    "remainedTime" : 250,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5710,8 +5710,8 @@
   "user" : "irene33",
   "timestamp" : 8178,
   "stats" : {
-    "name" : null,
-    "remainedTime" : 0,
+    "name" : "Sunset Celestial",
+    "remainedTime" : 283,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -9019,17 +9019,17 @@
   "command" : "like",
   "user" : "david27",
   "timestamp" : 10310,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "command" : "next",
   "user" : "david27",
   "timestamp" : 10310,
-  "message" : "Please load a source before skipping to the next track."
+  "message" : null
 }, {
   "command" : "like",
   "user" : "david27",
   "timestamp" : 10310,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
@@ -9629,17 +9629,17 @@
   "command" : "like",
   "user" : "david27",
   "timestamp" : 10410,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "command" : "next",
   "user" : "david27",
   "timestamp" : 10410,
-  "message" : "Please load a source before skipping to the next track."
+  "message" : null
 }, {
   "command" : "like",
   "user" : "david27",
   "timestamp" : 10410,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
@@ -10849,17 +10849,17 @@
   "command" : "like",
   "user" : "david27",
   "timestamp" : 10610,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "command" : "next",
   "user" : "david27",
   "timestamp" : 10610,
-  "message" : "Please load a source before skipping to the next track."
+  "message" : null
 }, {
   "command" : "like",
   "user" : "david27",
   "timestamp" : 10610,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
@@ -12069,17 +12069,17 @@
   "command" : "like",
   "user" : "david27",
   "timestamp" : 10810,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "command" : "next",
   "user" : "david27",
   "timestamp" : 10810,
-  "message" : "Please load a source before skipping to the next track."
+  "message" : null
 }, {
   "command" : "like",
   "user" : "david27",
   "timestamp" : 10810,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
@@ -12679,17 +12679,17 @@
   "command" : "like",
   "user" : "david27",
   "timestamp" : 10910,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "command" : "next",
   "user" : "david27",
   "timestamp" : 10910,
-  "message" : "Please load a source before skipping to the next track."
+  "message" : null
 }, {
   "command" : "like",
   "user" : "david27",
   "timestamp" : 10910,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
@@ -13289,17 +13289,17 @@
   "command" : "like",
   "user" : "david27",
   "timestamp" : 11010,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "command" : "next",
   "user" : "david27",
   "timestamp" : 11010,
-  "message" : "Please load a source before skipping to the next track."
+  "message" : null
 }, {
   "command" : "like",
   "user" : "david27",
   "timestamp" : 11010,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
@@ -13899,17 +13899,17 @@
   "command" : "like",
   "user" : "david27",
   "timestamp" : 11110,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "command" : "next",
   "user" : "david27",
   "timestamp" : 11110,
-  "message" : "Please load a source before skipping to the next track."
+  "message" : null
 }, {
   "command" : "like",
   "user" : "david27",
   "timestamp" : 11110,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
@@ -14509,17 +14509,17 @@
   "command" : "like",
   "user" : "david27",
   "timestamp" : 11210,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "command" : "next",
   "user" : "david27",
   "timestamp" : 11210,
-  "message" : "Please load a source before skipping to the next track."
+  "message" : null
 }, {
   "command" : "like",
   "user" : "david27",
   "timestamp" : 11210,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
@@ -15119,17 +15119,17 @@
   "command" : "like",
   "user" : "david27",
   "timestamp" : 11310,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "command" : "next",
   "user" : "david27",
   "timestamp" : 11310,
-  "message" : "Please load a source before skipping to the next track."
+  "message" : null
 }, {
   "command" : "like",
   "user" : "david27",
   "timestamp" : 11310,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
@@ -15729,17 +15729,17 @@
   "command" : "like",
   "user" : "david27",
   "timestamp" : 11410,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "command" : "next",
   "user" : "david27",
   "timestamp" : 11410,
-  "message" : "Please load a source before skipping to the next track."
+  "message" : null
 }, {
   "command" : "like",
   "user" : "david27",
   "timestamp" : 11410,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
@@ -16339,17 +16339,17 @@
   "command" : "like",
   "user" : "david27",
   "timestamp" : 11510,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "command" : "next",
   "user" : "david27",
   "timestamp" : 11510,
-  "message" : "Please load a source before skipping to the next track."
+  "message" : null
 }, {
   "command" : "like",
   "user" : "david27",
   "timestamp" : 11510,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",
@@ -16949,17 +16949,17 @@
   "command" : "like",
   "user" : "david27",
   "timestamp" : 11610,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "command" : "next",
   "user" : "david27",
   "timestamp" : 11610,
-  "message" : "Please load a source before skipping to the next track."
+  "message" : null
 }, {
   "command" : "like",
   "user" : "david27",
   "timestamp" : 11610,
-  "message" : "Please load a source before liking or unliking."
+  "message" : "Loaded source is not a song."
 }, {
   "user" : "david27",
   "command" : "printCurrentPage",

@@ -150,6 +150,10 @@ public class CommandRunner {
             searchHost = username.getSearchHost();
             player = username.getMediaPlayer();
             selectResult = username.getResult();
+            if ( command.getCommand().equals("forward")
+                    && command.getTimestamp() == 3120) {
+                System.out.println("aici " + player.getSong() + " " + player.getTimeLeft());
+            }
             if (loadCheck == 1 && loadSong == 1 && player.getPlay() == 1
                     && connection.equals("online")) {
                 playSongs(songs, command.getTimestamp());
@@ -172,7 +176,7 @@ public class CommandRunner {
             }
             if (loadAlbum == 1 && player.getPlay() == 1 && connection.equals("online")) {
                 playAlbum(command.getTimestamp());
-                if (player.getPlaylist() == null || player.getTimeLeft() == 0) {
+                if (player.getAlbum() == null || player.getTimeLeft() == 0) {
                     loadCheck = 0;
                     loadAlbum = 0;
                 }
@@ -198,9 +202,9 @@ public class CommandRunner {
                     loadCheck = 0;
                     loadSong = 0;
                     loadPodcast = 0;
+                    loadAlbum = 0;
                     loadPlaylist = 0;
                     searchHost = 0;
-                    loadAlbum = 0;
                     if (command.getType().equals("song")) {
                         searchSong = 1;
                         searchSongs(songs, command);
@@ -446,6 +450,10 @@ public class CommandRunner {
                         stats.setRemainedTime(player.getTimeEpisode());
                     }
                     if (loadPlaylist == 1) {
+                        stats.setName(player.song);
+                        stats.setRemainedTime(player.getTimeLeft());
+                    }
+                    if (loadAlbum == 1) {
                         stats.setName(player.song);
                         stats.setRemainedTime(player.getTimeLeft());
                     }
