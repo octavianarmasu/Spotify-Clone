@@ -42,4 +42,14 @@ public class Host extends User {
             }
         }
     }
+
+    public final void removePodcast(final String name) {
+        for (int i = 0; i < podcasts.size(); i++) {
+            if (podcasts.get(i).getName().equals(name)) {
+                podcasts.remove(i);
+                break;
+            }
+        }
+
+    }
 }

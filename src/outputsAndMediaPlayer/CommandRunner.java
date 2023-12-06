@@ -873,7 +873,7 @@ public class CommandRunner {
                 deleteUser.setCommand("deleteUser");
                 deleteUser.setUser(command.getUsername());
                 deleteUser.setTimestamp(command.getTimestamp());
-                deleteUserFunc(command, deleteUser, users, songs);
+                deleteUserFunc(command, deleteUser, users, songs, podcasts);
                 JsonNode selectNode = objectMapper.valueToTree(deleteUser);
                 outputs.add(selectNode);
             }
@@ -945,6 +945,16 @@ public class CommandRunner {
                 outputs.add(selectNode);
             }
 
+            if (command.getCommand().equals("removePodcast")) {
+                OutputClass removePodcast = new OutputClass();
+                removePodcast.setCommand("removePodcast");
+                removePodcast.setUser(command.getUsername());
+                removePodcast.setTimestamp(command.getTimestamp());
+                removePodcastFunc(command, removePodcast, users, podcasts);
+                JsonNode selectNode = objectMapper.valueToTree(removePodcast);
+                outputs.add(selectNode);
+            }
+
             previousCommand = command.getCommand();
             player.setTimestamp(command.getTimestamp());
             for (User user : users) {
@@ -969,6 +979,78 @@ public class CommandRunner {
                 }
             }
         }
+    }
+
+    private static void removePodcastFunc(final CommandInput command,
+                                          final OutputClass removePodcast,
+                                          final ArrayList<User> users,
+                                          final ArrayList<Podcasts> podcasts) {
+        int found = 0;
+        for (User user : users) {
+            if (user.getUsername().equals(command.getUsername())) {
+                found = 1;
+                if (!user.getUserType().equals("host")) {
+                    removePodcast.setMessage(command.getUsername() + " is not a host.");
+                    return;
+                }
+            }
+        }
+        for (Host host : hosts) {
+            if (host.getUsername().equals(command.getUsername())) {
+                found = 1;
+                if (checkPodcast(host, command) == 0) {
+                    removePodcast.setMessage(command.getUsername()
+                            + " doesn't have a podcast with the given name.");
+                    break;
+                }
+                if (checkPlayingPodcast(command, users) == 1) {
+                    removePodcast.setMessage(command.getUsername()
+                            + " can't delete this podcast.");
+                    break;
+                }
+                host.removePodcast(command.getName());
+                removePodcast.setMessage(command.getUsername()
+                        + " deleted the podcast successfully.");
+                for (Podcasts podcasts1 : podcasts) {
+                    if (podcasts1.getName().equals(command.getName())) {
+                        podcasts.remove(podcasts1);
+                        break;
+                    }
+                }
+
+            }
+        }
+        if (found == 0) {
+            removePodcast.setMessage("The username " + command.getUsername()
+                    + " doesn't exist.");
+        }
+    }
+
+    private static int checkPlayingPodcast(final CommandInput command,
+                                           final ArrayList<User> users) {
+        for (User user : users) {
+            if (user.getMediaPlayer() != null) {
+                if (user.getMediaPlayer().getPodcast() != null) {
+                    if (user.getLoadPodcast() == 1) {
+                        player = user.getMediaPlayer();
+                        loadPodcasts(command.getTimestamp());
+                    }
+                    if (user.getMediaPlayer().getPodcast().getName().equals(command.getName())) {
+                        return 1;
+                    }
+                }
+            }
+        }
+        return 0;
+    }
+
+    private static int checkPodcast(final Host host, final CommandInput command) {
+        for (Podcasts podcast : host.getPodcasts()) {
+            if (podcast.getName().equals(command.getName())) {
+                return 1;
+            }
+        }
+        return 0;
     }
 
     private static void changePageFunc(final CommandInput command, final OutputClass changePage,
@@ -1314,7 +1396,8 @@ public class CommandRunner {
 
     private static void deleteUserFunc(final CommandInput command,
                                        final OutputClass deleteUser, final ArrayList<User> users,
-                                       final ArrayList<Song> songs) {
+                                       final ArrayList<Song> songs,
+                                       final ArrayList<Podcasts> podcasts) {
         User user = SearchUser(command, users);
         if (user == null) {
             deleteUser.setMessage("The username " + command.getUsername() + " doesn't exist.");
@@ -1326,6 +1409,19 @@ public class CommandRunner {
                 for (User user1 : users) {
                     for (Playlist playlist : user.getPlaylists()) {
                         user1.getFollowedPlaylists().remove(playlist);
+                    }
+                }
+                if (user.getFollowedPlaylists() != null) {
+                    for (Playlist playlist : user.getFollowedPlaylists()) {
+                        for (User user1 : users) {
+                            if (user1.getPlaylists().contains(playlist)) {
+                                for (Playlist playlist1 : user1.getPlaylists()) {
+                                    if (playlist1.equals(playlist)) {
+                                        playlist1.setFollowers(playlist1.getFollowers() - 1);
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1356,7 +1452,46 @@ public class CommandRunner {
                 }
             }
         }
+        if (user.getUserType().equals("host")) {
+            if (checkPlayingHost(command, users, podcasts) == 1) {
+                deleteUser.setMessage(user.getUsername() + " can't be deleted.");
+                return;
+            }
+            deleteUser.setMessage(user.getUsername() + " was successfully deleted.");
+            users.remove(user);
+            for (Host host : hosts) {
+                if (host.getUsername().equals(command.getUsername())) {
+                    hosts.remove(host);
+                    break;
+                }
+            }
+            podcasts.removeIf(podcast -> podcast.getOwner().equals(command.getUsername()));
+        }
 
+    }
+
+    private static int checkPlayingHost(final CommandInput command,
+                                        final ArrayList<User> users,
+                                        final ArrayList<Podcasts> podcasts) {
+        for (User user : users) {
+            if (user.getMediaPlayer() != null) {
+                if (user.getMediaPlayer().getPodcast() != null) {
+                    if (user.getLoadPodcast() == 1) {
+                        player = user.getMediaPlayer();
+                        loadPodcasts(command.getTimestamp());
+                    }
+                    for (Podcasts podcast : podcasts) {
+                        String podcastName = user.getMediaPlayer().getPodcast().getName();
+                        if (podcastName.equals(podcast.getName())) {
+                            if (podcast.getOwner().equals(command.getUsername())) {
+                                return 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return 0;
     }
 
     private static int checkPlaying(final CommandInput command,
