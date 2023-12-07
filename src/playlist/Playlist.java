@@ -17,6 +17,7 @@ public class Playlist {
     private int followers = 0;
 
     private int timestamp;
+    private String owner;
 
     public Playlist() {
     }
@@ -130,5 +131,13 @@ public class Playlist {
 
     public final int getTimestamp() {
         return this.timestamp;
+    }
+
+    public final void setOwner(final String owner) {
+        this.owner = owner;
+    }
+
+    public final String getOwner() {
+        return this.owner;
     }
 }

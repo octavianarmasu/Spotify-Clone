@@ -19,7 +19,7 @@ public class MediaPlayer {
     private String episode;
     private int episodeNumber;
     private int timeEpisode;
-    private int repeat;
+    private int repeat = 0;
     private int shuffle;
     private final Playlist oldPlaylist = new Playlist();
     private int timestamp;

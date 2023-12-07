@@ -67,7 +67,7 @@ public class Shuffle {
             this.message = "Please load a source before using the shuffle function.";
         } else {
             if (loadPlaylist == 0 && loadAlbum == 0) {
-                this.message = "The loaded source is not a playlist.";
+                this.message = "The loaded source is not a playlist or an album.";
 
             } else {
                 if (mediaPlayer.getTimeLeft() == 0) {

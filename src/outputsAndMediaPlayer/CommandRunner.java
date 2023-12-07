@@ -113,7 +113,6 @@ public class CommandRunner {
         String connection;
         int searchHost;
         ArrayList<String> selectResult;
-        String previousCommand = null;
         User username = null;
         for (CommandInput command : commands) {
             if (command.getCommand().equals("addUser")) {
@@ -201,6 +200,7 @@ public class CommandRunner {
                     loadAlbum = 0;
                     loadPlaylist = 0;
                     searchHost = 0;
+                    player.setSong("");
                     if (command.getType().equals("song")) {
                         searchSong = 1;
                         searchSongs(songs, command);
@@ -323,7 +323,6 @@ public class CommandRunner {
                     } else {
                         select = 1;
                         player.setPlay(0);
-                        player.setRepeat(0);
                         message = "Successfully selected " + selectResult.get(number - 1) + ".";
                         if (searchArtist == 1 || searchHost == 1) {
                             message = "Successfully selected " + selectResult.get(number - 1)
@@ -360,11 +359,9 @@ public class CommandRunner {
                 loadOutput.setCommand("load");
                 loadOutput.setTimestamp(command.getTimestamp());
                 loadOutput.setUser(command.getUsername());
-                assert previousCommand != null;
                 if (select == 0) {
                     message = "Please select a source before attempting to load.";
                     loadOutput.setMessage(message);
-                    player.setRepeat(0);
                 } else {
                     if (selectOutput.successfulSelect == 0) {
                         message = "Please select a source before attempting to load.";
@@ -491,6 +488,7 @@ public class CommandRunner {
                             }
                         }
                         if (create == 1) {
+                            playlist.setOwner(command.getUsername());
                             user.addPlaylist(playlist);
                             playlists.add(playlist);
                             playlistOutput.setMessage("Playlist created successfully.");
@@ -499,9 +497,11 @@ public class CommandRunner {
                             Playlist auxPlaylist = new Playlist(playlist.getName(),
                                     changedSongs, playlist.getVisibility(),
                                     playlist.getFollowers());
+                            auxPlaylist.setOwner(playlist.getOwner());
                             user.addOldPlaylistUser(auxPlaylist);
                             user.getPlaylists().get(user.getPlaylists().size() - 1)
                                     .setTimestamp(command.getTimestamp());
+
                         }
 
                     }
@@ -987,7 +987,6 @@ public class CommandRunner {
                 outputs.add(selectNode);
             }
 
-            previousCommand = command.getCommand();
             player.setTimestamp(command.getTimestamp());
             for (User user : users) {
                 if (command.getUsername() != null) {
@@ -1014,6 +1013,7 @@ public class CommandRunner {
             }
         }
     }
+
 
     private static void removeEventFunc(final CommandInput command, final OutputClass removeEvent,
                                         final ArrayList<User> users) {
@@ -1479,6 +1479,10 @@ public class CommandRunner {
         if (user.getUserType().equals("user")) {
             deleteUser.setMessage(user.getUsername() + " was successfully deleted.");
             if (user.getPlaylists() != null) {
+                if (checkPlaylist(users, user, command, songs) == 1) {
+                    deleteUser.setMessage(user.getUsername() + " can't be deleted.");
+                    return;
+                }
                 for (User user1 : users) {
                     for (Playlist playlist : user.getPlaylists()) {
                         user1.getFollowedPlaylists().remove(playlist);
@@ -1506,10 +1510,14 @@ public class CommandRunner {
                 deleteUser.setMessage(user.getUsername() + " can't be deleted.");
                 return;
             }
-            deleteUser.setMessage(user.getUsername() + " was successfully deleted.");
-            users.remove(user);
+            if (checkPage(users, user) == 1) {
+                deleteUser.setMessage(user.getUsername() + " can't be deleted.");
+                return;
+            }
             for (Artist artist : artists) {
                 if (artist.getUsername().equals(command.getUsername())) {
+                    deleteUser.setMessage(user.getUsername() + " was successfully deleted.");
+                    users.remove(user);
                     artists.remove(artist);
                     break;
                 }
@@ -1530,6 +1538,10 @@ public class CommandRunner {
                 deleteUser.setMessage(user.getUsername() + " can't be deleted.");
                 return;
             }
+            if (checkPage(users, user) == 1) {
+                deleteUser.setMessage(user.getUsername() + " can't be deleted.");
+                return;
+            }
             deleteUser.setMessage(user.getUsername() + " was successfully deleted.");
             users.remove(user);
             for (Host host : hosts) {
@@ -1541,6 +1553,49 @@ public class CommandRunner {
             podcasts.removeIf(podcast -> podcast.getOwner().equals(command.getUsername()));
         }
 
+    }
+
+    private static int checkPlaylist(final ArrayList<User> users, final User owner,
+                                     final CommandInput command, final ArrayList<Song> songs) {
+
+        for (User user : users) {
+            if (command.getTimestamp() == 1500 && command.getUsername().equals("melodicwanderer")
+            && user.getUsername().equals("carol19")) {
+                System.out.println("sunt aici " + user.getMediaPlayer().getRepeat());
+            }
+            if (user.getMediaPlayer() != null) {
+                if (user.getMediaPlayer().getSong() != null) {
+                    if (user.getLoadPlaylist() == 1) {
+                        player = user.getMediaPlayer();
+                        if (player.getPlay() == 1) {
+                            playPlaylist(songs, command.getTimestamp());
+                        }
+                        if (player.getPlaylist() != null) {
+                            for (Playlist playlist : owner.getPlaylists()) {
+                                if (user.getMediaPlayer().getPlaylist().getName() != null) {
+                                    if (user.getMediaPlayer().getPlaylist().getName().equals(playlist.getName())) {
+                                        return 1;
+                                    }
+                                }
+                            }
+                        } else {
+                            user.setLoadCheck(0);
+                            user.setLoadPlaylist(0);
+                        }
+                    }
+                }
+            }
+        }
+        return 0;
+    }
+
+    private static int checkPage(final ArrayList<User> users, User userToDelete) {
+        for (User user: users) {
+            if (user.getCurrentPage().equals(userToDelete.getUsername())) {
+                return 1;
+            }
+        }
+        return 0;
     }
 
     private static int checkPlayingHost(final CommandInput command,
@@ -2333,46 +2388,28 @@ public class CommandRunner {
                 player.nextSong();
                 if (player.getSongNumber() == player.getPlaylist().getSongs().size()) {
                     player.setSongNumber(0);
-                    String aux = player.getPlaylist().getSongs().get(player.getSongNumber());
-                    player.setSong(aux);
-                    for (Song song : songs) {
-                        if (song.getName().equals(player.getSong())) {
-                            player.setTimeLeft(song.getDuration());
-                        }
+                }
+                String aux = player.getPlaylist().getSongs().get(player.getSongNumber());
+                player.setSong(aux);
+                for (Song song : songs) {
+                    if (song.getName().equals(player.getSong())) {
+                        player.setTimeLeft(song.getDuration());
                     }
-                    player.delTime(remainedTime);
-                } else {
-
+                }
+                player.delTime(remainedTime);
+                while (player.getTimeLeft() <= 0) {
+                    int remainedTime1 = player.getTimeLeft() * (-1);
+                    player.nextSong();
+                    if (player.getSongNumber() == player.getPlaylist().getSongs().size()) {
+                        player.setSongNumber(0);
+                    }
                     player.setSong(player.getPlaylist().getSongs().get(player.getSongNumber()));
                     for (Song song : songs) {
                         if (song.getName().equals(player.getSong())) {
                             player.setTimeLeft(song.getDuration());
                         }
                     }
-                    player.delTime(remainedTime);
-                    while (player.getTimeLeft() <= 0) {
-                        int remainedTime1 = player.getTimeLeft() * (-1);
-                        player.nextSong();
-                        if (player.getPlaylist().getSongs().size() - 1 >= player.getSongNumber()) {
-                            player.setSong(player.getPlaylist().getSongs().get(player.getSongNumber()));
-                            for (Song song : songs) {
-                                if (song.getName().equals(player.getSong())) {
-                                    player.setTimeLeft(song.getDuration());
-                                }
-                            }
-                            player.delTime(remainedTime1);
-                        } else {
-                            player.setSongNumber(0);
-                            String aux = player.getPlaylist().getSongs().get(player.getSongNumber());
-                            player.setSong(aux);
-                            for (Song song : songs) {
-                                if (song.getName().equals(player.getSong())) {
-                                    player.setTimeLeft(song.getDuration());
-                                }
-                            }
-                            player.delTime(remainedTime1);
-                        }
-                    }
+                    player.delTime(remainedTime1);
                 }
             }
 
@@ -2394,7 +2431,6 @@ public class CommandRunner {
                     }
                     player.delTime(remainedTime1);
                 }
-
             }
         }
     }
@@ -2402,7 +2438,7 @@ public class CommandRunner {
     /**
      * plays songs
      *
-     * @param songs            arraylist of songs
+     * @param songs arraylist of songs
      * @param currentTimestamp current timestamp
      */
     public static void playSongs(final ArrayList<Song> songs, final int currentTimestamp) {
