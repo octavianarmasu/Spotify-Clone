@@ -253,7 +253,7 @@
   "command" : "deleteUser",
   "user" : "melodicwanderer",
   "timestamp" : 1500,
-  "message" : "melodicwanderer was successfully deleted."
+  "message" : "melodicwanderer can't be deleted."
 }, {
   "command" : "deleteUser",
   "user" : "musicmaven",
@@ -263,7 +263,7 @@
   "command" : "repeat",
   "user" : "carol19",
   "timestamp" : 7200,
-  "message" : "Please load a source before setting the repeat status."
+  "message" : "Repeat mode changed to repeat current song."
 }, {
   "command" : "deleteUser",
   "user" : "sonicpainter",
@@ -273,7 +273,7 @@
   "command" : "repeat",
   "user" : "carol19",
   "timestamp" : 7505,
-  "message" : "Please load a source before setting the repeat status."
+  "message" : "Repeat mode changed to no repeat."
 }, {
   "command" : "deleteUser",
   "user" : "melodicwanderer",

@@ -149,10 +149,13 @@ public class CommandRunner {
             searchHost = username.getSearchHost();
             player = username.getMediaPlayer();
             selectResult = username.getResult();
+            if (command.getTimestamp() == 4350 && command.getUsername().equals("emily30")) {
+                System.out.println("sunt aici " + player.getSong());
+            }
             if (loadCheck == 1 && loadSong == 1 && player.getPlay() == 1
                     && connection.equals("online")) {
                 playSongs(songs, command.getTimestamp());
-                if (player.getSong() == null) {
+                if (player.getSong() == null || player.getTimeLeft() == 0) {
                     loadCheck = 0;
                     loadSong = 0;
                 }
@@ -458,11 +461,8 @@ public class CommandRunner {
                 stats.changeShuffle(player.getShuffle(), loadSong, loadPodcast,
                         loadPlaylist, loadAlbum);
                 if (loadCheck == 0) {
-                    player.setPlay(0);
-                    player.setTimeLeft(0);
-                    player.setSong("");
-                    stats.setName(player.song);
-                    stats.setRemainedTime(player.getTimeLeft());
+                    stats.setName("");
+                    stats.setRemainedTime(0);
                 }
                 stats.setPaused(player.getPlay() != 1);
                 status.setStats(stats);
@@ -890,6 +890,7 @@ public class CommandRunner {
                 JsonNode selectNode = objectMapper.valueToTree(getAllUsers);
                 outputs.add(selectNode);
             }
+
             if (command.getCommand().equals("deleteUser")) {
                 OutputClass deleteUser = new OutputClass();
                 deleteUser.setCommand("deleteUser");
@@ -1559,10 +1560,6 @@ public class CommandRunner {
                                      final CommandInput command, final ArrayList<Song> songs) {
 
         for (User user : users) {
-            if (command.getTimestamp() == 1500 && command.getUsername().equals("melodicwanderer")
-            && user.getUsername().equals("carol19")) {
-                System.out.println("sunt aici " + user.getMediaPlayer().getRepeat());
-            }
             if (user.getMediaPlayer() != null) {
                 if (user.getMediaPlayer().getSong() != null) {
                     if (user.getLoadPlaylist() == 1) {
