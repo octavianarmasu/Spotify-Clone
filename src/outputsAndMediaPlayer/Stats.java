@@ -77,14 +77,16 @@ public class Stats {
      */
 
     public final void changeShuffle(final int shuffleCheck, final int loadsong,
-                                    final int loadpodcast, final int loadplaylist) {
+                                    final int loadpodcast, final int loadplaylist, int loadAlbum) {
         if (shuffleCheck == 0) {
             this.shuffle = false;
         } else {
             if (loadsong == 1 || loadpodcast == 1) {
                 this.shuffle = false;
             }
-            this.shuffle = loadplaylist == 1;
+           if (loadplaylist == 1 || loadAlbum == 1) {
+               this.shuffle = true;
+           }
         }
     }
 }

@@ -60,12 +60,13 @@ public class Shuffle {
      * @param mediaPlayer the mediaPlayer
      */
     public final void changeMessage(final int shuffle, final int loadCheck,
-                                    final int loadPlaylist, final MediaPlayer mediaPlayer) {
+                                    final int loadPlaylist, final MediaPlayer mediaPlayer,
+                                    final int loadAlbum) {
 
         if (loadCheck == 0) {
             this.message = "Please load a source before using the shuffle function.";
         } else {
-            if (loadPlaylist == 0) {
+            if (loadPlaylist == 0 && loadAlbum == 0) {
                 this.message = "The loaded source is not a playlist.";
 
             } else {

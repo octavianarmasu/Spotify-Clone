@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.List;
 import podcast.Podcasts;
 import playlist.Playlist;
+import songs.Song;
 
 public class MediaPlayer {
     String song;
@@ -20,9 +21,10 @@ public class MediaPlayer {
     private int timeEpisode;
     private int repeat;
     private int shuffle;
-    private Playlist oldPlaylist = new Playlist();
+    private final Playlist oldPlaylist = new Playlist();
     private int timestamp;
     private Album album = new Album();
+    private final Album oldAlbum = new Album();
 
     public MediaPlayer() {
 
@@ -166,7 +168,7 @@ public class MediaPlayer {
      * Changes the shuffle status.
      */
     public final void addDelShuffle() {
-        if (this.song == null || this.playlist == null) {
+        if (this.song == null) {
             return;
         }
         if (this.shuffle == 0) {
@@ -190,10 +192,6 @@ public class MediaPlayer {
         return this.oldPlaylist;
     }
 
-    public final void setOldPlaylist(final Playlist oldPlaylist) {
-        this.oldPlaylist = oldPlaylist;
-    }
-
     /**
      * Saves the un-shuffled playlist.
      * @param playlistChange the playlist to be saved
@@ -201,7 +199,7 @@ public class MediaPlayer {
     public final ArrayList<String> changeOldPlaylist(final Playlist playlistChange) {
         if (playlistChange != null && playlistChange.getSongs() != null) {
             List<String> songs = Collections.unmodifiableList(playlistChange.getSongs());
-            return new ArrayList<String>(songs);
+            return new ArrayList<>(songs);
         }
         return null;
     }
@@ -229,4 +227,19 @@ public class MediaPlayer {
         this.album = album;
     }
 
+    /**
+     * Saves the songs of the album before shuffling.
+     * @return the songs of the album
+     */
+    public final ArrayList<Song> changeOldAlbum(Album albumChange) {
+        if (albumChange != null && albumChange.getSongs() != null) {
+            List<Song> songs = Collections.unmodifiableList(albumChange.getSongs());
+            return new ArrayList<>(songs);
+        }
+        return null;
+    }
+
+    public final Album getOldAlbum() {
+        return this.oldAlbum;
+    }
 }

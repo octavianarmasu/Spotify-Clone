@@ -283,7 +283,7 @@
   "command" : "deleteUser",
   "user" : "sonicpainter",
   "timestamp" : 7860,
-  "message" : "sonicpainter can't be deleted."
+  "message" : "sonicpainter was successfully deleted."
 }, {
   "command" : "changePage",
   "user" : "david27",
@@ -293,10 +293,10 @@
   "command" : "deleteUser",
   "user" : "sonicpainter",
   "timestamp" : 7890,
-  "message" : "sonicpainter can't be deleted."
+  "message" : "sonicpainter was successfully deleted."
 }, {
   "user" : "bob35",
   "command" : "printCurrentPage",
   "timestamp" : 7900,
-  "message" : "Liked songs:\n\t[Aurora Harmony]\n\nFollowed playlists:\n\t[]"
+  "message" : "Liked songs:\n\t[]\n\nFollowed playlists:\n\t[]"
 } ]

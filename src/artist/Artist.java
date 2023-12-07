@@ -87,4 +87,13 @@ public class Artist extends User {
             }
         }
     }
+
+    public final void removeEvent(final String name) {
+        for (Event event : this.events) {
+            if (event.getName().equals(name)) {
+                this.events.remove(event);
+                break;
+            }
+        }
+    }
 }

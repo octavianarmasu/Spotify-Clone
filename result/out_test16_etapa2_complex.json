@@ -5287,7 +5287,7 @@
   "command" : "shuffle",
   "user" : "emily30",
   "timestamp" : 6674,
-  "message" : "The loaded source is not a playlist."
+  "message" : "Shuffle function activated successfully."
 }, {
   "command" : "removeAlbum",
   "user" : "jacobdean",
@@ -5301,7 +5301,7 @@
     "name" : "Soul Pandora",
     "remainedTime" : 172,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5314,10 +5314,10 @@
   "user" : "emily30",
   "timestamp" : 6934,
   "stats" : {
-    "name" : "Adventure Infinity",
-    "remainedTime" : 125,
+    "name" : "Cascade Pulse",
+    "remainedTime" : 151,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5386,7 +5386,7 @@
   "command" : "shuffle",
   "user" : "frank21",
   "timestamp" : 6985,
-  "message" : "The loaded source is not a playlist."
+  "message" : "Shuffle function activated successfully."
 }, {
   "command" : "removeAlbum",
   "user" : "jacobdean",
@@ -5400,7 +5400,7 @@
     "name" : "Crescendo Twilight",
     "remainedTime" : 205,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5413,10 +5413,10 @@
   "user" : "frank21",
   "timestamp" : 7245,
   "stats" : {
-    "name" : "Odyssey Reflection",
-    "remainedTime" : 222,
+    "name" : "Zephyr Enigma",
+    "remainedTime" : 140,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5485,7 +5485,7 @@
   "command" : "shuffle",
   "user" : "grace25",
   "timestamp" : 7296,
-  "message" : "The loaded source is not a playlist."
+  "message" : "Shuffle function activated successfully."
 }, {
   "command" : "removeAlbum",
   "user" : "jsimpson",
@@ -5499,7 +5499,7 @@
     "name" : "Harmony Love",
     "remainedTime" : 272,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5515,7 +5515,7 @@
     "name" : "Harmony Love",
     "remainedTime" : 17,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5683,7 +5683,7 @@
   "command" : "shuffle",
   "user" : "irene33",
   "timestamp" : 7918,
-  "message" : "The loaded source is not a playlist."
+  "message" : "Shuffle function activated successfully."
 }, {
   "command" : "removeAlbum",
   "user" : "mccarthyluis",
@@ -5697,7 +5697,7 @@
     "name" : "Night Aurora",
     "remainedTime" : 250,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5710,10 +5710,10 @@
   "user" : "irene33",
   "timestamp" : 8178,
   "stats" : {
-    "name" : "Sunset Celestial",
-    "remainedTime" : 283,
+    "name" : "Solitude Dance",
+    "remainedTime" : 281,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -23414,7 +23414,7 @@
   "command" : "follow",
   "user" : "david27",
   "timestamp" : 13290,
-  "message" : "You cannot follow or unfollow your own playlist."
+  "message" : "Playlist followed successfully."
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -23686,7 +23686,7 @@
   "command" : "follow",
   "user" : "alice22",
   "timestamp" : 13460,
-  "message" : "You cannot follow or unfollow your own playlist."
+  "message" : "Playlist followed successfully."
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -24134,7 +24134,7 @@
   "command" : "follow",
   "user" : "irene33",
   "timestamp" : 13740,
-  "message" : "You cannot follow or unfollow your own playlist."
+  "message" : "Playlist followed successfully."
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -25398,7 +25398,7 @@
   "command" : "follow",
   "user" : "henry26",
   "timestamp" : 14530,
-  "message" : "You cannot follow or unfollow your own playlist."
+  "message" : "Playlist followed successfully."
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -25542,7 +25542,7 @@
   "command" : "follow",
   "user" : "grace25",
   "timestamp" : 14620,
-  "message" : "You cannot follow or unfollow your own playlist."
+  "message" : "Playlist followed successfully."
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -25764,7 +25764,7 @@
     "name" : "Mellow Melodies Trek #2",
     "songs" : [ "Bohemian Rhapsody", "Castle on the Hill", "Angie", "Sad But True", "Happier", "Start Me Up", "Under Pressure", "Begin Again" ],
     "visibility" : "public",
-    "followers" : 3
+    "followers" : 4
   } ]
 }, {
   "command" : "showPreferredSongs",
@@ -25819,7 +25819,7 @@
     "name" : "Epic Melodies Odyssey #1",
     "songs" : [ "Don't", "Start Me Up", "The Man", "Money Trees", "Love Story" ],
     "visibility" : "public",
-    "followers" : 3
+    "followers" : 4
   }, {
     "name" : "Groovy Rhythms Adventure #2",
     "songs" : [ "Dream On", "Gimme Shelter", "Sad But True", "Delicate", "Love Story" ],
@@ -25879,7 +25879,7 @@
     "name" : "Dynamic Bangers Voyage #1",
     "songs" : [ "Start Me Up", "Delicate", "Paint It Black", "Under Pressure", "Money Trees" ],
     "visibility" : "public",
-    "followers" : 2
+    "followers" : 3
   }, {
     "name" : "Classic Rhythms Trek #2",
     "songs" : [ "Stairway to Heaven", "Dream On", "Thinking Out Loud", "Whatever You Need", "Maps" ],
@@ -25904,7 +25904,7 @@
     "name" : "Electric Beats Dream #2",
     "songs" : [ "Sad But True", "The Man", "Happier", "Shape of You", "Money Trees", "Big Pimpin'", "Whatever You Need", "Delicate" ],
     "visibility" : "private",
-    "followers" : 0
+    "followers" : 1
   } ]
 }, {
   "command" : "showPreferredSongs",
@@ -25919,7 +25919,7 @@
     "name" : "Dynamic Grooves Voyage #1",
     "songs" : [ "The Man", "Delicate", "Gimme Shelter", "Under Pressure", "Dream On" ],
     "visibility" : "public",
-    "followers" : 2
+    "followers" : 3
   }, {
     "name" : "Stellar Bangers Safari #2",
     "songs" : [ "The Man", "Maps", "Angie", "Don't", "Start Me Up", "Stairway to Heaven", "Thinking Out Loud", "The Unforgiven" ],
@@ -25958,7 +25958,7 @@
 }, {
   "command" : "getTop5Playlists",
   "timestamp" : 14850,
-  "result" : [ "Breezy Tracks Journey #2", "Classic Tunes Expedition #1", "Vibey Sounds Voyage #2", "Dynamic Sounds Dream #2", "Dynamic Vibes Odyssey #2" ]
+  "result" : [ "Breezy Tracks Journey #2", "Classic Tunes Expedition #1", "Epic Melodies Odyssey #1", "Mellow Melodies Trek #2", "Vibey Sounds Voyage #2" ]
 }, {
   "command" : "getTop5Songs",
   "timestamp" : 14850,

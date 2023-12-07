@@ -4923,7 +4923,7 @@
   "command" : "shuffle",
   "user" : "alice22",
   "timestamp" : 5429,
-  "message" : "The loaded source is not a playlist."
+  "message" : "Shuffle function activated successfully."
 }, {
   "command" : "removeAlbum",
   "user" : "jacobdean",
@@ -4937,7 +4937,7 @@
     "name" : "Serendipity Serendipity",
     "remainedTime" : 239,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -4950,17 +4950,17 @@
   "user" : "alice22",
   "timestamp" : 5689,
   "stats" : {
-    "name" : "Melody Sunset",
-    "remainedTime" : 186,
+    "name" : "",
+    "remainedTime" : 0,
     "repeat" : "No Repeat",
     "shuffle" : false,
-    "paused" : false
+    "paused" : true
   }
 }, {
   "command" : "like",
   "user" : "alice22",
   "timestamp" : 5690,
-  "message" : "Loaded source is not a song."
+  "message" : "Please load a source before liking or unliking."
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -5022,7 +5022,7 @@
   "command" : "shuffle",
   "user" : "bob35",
   "timestamp" : 5740,
-  "message" : "The loaded source is not a playlist."
+  "message" : "Shuffle function activated successfully."
 }, {
   "command" : "removeAlbum",
   "user" : "leslie27",
@@ -5036,7 +5036,7 @@
     "name" : "Whisper Pulse",
     "remainedTime" : 254,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5049,10 +5049,10 @@
   "user" : "bob35",
   "timestamp" : 6000,
   "stats" : {
-    "name" : "Radiance Euphoria",
-    "remainedTime" : 185,
+    "name" : "Euphoria Luminescence",
+    "remainedTime" : 184,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5126,7 +5126,7 @@
   "command" : "shuffle",
   "user" : "carol19",
   "timestamp" : 6051,
-  "message" : "The loaded source is not a playlist."
+  "message" : "Shuffle function activated successfully."
 }, {
   "command" : "removeAlbum",
   "user" : "cbutler",
@@ -5140,7 +5140,7 @@
     "name" : "Heart Bliss",
     "remainedTime" : 157,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5153,10 +5153,10 @@
   "user" : "carol19",
   "timestamp" : 6311,
   "stats" : {
-    "name" : "Pinnacle Euphoria",
-    "remainedTime" : 94,
+    "name" : "Essence Voyage",
+    "remainedTime" : 133,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5284,8 +5284,8 @@
   "user" : "emily30",
   "timestamp" : 6648,
   "stats" : {
-    "name" : "Serendipity Serendipity",
-    "remainedTime" : 259,
+    "name" : "Rapture Odyssey",
+    "remainedTime" : 191,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5300,8 +5300,8 @@
   "user" : "emily30",
   "timestamp" : 6658,
   "stats" : {
-    "name" : "Serendipity Serendipity",
-    "remainedTime" : 254,
+    "name" : "Rapture Odyssey",
+    "remainedTime" : 186,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5324,7 +5324,7 @@
   "command" : "shuffle",
   "user" : "emily30",
   "timestamp" : 6673,
-  "message" : "The loaded source is not a playlist."
+  "message" : "Shuffle function activated successfully."
 }, {
   "command" : "removeAlbum",
   "user" : "jacobdean",
@@ -5335,10 +5335,10 @@
   "user" : "emily30",
   "timestamp" : 6678,
   "stats" : {
-    "name" : "Serendipity Serendipity",
-    "remainedTime" : 239,
+    "name" : "Rapture Odyssey",
+    "remainedTime" : 171,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5351,10 +5351,10 @@
   "user" : "emily30",
   "timestamp" : 6933,
   "stats" : {
-    "name" : "Melody Sunset",
-    "remainedTime" : 186,
+    "name" : "Serendipity Serendipity",
+    "remainedTime" : 180,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5423,7 +5423,7 @@
   "command" : "shuffle",
   "user" : "frank21",
   "timestamp" : 6984,
-  "message" : "The loaded source is not a playlist."
+  "message" : "Shuffle function activated successfully."
 }, {
   "command" : "removeAlbum",
   "user" : "amanda16",
@@ -5437,7 +5437,7 @@
     "name" : "Luminescence Crescendo",
     "remainedTime" : 224,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5453,7 +5453,7 @@
     "name" : "Bliss Rhythm",
     "remainedTime" : 203,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5522,7 +5522,7 @@
   "command" : "shuffle",
   "user" : "grace25",
   "timestamp" : 7295,
-  "message" : "The loaded source is not a playlist."
+  "message" : "Shuffle function activated successfully."
 }, {
   "command" : "removeAlbum",
   "user" : "barmstrong",
@@ -5536,7 +5536,7 @@
     "name" : "Love Love",
     "remainedTime" : 231,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5552,7 +5552,7 @@
     "name" : "Soul Love",
     "remainedTime" : 266,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5581,8 +5581,8 @@
   "user" : "henry26",
   "timestamp" : 7581,
   "stats" : {
-    "name" : "Luminescence Crescendo",
-    "remainedTime" : 244,
+    "name" : "Sunset Melody",
+    "remainedTime" : 265,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5597,8 +5597,8 @@
   "user" : "henry26",
   "timestamp" : 7591,
   "stats" : {
-    "name" : "Luminescence Crescendo",
-    "remainedTime" : 239,
+    "name" : "Sunset Melody",
+    "remainedTime" : 260,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5621,7 +5621,7 @@
   "command" : "shuffle",
   "user" : "henry26",
   "timestamp" : 7606,
-  "message" : "The loaded source is not a playlist."
+  "message" : "Shuffle function activated successfully."
 }, {
   "command" : "removeAlbum",
   "user" : "amanda16",
@@ -5632,10 +5632,10 @@
   "user" : "henry26",
   "timestamp" : 7611,
   "stats" : {
-    "name" : "Luminescence Crescendo",
-    "remainedTime" : 224,
+    "name" : "Sunset Melody",
+    "remainedTime" : 245,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5648,10 +5648,10 @@
   "user" : "henry26",
   "timestamp" : 7866,
   "stats" : {
-    "name" : "Bliss Rhythm",
-    "remainedTime" : 203,
+    "name" : "Colors Rapture",
+    "remainedTime" : 281,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5720,7 +5720,7 @@
   "command" : "shuffle",
   "user" : "irene33",
   "timestamp" : 7917,
-  "message" : "The loaded source is not a playlist."
+  "message" : "Shuffle function activated successfully."
 }, {
   "command" : "removeAlbum",
   "user" : "jacobdean",
@@ -5734,7 +5734,7 @@
     "name" : "Rhythm Voyage",
     "remainedTime" : 218,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5747,10 +5747,10 @@
   "user" : "irene33",
   "timestamp" : 8177,
   "stats" : {
-    "name" : "Aurora Rapture",
-    "remainedTime" : 202,
+    "name" : "Bliss Radiance",
+    "remainedTime" : 173,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5779,8 +5779,8 @@
   "user" : "jack29",
   "timestamp" : 8203,
   "stats" : {
-    "name" : "Heart Bliss",
-    "remainedTime" : 177,
+    "name" : "Pinnacle Euphoria",
+    "remainedTime" : 187,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5795,8 +5795,8 @@
   "user" : "jack29",
   "timestamp" : 8213,
   "stats" : {
-    "name" : "Heart Bliss",
-    "remainedTime" : 172,
+    "name" : "Pinnacle Euphoria",
+    "remainedTime" : 182,
     "repeat" : "No Repeat",
     "shuffle" : false,
     "paused" : false
@@ -5819,7 +5819,7 @@
   "command" : "shuffle",
   "user" : "jack29",
   "timestamp" : 8228,
-  "message" : "The loaded source is not a playlist."
+  "message" : "Shuffle function activated successfully."
 }, {
   "command" : "removeAlbum",
   "user" : "cbutler",
@@ -5830,10 +5830,10 @@
   "user" : "jack29",
   "timestamp" : 8233,
   "stats" : {
-    "name" : "Heart Bliss",
-    "remainedTime" : 157,
+    "name" : "Pinnacle Euphoria",
+    "remainedTime" : 167,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -5846,10 +5846,10 @@
   "user" : "jack29",
   "timestamp" : 8488,
   "stats" : {
-    "name" : "Pinnacle Euphoria",
-    "remainedTime" : 94,
+    "name" : "Adventure Cascade",
+    "remainedTime" : 177,
     "repeat" : "No Repeat",
-    "shuffle" : false,
+    "shuffle" : true,
     "paused" : false
   }
 }, {
@@ -24762,7 +24762,7 @@
   "command" : "follow",
   "user" : "carol19",
   "timestamp" : 14079,
-  "message" : "You cannot follow or unfollow your own playlist."
+  "message" : "Playlist followed successfully."
 }, {
   "command" : "search",
   "user" : "david27",
@@ -25242,7 +25242,7 @@
   "command" : "follow",
   "user" : "carol19",
   "timestamp" : 14379,
-  "message" : "You cannot follow or unfollow your own playlist."
+  "message" : "Playlist unfollowed successfully."
 }, {
   "command" : "search",
   "user" : "david27",
@@ -25322,7 +25322,7 @@
   "command" : "follow",
   "user" : "henry26",
   "timestamp" : 14429,
-  "message" : "You cannot follow or unfollow your own playlist."
+  "message" : "Playlist followed successfully."
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -25802,7 +25802,7 @@
   "command" : "follow",
   "user" : "henry26",
   "timestamp" : 14729,
-  "message" : "You cannot follow or unfollow your own playlist."
+  "message" : "Playlist unfollowed successfully."
 }, {
   "command" : "search",
   "user" : "irene33",
