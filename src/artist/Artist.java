@@ -12,12 +12,14 @@ public class Artist extends User {
     private final ArrayList<Event> events = new ArrayList<>();
     private final ArrayList<Merch> merch = new ArrayList<>();
     private int nrOfLikes = 0;
-    public Artist () {
+
+    public Artist() {
 
     }
 
     /**
      * Adds an album to the user's list of albums.
+     *
      * @param album the album to be added
      */
     public final void addAlbum(final Album album) {
@@ -30,6 +32,7 @@ public class Artist extends User {
 
     /**
      * Adds an event to the user's list of events.
+     *
      * @param event the event to be added
      */
     public final void addEvent(final Event event) {
@@ -42,11 +45,13 @@ public class Artist extends User {
 
     /**
      * Adds a merch to the user's list of merch.
+     *
      * @param merch the merch to be added
      */
     public final void addMerch(final Merch merch) {
         this.merch.add(merch);
     }
+
     public final ArrayList<Merch> getMerch() {
         return this.merch;
     }
@@ -62,17 +67,17 @@ public class Artist extends User {
             checkPassed = 0;
             if (nameFilter != null) {
                 if (album.getName().startsWith(nameFilter)) {
-                    checkPassed ++;
+                    checkPassed++;
                 }
             }
             if (ownerFilter != null) {
                 if (this.getUsername().equals(ownerFilter)) {
-                    checkPassed ++;
+                    checkPassed++;
                 }
             }
             if (descriptionFilter != null) {
                 if (album.getDescription().equals(descriptionFilter)) {
-                    checkPassed ++;
+                    checkPassed++;
                 }
             }
             if (checkPassed == numFilters) {
@@ -98,13 +103,11 @@ public class Artist extends User {
             }
         }
     }
-    public final void setNrOfLikes() {
-        for (Album album : this.album) {
-            for (Song song : album.getSongs()) {
-                this.nrOfLikes += song.getLikes();
-            }
-        }
+
+    public final void setNrOfLikes(int nrOfLikes) {
+        this.nrOfLikes = nrOfLikes;
     }
+
     public final int getNrOfLikes() {
         return this.nrOfLikes;
     }

@@ -915,7 +915,7 @@ public class CommandRunner {
                 GetTopSongs topAlbums = new GetTopSongs();
                 topAlbums.setCommand("getTop5Albums");
                 topAlbums.setTimestamp(command.getTimestamp());
-                showTop5Albums(topAlbums);
+                showTop5Albums(topAlbums, command);
                 JsonNode selectNode = objectMapper.valueToTree(topAlbums);
                 outputs.add(selectNode);
             }
@@ -1037,7 +1037,18 @@ public class CommandRunner {
     private static void showTop5Artists(final GetTopArtists topArtists) {
         ArrayList<Artist> resultArtist = new ArrayList<>();
         for (Artist artist : artists) {
-            artist.setNrOfLikes();
+            int likesForArtist = 0;
+            for (Album album : artist.getAlbum()) {
+                int likes = 0;
+                for (Song song : album.getSongs()) {
+                    if (song.getArtist().equals(album.getArtist())) {
+                        likes += song.getLikes();
+                    }
+                }
+                album.setTotalLikes(likes);
+                likesForArtist += likes;
+            }
+            artist.setNrOfLikes(likesForArtist);
             resultArtist.add(artist);
         }
         resultArtist.sort(new Comparator<Artist>() {
@@ -1405,35 +1416,29 @@ public class CommandRunner {
         return 1;
     }
 
-    private static void showTop5Albums(final GetTopSongs topAlbums) {
-        ArrayList<Album> albumsToSort = new ArrayList<>();
+    private static void showTop5Albums(final GetTopSongs topAlbums, CommandInput command) {
+        List<Album> albumsToSort = new ArrayList<>();
         for (Artist artist : artists) {
             for (Album album : artist.getAlbum()) {
                 int likes = 0;
                 for (Song song : album.getSongs()) {
-                    likes += song.getLikes();
+                    if (song.getArtist().equals(album.getArtist())) {
+                        likes += song.getLikes();
+                    }
                 }
                 album.setTotalLikes(likes);
                 albumsToSort.add(album);
             }
         }
-        albumsToSort.sort(new Comparator<Album>() {
-            @Override
-            public int compare(final Album o1, final Album o2) {
-                return o2.getTotalLikes() - o1.getTotalLikes();
-            }
-        });
-        if (albumsToSort.size() < 5) {
-            for (Album album : albumsToSort) {
-                topAlbums.addResult(album.getName());
-            }
-        } else {
-            for (int i = 0; i < 5; i++) {
-                topAlbums.addResult(albumsToSort.get(i).getName());
-            }
-        }
+        albumsToSort.sort(Comparator.comparing(Album::getTotalLikes).reversed()
+                .thenComparing(Album::getName));
 
+        int resultCount = Math.min(MAGICNUM, albumsToSort.size());
+        for (int i = 0; i < resultCount; i++) {
+            topAlbums.addResult(albumsToSort.get(i).getName());
+        }
     }
+
 
     private static void playAlbum(final int timestamp) {
         if (player.getTimeLeft() > 0) {
@@ -2124,7 +2129,7 @@ public class CommandRunner {
                     break;
                 }
                 Album album = new Album(command.getName(), command.getReleaseYear(),
-                        command.getDescription(), songForAlbum);
+                        command.getDescription(), songForAlbum, artist.getUsername());
                 artist.addAlbum(album);
                 addAlbum.setMessage(artist.getUsername()
                         + " has added new album successfully.");
@@ -2347,32 +2352,33 @@ public class CommandRunner {
         if (player.getPlaylist() != null) {
             for (User user : users) {
                 if (user.getUsername().equals(command.getUsername())) {
-                    if (user.getPlaylists().contains(player.getPlaylist())) {
-                        follow.setMessage("You cannot follow or unfollow your own playlist.");
+                    for (Playlist playlist : user.getPlaylists()){
+                        if (playlist.getName().equals(player.getPlaylist().getName())) {
+                            follow.setMessage("You cannot follow or unfollow your own playlist.");
+                            return;
+                        }
+                    }
+                    if (player.getPlaylist().getVisibility().equals("private")) {
+                        follow.setMessage("Please select a source before"
+                                + " following or unfollowing.");
                         return;
-                    } else {
-                        if (player.getPlaylist().getVisibility().equals("private")) {
-                            follow.setMessage("Please select a source before"
-                                    + " following or unfollowing.");
-                        } else {
-                            if (user.getFollowedPlaylists().contains(player.getPlaylist())) {
-                                user.getFollowedPlaylists().remove(player.getPlaylist());
-                                follow.setMessage("Playlist unfollowed successfully.");
-                                for (Playlist playlist : playlists) {
-                                    String aux = player.getPlaylist().getName();
-                                    if (playlist.getName().equals(aux)) {
-                                        playlist.removeFollower();
-                                    }
-                                }
-                            } else {
-                                user.addFollowedPlaylist(player.getPlaylist());
-                                follow.setMessage("Playlist followed successfully.");
-                                for (Playlist playlist : playlists) {
-                                    if (playlist.getName().equals(player.getPlaylist().getName())) {
-                                        playlist.plusFollower();
-                                    }
-                                }
+                    }
+                    if (user.getFollowedPlaylists().contains(player.getPlaylist())) {
+                        user.getFollowedPlaylists().remove(player.getPlaylist());
+                        follow.setMessage("Playlist unfollowed successfully.");
+                        for (Playlist playlist : playlists) {
+                            String aux = player.getPlaylist().getName();
+                            if (playlist.getName().equals(aux)) {
+                                playlist.removeFollower();
                             }
+                        }
+                        return;
+                    }
+                    user.addFollowedPlaylist(player.getPlaylist());
+                    follow.setMessage("Playlist followed successfully.");
+                    for (Playlist playlist : playlists) {
+                        if (playlist.getName().equals(player.getPlaylist().getName())) {
+                            playlist.plusFollower();
                         }
                     }
                 }

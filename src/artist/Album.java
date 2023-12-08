@@ -11,15 +11,18 @@ public class Album {
     private final ArrayList<Song> songs = new ArrayList<>();
     private int totalLikes = 0;
 
+    private String artist;
+
     public Album() {
     }
 
     public Album(final String name, final int releaseYear, final String description,
-                 final ArrayList<Song> songs) {
+                 final ArrayList<Song> songs, final String artist) {
         this.name = name;
         this.releaseYear = releaseYear;
         this.description = description;
         this.songs.addAll(songs);
+        this.artist = artist;
     }
 
     public final String getName() {
@@ -76,6 +79,14 @@ public class Album {
 
     public final void setTotalLikes(final int totalLikes) {
         this.totalLikes = totalLikes;
+    }
+
+    public final String getArtist() {
+        return artist;
+    }
+
+    public final void setArtist(final String artist) {
+        this.artist = artist;
     }
 
 }

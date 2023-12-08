@@ -23414,7 +23414,7 @@
   "command" : "follow",
   "user" : "david27",
   "timestamp" : 13290,
-  "message" : "Playlist followed successfully."
+  "message" : "You cannot follow or unfollow your own playlist."
 }, {
   "command" : "search",
   "user" : "emily30",
@@ -23686,7 +23686,7 @@
   "command" : "follow",
   "user" : "alice22",
   "timestamp" : 13460,
-  "message" : "Playlist followed successfully."
+  "message" : "You cannot follow or unfollow your own playlist."
 }, {
   "command" : "search",
   "user" : "bob35",
@@ -24134,7 +24134,7 @@
   "command" : "follow",
   "user" : "irene33",
   "timestamp" : 13740,
-  "message" : "Playlist followed successfully."
+  "message" : "You cannot follow or unfollow your own playlist."
 }, {
   "command" : "search",
   "user" : "jack29",
@@ -25398,7 +25398,7 @@
   "command" : "follow",
   "user" : "henry26",
   "timestamp" : 14530,
-  "message" : "Playlist followed successfully."
+  "message" : "You cannot follow or unfollow your own playlist."
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -25542,7 +25542,7 @@
   "command" : "follow",
   "user" : "grace25",
   "timestamp" : 14620,
-  "message" : "Playlist followed successfully."
+  "message" : "You cannot follow or unfollow your own playlist."
 }, {
   "command" : "search",
   "user" : "henry26",
@@ -25764,7 +25764,7 @@
     "name" : "Mellow Melodies Trek #2",
     "songs" : [ "Bohemian Rhapsody", "Castle on the Hill", "Angie", "Sad But True", "Happier", "Start Me Up", "Under Pressure", "Begin Again" ],
     "visibility" : "public",
-    "followers" : 4
+    "followers" : 3
   } ]
 }, {
   "command" : "showPreferredSongs",
@@ -25819,7 +25819,7 @@
     "name" : "Epic Melodies Odyssey #1",
     "songs" : [ "Don't", "Start Me Up", "The Man", "Money Trees", "Love Story" ],
     "visibility" : "public",
-    "followers" : 4
+    "followers" : 3
   }, {
     "name" : "Groovy Rhythms Adventure #2",
     "songs" : [ "Dream On", "Gimme Shelter", "Sad But True", "Delicate", "Love Story" ],
@@ -25879,7 +25879,7 @@
     "name" : "Dynamic Bangers Voyage #1",
     "songs" : [ "Start Me Up", "Delicate", "Paint It Black", "Under Pressure", "Money Trees" ],
     "visibility" : "public",
-    "followers" : 3
+    "followers" : 2
   }, {
     "name" : "Classic Rhythms Trek #2",
     "songs" : [ "Stairway to Heaven", "Dream On", "Thinking Out Loud", "Whatever You Need", "Maps" ],
@@ -25904,7 +25904,7 @@
     "name" : "Electric Beats Dream #2",
     "songs" : [ "Sad But True", "The Man", "Happier", "Shape of You", "Money Trees", "Big Pimpin'", "Whatever You Need", "Delicate" ],
     "visibility" : "private",
-    "followers" : 1
+    "followers" : 0
   } ]
 }, {
   "command" : "showPreferredSongs",
@@ -25919,7 +25919,7 @@
     "name" : "Dynamic Grooves Voyage #1",
     "songs" : [ "The Man", "Delicate", "Gimme Shelter", "Under Pressure", "Dream On" ],
     "visibility" : "public",
-    "followers" : 3
+    "followers" : 2
   }, {
     "name" : "Stellar Bangers Safari #2",
     "songs" : [ "The Man", "Maps", "Angie", "Don't", "Start Me Up", "Stairway to Heaven", "Thinking Out Loud", "The Unforgiven" ],
@@ -25958,7 +25958,7 @@
 }, {
   "command" : "getTop5Playlists",
   "timestamp" : 14850,
-  "result" : [ "Breezy Tracks Journey #2", "Classic Tunes Expedition #1", "Epic Melodies Odyssey #1", "Mellow Melodies Trek #2", "Vibey Sounds Voyage #2" ]
+  "result" : [ "Breezy Tracks Journey #2", "Classic Tunes Expedition #1", "Vibey Sounds Voyage #2", "Dynamic Sounds Dream #2", "Dynamic Vibes Odyssey #2" ]
 }, {
   "command" : "getTop5Songs",
   "timestamp" : 14850,

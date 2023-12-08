@@ -24762,7 +24762,7 @@
   "command" : "follow",
   "user" : "carol19",
   "timestamp" : 14079,
-  "message" : "Playlist followed successfully."
+  "message" : "You cannot follow or unfollow your own playlist."
 }, {
   "command" : "search",
   "user" : "david27",
@@ -25242,7 +25242,7 @@
   "command" : "follow",
   "user" : "carol19",
   "timestamp" : 14379,
-  "message" : "Playlist unfollowed successfully."
+  "message" : "You cannot follow or unfollow your own playlist."
 }, {
   "command" : "search",
   "user" : "david27",
@@ -25322,7 +25322,7 @@
   "command" : "follow",
   "user" : "henry26",
   "timestamp" : 14429,
-  "message" : "Playlist followed successfully."
+  "message" : "You cannot follow or unfollow your own playlist."
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -25802,7 +25802,7 @@
   "command" : "follow",
   "user" : "henry26",
   "timestamp" : 14729,
-  "message" : "Playlist unfollowed successfully."
+  "message" : "You cannot follow or unfollow your own playlist."
 }, {
   "command" : "search",
   "user" : "irene33",
@@ -26050,9 +26050,9 @@
 }, {
   "command" : "getTop5Albums",
   "timestamp" : 14849,
-  "result" : [ "Bad Guide", "Bad Guide", "Teen Dreams", "Heroic Hood", "Bad Hood" ]
+  "result" : [ "Bad Guide", "Teen Dreams", "Bad Hood", "Heroic Hood", "Groovy View" ]
 }, {
   "command" : "getTop5Artists",
   "timestamp" : 14849,
-  "result" : [ "leslie27", "amanda16", "jacobdean", "barmstrong", "matthewfernandez" ]
+  "result" : [ "leslie27", "amanda16", "jacobdean", "barmstrong", "cbutler" ]
 } ]
