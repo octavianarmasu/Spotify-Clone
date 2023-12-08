@@ -25,6 +25,7 @@ import playlist.ShowPlaylists;
 import songs.ShowPreferredSongs;
 import songs.GetTopSongs;
 import songs.Song;
+import artist.GetTopArtists;
 
 
 import artist.Merch;
@@ -149,9 +150,6 @@ public class CommandRunner {
             searchHost = username.getSearchHost();
             player = username.getMediaPlayer();
             selectResult = username.getResult();
-            if (command.getTimestamp() == 4350 && command.getUsername().equals("emily30")) {
-                System.out.println("sunt aici " + player.getSong());
-            }
             if (loadCheck == 1 && loadSong == 1 && player.getPlay() == 1
                     && connection.equals("online")) {
                 playSongs(songs, command.getTimestamp());
@@ -174,9 +172,20 @@ public class CommandRunner {
             }
             if (loadAlbum == 1 && player.getPlay() == 1 && connection.equals("online")) {
                 playAlbum(command.getTimestamp());
-                if (player.getAlbum() == null || player.getTimeLeft() == 0) {
+                if (player.getTimeLeft() == 0) {
                     loadCheck = 0;
                     loadAlbum = 0;
+                    if (player.getShuffle() == 1) {
+                        ArrayList<Song> songsCopy = new ArrayList<>(player.getOldAlbum().getSongs());
+                        for (Artist artist : artists) {
+                            for (Album album : artist.getAlbum()) {
+                                if (album.getName().equals(player.getOldAlbum().getName())) {
+                                    album.getSongs().clear();
+                                    album.setSongs(songsCopy);
+                                }
+                            }
+                        }
+                    }
                 }
             }
             if (command.getCommand().equals("search")) {
@@ -346,7 +355,7 @@ public class CommandRunner {
                                 choosePodcast(number, podcasts, selectResult);
                             }
                             if (searchAlbum == 1) {
-                                chooseAlbum(number, selectResult);
+                                chooseAlbum(number, selectResult, users);
                             }
                         }
                         searchCount = 0;
@@ -567,10 +576,10 @@ public class CommandRunner {
                     if (loadCheck == 0 || player.getSong().isEmpty()) {
                         likedSongs.setMessage("Please load a source before liking or unliking.");
                     } else {
-                        if (loadSong == 0) {
+                        if (player.getSong() == null) {
                             likedSongs.setMessage("Loaded source is not a song.");
                         }
-                        if ((loadSong == 1 || loadPlaylist == 1) && loadCheck == 1) {
+                        if (loadCheck == 1) {
                             addLikedSong(likedSongs, command, users, songs);
                         }
                     }
@@ -585,7 +594,9 @@ public class CommandRunner {
                 preferredSongs.setTimestamp(command.getTimestamp());
                 for (User user : users) {
                     if (command.getUsername().equals(user.getUsername())) {
-                        preferredSongs.setResult(user.getLikedSongs());
+                        for (Song song : user.getLikedSongs()) {
+                            preferredSongs.addResult(song.getName());
+                        }
                     }
                 }
                 JsonNode selectNode = objectMapper.valueToTree(preferredSongs);
@@ -676,11 +687,11 @@ public class CommandRunner {
                 next.setCommand("next");
                 next.setUser(command.getUsername());
                 next.setTimestamp(command.getTimestamp());
-                if (loadCheck == 0) {
+                if (loadCheck == 0 ) {
                     next.setMessage("Please load a source before skipping to the next track.");
                 } else {
                     player.setPlay(1);
-                    skipToNext(next, songs, loadSong, loadPodcast, loadPlaylist);
+                    skipToNext(next, songs, loadSong, loadPodcast, loadPlaylist, loadAlbum);
                 }
 
                 JsonNode selectNode = objectMapper.valueToTree(next);
@@ -988,6 +999,14 @@ public class CommandRunner {
                 outputs.add(selectNode);
             }
 
+            if (command.getCommand().equals("getTop5Artists")) {
+                GetTopArtists topArtists = new GetTopArtists();
+                topArtists.setTimestamp(command.getTimestamp());
+                showTop5Artists(topArtists);
+                JsonNode selectNode = objectMapper.valueToTree(topArtists);
+                outputs.add(selectNode);
+            }
+
             player.setTimestamp(command.getTimestamp());
             for (User user : users) {
                 if (command.getUsername() != null) {
@@ -1013,6 +1032,30 @@ public class CommandRunner {
                 }
             }
         }
+    }
+
+    private static void showTop5Artists(final GetTopArtists topArtists) {
+        ArrayList<Artist> resultArtist = new ArrayList<>();
+        for (Artist artist : artists) {
+            artist.setNrOfLikes();
+            resultArtist.add(artist);
+        }
+        resultArtist.sort(new Comparator<Artist>() {
+            @Override
+            public int compare(final Artist o1, final Artist o2) {
+                return o2.getNrOfLikes() - o1.getNrOfLikes();
+            }
+        });
+        if (resultArtist.size() > MAGICNUM) {
+            for (int i = 0; i < MAGICNUM; i++) {
+                topArtists.addResult(resultArtist.get(i).getUsername());
+            }
+        } else {
+            for (Artist artist : resultArtist) {
+                topArtists.addResult(artist.getUsername());
+            }
+        }
+
     }
 
 
@@ -1424,15 +1467,41 @@ public class CommandRunner {
         }
     }
 
-    private static void chooseAlbum(final int number, final ArrayList<String> selectResult ) {
+    private static void chooseAlbum(final int number, final ArrayList<String> selectResult,
+                                    final ArrayList<User> users) {
+
+        String albumName = selectResult.get(number - 1);
+        int select = 0;
         for (Artist artist : artists) {
             for (Album album : artist.getAlbum()) {
-                String aux = selectResult.get(number - 1);
-                if (album.getName().equals(aux)) {
+                if (album.getName().equals(albumName)) {
+                    for (User user : users) {
+                        if (user.getMediaPlayer() != null
+                                && user.getMediaPlayer().getOldAlbum() != null
+                                && user.getMediaPlayer().getOldAlbum().getName() != null) {
+                            if (user.getMediaPlayer().getOldAlbum().getName().equals(albumName)) {
+                               album.getSongs().clear();
+                               album.setSongs(user.getMediaPlayer().getOldAlbum().getSongs());
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+        for (Artist artist : artists) {
+            for (Album album : artist.getAlbum()) {
+                if (album.getName().equals(albumName)) {
                     player.setAlbum(album);
                     player.setSong(album.getSongs().get(0).getName());
                     player.setSongNumber(0);
                     player.setTimeLeft(album.getSongs().get(0).getDuration());
+                    player.setArtist(artist.getUsername());
+                    select ++;
+                    if (select == number){
+                        return;
+                    }
                 }
             }
         }
@@ -1528,7 +1597,7 @@ public class CommandRunner {
                 Song song = iterator.next();
                 if (song.getArtist().equals(command.getUsername())) {
                     for (User user1 : users) {
-                        user1.getLikedSongs().remove(song.getName());
+                        user1.getLikedSongs().remove(song);
                     }
                     iterator.remove();
                 }
@@ -1791,7 +1860,7 @@ public class CommandRunner {
             if (user.getUsername().equals(command.getUsername())) {
                 if (user.getCurrentPage().equals("Home")
                         || user.getCurrentPage().equals("home")) {
-                    printHomePage(printPage, user);
+                    printHomePage(printPage, user, songs);
                 } else {
                     if (user.getCurrentPage().equals("LikedContent")) {
                         printLikedContentPage(printPage, user, users, songs);
@@ -1818,26 +1887,21 @@ public class CommandRunner {
         printPage.setMessage("Liked songs:\n\t[");
         for (int i = 0; i< user.getLikedSongs().size(); i++) {
             if (i == user.getLikedSongs().size() - 1) {
-                printPage.setMessage(printPage.getMessage() + user.getLikedSongs().get(i) + " - ");
-                for (Song song : songs) {
-                    if (song.getName().equals(user.getLikedSongs().get(i))) {
-                        printPage.setMessage(printPage.getMessage() + song.getArtist() + "]\n\n");
-                    }
-                }
+                printPage.setMessage(printPage.getMessage()
+                        + user.getLikedSongs().get(i).getName() + " - "
+                        + user.getLikedSongs().get(i).getArtist() + "]\n\n");
                 break;
             }
-            printPage.setMessage(printPage.getMessage() + user.getLikedSongs().get(i) + " - ");
-            for (Song song : songs) {
-                if (song.getName().equals(user.getLikedSongs().get(i))) {
-                    printPage.setMessage(printPage.getMessage() + song.getArtist() + ", ");
-                }
-            }
+            printPage.setMessage(printPage.getMessage()
+                    + user.getLikedSongs().get(i).getName() + " - "
+                    + user.getLikedSongs().get(i).getArtist() + ", ");
+
         }
         if (user.getLikedSongs().isEmpty()) {
             printPage.setMessage(printPage.getMessage() + "]\n\n");
         }
         printPage.setMessage(printPage.getMessage() + "Followed playlists:\n\t[");
-        for (int i = 0; i < user.getFollowedPlaylists().size(); i++) {
+        for (int i = 0; i< user.getFollowedPlaylists().size(); i++) {
             if (i == user.getFollowedPlaylists().size() - 1) {
                 printPage.setMessage(printPage.getMessage()
                         + user.getFollowedPlaylists().get(i).getName()
@@ -1862,6 +1926,9 @@ public class CommandRunner {
                     }
                 }
             }
+        }
+        if (user.getFollowedPlaylists().isEmpty()) {
+            printPage.setMessage(printPage.getMessage() + "]");
         }
     }
 
@@ -1944,6 +2011,10 @@ public class CommandRunner {
                     }
                 }
                 printPage.setMessage(printPage.getMessage() + "Events:\n\t[");
+                if (artist.getEvents().isEmpty()) {
+                    printPage.setMessage(printPage.getMessage() + "]");
+                    break;
+                }
                 for (int i = 0; i < artist.getEvents().size(); i++) {
                     if (i == artist.getEvents().size() - 1) {
                         printPage.setMessage(printPage.getMessage()
@@ -1963,15 +2034,28 @@ public class CommandRunner {
         }
     }
 
-    private static void printHomePage(final PrintPage printPage, final User user) {
+    private static void printHomePage(final PrintPage printPage, final User user,
+                                      final ArrayList<Song> songs) {
+        List<Song> likedCopy = new ArrayList<>(Collections.unmodifiableList(user.getLikedSongs()));
+        likedCopy.sort(new Comparator<Song>() {
+            @Override
+            public int compare(final Song o1, final Song o2) {
+                return o2.getLikes() - o1.getLikes();
+            }
+        });
+        int likedSize = likedCopy.size();
+        if (likedCopy.size() > MAGICNUM) {
+            likedSize = MAGICNUM;
+        }
         printPage.setMessage("Liked songs:\n\t[");
-        for (int i = 0; i < user.getLikedSongs().size(); i++) {
-            if (i == user.getLikedSongs().size() - 1) {
-                printPage.setMessage(printPage.getMessage() + user.getLikedSongs().get(i));
+        for (int i = 0; i < likedSize; i++) {
+            if (i == likedSize - 1) {
+                printPage.setMessage(printPage.getMessage()
+                        + likedCopy.get(i).getName());
                 break;
             }
             printPage.setMessage(printPage.getMessage()
-                    + user.getLikedSongs().get(i) + ", ");
+                    + likedCopy.get(i).getName() + ", ");
         }
         printPage.setMessage(printPage.getMessage()
                 + "]\n\nFollowed playlists:\n\t[");
@@ -2151,9 +2235,15 @@ public class CommandRunner {
     private static void chooseSong(final int number, final ArrayList<Song> songs,
                                    final ArrayList<String> selectResult) {
         player.setSong(selectResult.get(number - 1));
+        int select = 0;
         for (Song song : songs) {
             if (song.getName().equals(selectResult.get(number - 1))) {
                 player.setTimeLeft(song.getDuration());
+                player.setArtist(song.getArtist());
+                select++;
+                if (select == number) {
+                    return;
+                }
             }
         }
     }
@@ -2182,6 +2272,7 @@ public class CommandRunner {
                             if (found != number
                                     && song.getName().equals(song1)) {
                                 player.setTimeLeft(song.getDuration());
+                                player.setArtist(song.getArtist());
                                 found++;
                             }
                         }
@@ -2252,11 +2343,13 @@ public class CommandRunner {
     private static void followPlaylist(final OutputClass follow, final CommandInput command,
                                        final ArrayList<User> users,
                                        final ArrayList<Playlist> playlists) {
+
         if (player.getPlaylist() != null) {
             for (User user : users) {
                 if (user.getUsername().equals(command.getUsername())) {
                     if (user.getPlaylists().contains(player.getPlaylist())) {
                         follow.setMessage("You cannot follow or unfollow your own playlist.");
+                        return;
                     } else {
                         if (player.getPlaylist().getVisibility().equals("private")) {
                             follow.setMessage("Please select a source before"
@@ -2297,22 +2390,34 @@ public class CommandRunner {
      */
     private static void addLikedSong(final OutputClass likedSongs, final CommandInput command,
                                      final ArrayList<User> users, final ArrayList<Song> songs) {
+
+
+        int found = 0;
         for (User user : users) {
             if (user.getUsername().equals(command.getUsername())) {
-                if (user.getLikedSongs().contains(player.getSong())) {
-                    user.getLikedSongs().remove(player.getSong());
-                    likedSongs.setMessage("Unlike registered successfully.");
+               for (Song song : user.getLikedSongs()) {
+                   if (song.getName().equals(player.getSong())
+                            && player.getArtist().equals(song.getArtist())) {
+                       song.removeLike();
+                       user.getLikedSongs().remove(song);
+                       likedSongs.setMessage("Unlike registered successfully.");
+                       found = 1;
+                       break;
+                   }
+               }
+            }
+        }
+
+        if (found == 0) {
+            for (User user : users) {
+                if (user.getUsername().equals(command.getUsername())) {
                     for (Song song : songs) {
-                        if (song.getName().equals(player.getSong())) {
-                            song.removeLike();
-                        }
-                    }
-                } else {
-                    user.addLikedSong(player.getSong());
-                    likedSongs.setMessage("Like registered successfully.");
-                    for (Song song : songs) {
-                        if (song.getName().equals(player.getSong())) {
+                        if (song.getName().equals(player.getSong())
+                                && song.getArtist().equals(player.getArtist())) {
+                            user.addLikedSong(song);
+                            likedSongs.setMessage("Like registered successfully.");
                             song.addLike();
+                            break;
                         }
                     }
                 }
@@ -2350,6 +2455,7 @@ public class CommandRunner {
                     for (Song song : songs) {
                         if (song.getName().equals(player.getSong())) {
                             player.setTimeLeft(song.getDuration());
+                            player.setArtist(song.getArtist());
                         }
                     }
                     player.delTime(remainedTime);
@@ -2362,6 +2468,7 @@ public class CommandRunner {
                             for (Song song : songs) {
                                 if (song.getName().equals(player.getSong())) {
                                     player.setTimeLeft(song.getDuration());
+                                    player.setArtist(song.getArtist());
                                 }
                             }
                             player.delTime(remainedTime);
@@ -2391,6 +2498,7 @@ public class CommandRunner {
                 for (Song song : songs) {
                     if (song.getName().equals(player.getSong())) {
                         player.setTimeLeft(song.getDuration());
+                        player.setArtist(song.getArtist());
                     }
                 }
                 player.delTime(remainedTime);
@@ -2404,6 +2512,7 @@ public class CommandRunner {
                     for (Song song : songs) {
                         if (song.getName().equals(player.getSong())) {
                             player.setTimeLeft(song.getDuration());
+                            player.setArtist(song.getArtist());
                         }
                     }
                     player.delTime(remainedTime1);
@@ -2416,6 +2525,7 @@ public class CommandRunner {
                 for (Song song : songs) {
                     if (song.getName().equals(player.getSong())) {
                         player.setTimeLeft(song.getDuration());
+                        player.setArtist(song.getArtist());
                     }
                 }
                 player.delTime(remainedTime);
@@ -2424,6 +2534,7 @@ public class CommandRunner {
                     for (Song song : songs) {
                         if (song.getName().equals(player.getSong())) {
                             player.setTimeLeft(song.getDuration());
+                            player.setArtist(song.getArtist());
                         }
                     }
                     player.delTime(remainedTime1);
@@ -2582,7 +2693,7 @@ public class CommandRunner {
 
     private static void skipToNext(final OutputClass next, final ArrayList<Song> songs,
                                    final int loadsong, final int loadpodcast,
-                                   final int loadPlaylist) {
+                                   final int loadPlaylist, final int loadAlbum) {
         if (loadsong == 1) {
             if (player.getRepeat() == 0) {
                 next.setMessage("Please load a source before skipping to the next track.");
@@ -2610,6 +2721,7 @@ public class CommandRunner {
                     for (Song song : songs) {
                         if (song.getName().equals(player.getSong())) {
                             player.setTimeLeft(song.getDuration());
+                            player.setArtist(song.getArtist());
                         }
                     }
                     next.setMessage("Skipped to next track successfully. "
@@ -2628,6 +2740,7 @@ public class CommandRunner {
                         for (Song song : songs) {
                             if (song.getName().equals(player.getSong())) {
                                 player.setTimeLeft(song.getDuration());
+                                player.setArtist(song.getArtist());
                             }
                         }
                         next.setMessage("Skipped to next track successfully."
@@ -2638,6 +2751,7 @@ public class CommandRunner {
                 for (Song song : songs) {
                     if (song.getName().equals(player.getSong())) {
                         player.setTimeLeft(song.getDuration());
+                        player.setArtist(song.getArtist());
                     }
                 }
                 next.setMessage("Skipped to next track successfully. "
@@ -2684,6 +2798,20 @@ public class CommandRunner {
                 }
             }
         }
+        if (loadAlbum == 1) {
+            if (player.getSongNumber() == player.getAlbum().getSongs().size() - 1) {
+                next.setMessage("Please load a source before skipping to the next track.");
+            } else {
+                player.nextSong();
+                if (player.getAlbum().getSongs().size() - 1 >= player.getSongNumber()) {
+                    player.setSong(player.getAlbum().getSongs().get(player.getSongNumber()).getName());
+                    int duration = player.getAlbum().getSongs().get(player.getSongNumber()).getDuration();
+                    player.setTimeLeft(duration);
+                }
+                next.setMessage("Skipped to next track successfully. "
+                        + "The current track is " + player.getSong() + ".");
+            }
+        }
     }
 
     private static void skipToPrev(final OutputClass prev, final ArrayList<Song> songs,
@@ -2724,6 +2852,7 @@ public class CommandRunner {
                         for (Song song1 : songs) {
                             if (song1.getName().equals(player.getSong())) {
                                 player.setTimeLeft(song1.getDuration());
+                                player.setArtist(song1.getArtist());
                             }
                         }
                         prev.setMessage("Returned to previous track successfully. "

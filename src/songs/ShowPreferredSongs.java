@@ -48,4 +48,7 @@ public class ShowPreferredSongs {
         this.result = result;
     }
 
+    public void addResult(final String name) {
+        this.result.add(name);
+    }
 }

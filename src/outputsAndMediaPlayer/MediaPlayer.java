@@ -25,6 +25,7 @@ public class MediaPlayer {
     private int timestamp;
     private Album album = new Album();
     private final Album oldAlbum = new Album();
+    private String artist;
 
     public MediaPlayer() {
 
@@ -242,4 +243,14 @@ public class MediaPlayer {
     public final Album getOldAlbum() {
         return this.oldAlbum;
     }
+
+    public final String getArtist() {
+        return this.artist;
+    }
+
+    public final void setArtist(final String artist) {
+        this.artist = artist;
+    }
+
+
 }

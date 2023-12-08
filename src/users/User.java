@@ -1,11 +1,13 @@
 package users;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
 import outputsAndMediaPlayer.MediaPlayer;
 import playlist.Playlist;
+import songs.Song;
 
 public class User {
     private String username;
@@ -13,7 +15,7 @@ public class User {
     private String city;
     private final ArrayList<Playlist> playlists = new ArrayList<>();
     private final ArrayList<Playlist> oldPlaylists = new ArrayList<>();
-    private final ArrayList<String> likedSongs = new ArrayList<>();
+    private final ArrayList<Song> likedSongs = new ArrayList<>();
     private final ArrayList<Playlist> follwedPlaylist = new ArrayList<>();
     private int select;
     private int searchCount;
@@ -114,14 +116,14 @@ public class User {
      * Adds a song to the user's list of liked songs.
      *
      */
-    public final void addLikedSong(final String song) {
+    public final void addLikedSong(final Song song) {
         this.likedSongs.add(song);
     }
 
     /**
      * Returns the list of liked songs.
      */
-    public final ArrayList<String> getLikedSongs() {
+    public final ArrayList<Song> getLikedSongs() {
         return this.likedSongs;
     }
 
@@ -340,6 +342,27 @@ public class User {
     }
 
 
+    public final void sortLikedSongs(final ArrayList<Song> songs) {
+        for (int i = 0; i < likedSongs.size() - 1; i++) {
+            for (int j = i + 1; j < likedSongs.size(); j++) {
+                Song song1 = likedSongs.get(i);
+                Song song2 = likedSongs.get(j);
+                int like1 = 0;
+                int like2 = 0;
+                for (Song song : songs) {
+                    if (song.getName().equals(song1.getName())) {
+                        like1 = song.getLikes();
+                    }
+                    if (song.getName().equals(song2.getName())) {
+                        like2 = song.getLikes();
+                    }
+                }
+                if (like1 < like2) {
+                    Collections.swap(likedSongs, i, j);
+                }
+            }
+        }
+    }
 }
 
 

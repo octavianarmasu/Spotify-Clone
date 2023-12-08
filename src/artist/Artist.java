@@ -2,6 +2,7 @@ package artist;
 
 import events.Event;
 import fileio.input.CommandInput;
+import songs.Song;
 import users.User;
 
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ public class Artist extends User {
     private final ArrayList<Album> album = new ArrayList<>();
     private final ArrayList<Event> events = new ArrayList<>();
     private final ArrayList<Merch> merch = new ArrayList<>();
+    private int nrOfLikes = 0;
     public Artist () {
 
     }
@@ -95,5 +97,15 @@ public class Artist extends User {
                 break;
             }
         }
+    }
+    public final void setNrOfLikes() {
+        for (Album album : this.album) {
+            for (Song song : album.getSongs()) {
+                this.nrOfLikes += song.getLikes();
+            }
+        }
+    }
+    public final int getNrOfLikes() {
+        return this.nrOfLikes;
     }
 }
