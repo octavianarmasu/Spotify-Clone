@@ -469,11 +469,12 @@ public class CommandRunner {
                 stats.changeRepeat(player.getRepeat(), loadSong, loadPodcast, loadPlaylist);
                 stats.changeShuffle(player.getShuffle(), loadSong, loadPodcast,
                         loadPlaylist, loadAlbum);
+                stats.setPaused(player.getPlay() != 1);
                 if (loadCheck == 0) {
                     stats.setName("");
                     stats.setRemainedTime(0);
+                    stats.setPaused(true);
                 }
-                stats.setPaused(player.getPlay() != 1);
                 status.setStats(stats);
                 JsonNode selectNode = objectMapper.valueToTree(status);
                 outputs.add(selectNode);
