@@ -1,6 +1,7 @@
 package outputsAndMediaPlayer;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import fileio.input.CommandInput;
 
 import java.util.ArrayList;
 
@@ -25,6 +26,38 @@ public class Filters {
     private String description;
 
     public Filters() {
+    }
+
+    /**
+     * verify if the command has multiple filters
+     *
+     * @param command the command to be verified
+     * @return the number of filters
+     */
+    public static int verifyMultipleForSongs(final CommandInput command) {
+        int numFilters = 0;
+        if (command.getFilters().getName() != null) {
+            numFilters++;
+        }
+        if (command.getFilters().getArtist() != null) {
+            numFilters++;
+        }
+        if (command.getFilters().getAlbum() != null) {
+            numFilters++;
+        }
+        if (command.getFilters().getGenre() != null) {
+            numFilters++;
+        }
+        if (command.getFilters().getLyrics() != null) {
+            numFilters++;
+        }
+        if (command.getFilters().getReleaseYear() != null) {
+            numFilters++;
+        }
+        if (command.getFilters().getTags() != null) {
+            numFilters++;
+        }
+        return numFilters;
     }
 
     public final String getName() {
@@ -62,6 +95,4 @@ public class Filters {
     public final String getDescription() {
         return description;
     }
-
-
 }
