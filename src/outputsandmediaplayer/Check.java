@@ -3,6 +3,7 @@ package outputsandmediaplayer;
 import announcements.Announcements;
 import artist.Album;
 import artist.Artist;
+import artist.Merch;
 import events.Event;
 import fileio.input.CommandInput;
 import host.Host;
@@ -175,7 +176,7 @@ public final class Check {
      * check if there is a duplicate song in the list of songs of an album
      *
      * @param songForAlbum the list of songs of an album
-     * return 1 if there is no duplicate, 0 otherwise
+     *                     return 1 if there is no duplicate, 0 otherwise
      */
     public static int checkSongsForAlbum(final ArrayList<Song> songForAlbum) {
         for (int i = 0; i < songForAlbum.size() - 1; i++) {
@@ -190,7 +191,8 @@ public final class Check {
 
     /**
      * checks if the artist has already an album with the same name
-     * @param artist the artist to be verified
+     *
+     * @param artist  the artist to be verified
      * @param command the command to be verified
      * @return 0 if the album is already in the list, 1 otherwise
      */
@@ -206,4 +208,34 @@ public final class Check {
         return 1;
     }
 
+    /**
+     * check if an artist has the same merch twice
+     *
+     * @param artist  the artist to be verified
+     * @param command the command to be verified
+     * @return 0 if the merch is already in the list, 1 otherwise
+     */
+    public static int checkDuplicateMerch(final Artist artist, final CommandInput command) {
+        for (Merch merch : artist.getMerch()) {
+            if (merch.getName().equals(command.getName())) {
+                return 0;
+            }
+        }
+        return 1;
+    }
+
+    /**
+     * check if a host already has a podcast with the same name
+     * @param host the host to be verified
+     * @param command the command to be verified
+     * @return 1 if the podcast is in the list, 0 otherwise
+     */
+    public static int checkPodcast(final Host host, final CommandInput command) {
+        for (Podcasts podcast : host.getPodcasts()) {
+            if (podcast.getName().equals(command.getName())) {
+                return 1;
+            }
+        }
+        return 0;
+    }
 }

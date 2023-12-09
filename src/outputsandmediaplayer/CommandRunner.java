@@ -1,12 +1,9 @@
 package outputsandmediaplayer;
 
-import announcements.Announcements;
 import artist.SongsToAdd;
 import artist.ShowAlbums;
-import events.Event;
 import users.AddUser;
 import users.GetUsers;
-import podcast.EpisodesToAdd;
 import printcurrentpage.PrintPage;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -32,7 +29,6 @@ import songs.Song;
 import artist.GetTopArtists;
 
 
-import artist.Merch;
 import host.Host;
 
 import artist.ResultForAlbum;
@@ -878,7 +874,7 @@ public final class CommandRunner {
                 addEvent.setCommand("addEvent");
                 addEvent.setUser(command.getUsername());
                 addEvent.setTimestamp(command.getTimestamp());
-                addEventFunc(command, addEvent, users);
+                addEvent.addEventFunc(command, artists, users);
                 JsonNode selectNode = objectMapper.valueToTree(addEvent);
                 outputs.add(selectNode);
             }
@@ -887,7 +883,7 @@ public final class CommandRunner {
                 addMerch.setCommand("addMerch");
                 addMerch.setUser(command.getUsername());
                 addMerch.setTimestamp(command.getTimestamp());
-                addMerchFunc(command, addMerch, users);
+                addMerch.addMerchFunc(command, artists, users);
                 JsonNode selectNode = objectMapper.valueToTree(addMerch);
                 outputs.add(selectNode);
             }
@@ -934,7 +930,7 @@ public final class CommandRunner {
                 addPodcast.setCommand("addPodcast");
                 addPodcast.setUser(command.getUsername());
                 addPodcast.setTimestamp(command.getTimestamp());
-                addPodcastFunc(command, addPodcast, users, podcasts);
+                addPodcast.addPodcastFunc(command, hosts, users, podcasts);
                 JsonNode selectNode = objectMapper.valueToTree(addPodcast);
                 outputs.add(selectNode);
             }
@@ -944,7 +940,7 @@ public final class CommandRunner {
                 addAnnouncement.setCommand("addAnnouncement");
                 addAnnouncement.setUser(command.getUsername());
                 addAnnouncement.setTimestamp(command.getTimestamp());
-                addAnnouncementFunc(command, addAnnouncement, users);
+                addAnnouncement.addAnnouncementFunc(command, hosts, users);
                 JsonNode selectNode = objectMapper.valueToTree(addAnnouncement);
                 outputs.add(selectNode);
             }
@@ -961,7 +957,7 @@ public final class CommandRunner {
                 removeAnnouncement.setCommand("removeAnnouncement");
                 removeAnnouncement.setUser(command.getUsername());
                 removeAnnouncement.setTimestamp(command.getTimestamp());
-                removeAnnouncementFunc(command, removeAnnouncement, users);
+                removeAnnouncement.removeAnnouncementFunc(command, hosts, users);
                 JsonNode selectNode = objectMapper.valueToTree(removeAnnouncement);
                 outputs.add(selectNode);
             }
@@ -1127,7 +1123,7 @@ public final class CommandRunner {
         for (Host host : hosts) {
             if (host.getUsername().equals(command.getUsername())) {
                 found = 1;
-                if (checkPodcast(host, command) == 0) {
+                if (Check.checkPodcast(host, command) == 0) {
                     removePodcast.setMessage(command.getUsername()
                             + " doesn't have a podcast with the given name.");
                     break;
@@ -1168,15 +1164,6 @@ public final class CommandRunner {
                         return 1;
                     }
                 }
-            }
-        }
-        return 0;
-    }
-
-    private static int checkPodcast(final Host host, final CommandInput command) {
-        for (Podcasts podcast : host.getPodcasts()) {
-            if (podcast.getName().equals(command.getName())) {
-                return 1;
             }
         }
         return 0;
@@ -1252,38 +1239,6 @@ public final class CommandRunner {
         return 0;
     }
 
-    private static void removeAnnouncementFunc(final CommandInput command,
-                                               final OutputClass removeAnnouncement,
-                                               final ArrayList<User> users) {
-        int found = 0;
-        for (User user : users) {
-            if (user.getUsername().equals(command.getUsername())) {
-                found = 1;
-                if (!user.getUserType().equals("host")) {
-                    removeAnnouncement.setMessage(command.getUsername() + " is not a host.");
-                    return;
-                }
-            }
-        }
-        for (Host host : hosts) {
-            if (host.getUsername().equals(command.getUsername())) {
-                found = 1;
-                if (Check.checkAnnouncement(host, command) == 0) {
-                    removeAnnouncement.setMessage(command.getUsername()
-                            + " has no announcement with the given name.");
-                    break;
-                }
-                host.removeAnnouncement(command.getName());
-                removeAnnouncement.setMessage(command.getUsername()
-                        + " has successfully deleted the announcement.");
-            }
-        }
-        if (found == 0) {
-            removeAnnouncement.setMessage("The username " + command.getUsername()
-                    + " doesn't exist.");
-        }
-    }
-
     private static void showPodcastsFunc(final ShowPodcasts showPodcasts,
                                          final CommandInput command) {
         for (Host host : hosts) {
@@ -1299,85 +1254,6 @@ public final class CommandRunner {
             }
         }
     }
-
-    private static void addAnnouncementFunc(final CommandInput command,
-                                            final OutputClass addAnnouncement,
-                                            final ArrayList<User> users) {
-        int found = 0;
-        for (User user : users) {
-            if (user.getUsername().equals(command.getUsername())) {
-                found = 1;
-                if (!user.getUserType().equals("host")) {
-                    addAnnouncement.setMessage(command.getUsername() + " is not a host.");
-                    return;
-                }
-            }
-        }
-        for (Host host : hosts) {
-            if (host.getUsername().equals(command.getUsername())) {
-                found = 1;
-                if (Check.checkDuplicateAnnouncement(host, command) == 0) {
-                    addAnnouncement.setMessage(command.getUsername()
-                            + " has already added an announcement with this name.");
-                    break;
-                }
-                Announcements announcement = new Announcements(command.getName(),
-                        command.getDescription());
-                host.addAnnouncement(announcement);
-                addAnnouncement.setMessage(command.getUsername()
-                        + " has successfully added new announcement.");
-            }
-        }
-        if (found == 0) {
-            addAnnouncement.setMessage("User " + command.getUsername() + " doesn't exist.");
-        }
-    }
-
-    private static void addPodcastFunc(final CommandInput command, final OutputClass addPodcast,
-                                       final ArrayList<User> users,
-                                       final ArrayList<Podcasts> podcasts) {
-        int found = 0;
-        for (User user : users) {
-            if (command.getUsername().equals(user.getUsername())) {
-                found = 1;
-                if (!user.getUserType().equals("host")) {
-                    addPodcast.setMessage(command.getUsername() + " is not a host.");
-                    return;
-                }
-            }
-        }
-        for (Host host : hosts) {
-            if (host.getUsername().equals(command.getUsername())) {
-                found = 1;
-                ArrayList<Episode> episodesForPodcast = new ArrayList<>();
-                for (EpisodesToAdd episode : command.getEpisodes()) {
-                    Episode episodeAux = new Episode(episode.getName(),
-                            episode.getDuration(), episode.getDescription());
-                    episodesForPodcast.add(episodeAux);
-                }
-                if (Check.checkDuplicatePodcast(host, command) == 0) {
-                    addPodcast.setMessage(command.getUsername()
-                            + " has another podcast with the same name.");
-                    break;
-                }
-                if (Check.checkDuplicateEpisode(episodesForPodcast) == 0) {
-                    addPodcast.setMessage(command.getUsername()
-                            + " has the same episode in this podcast.");
-                    break;
-                }
-                Podcasts podcastsToAdd = new Podcasts(command.getName(), command.getUsername(),
-                        episodesForPodcast);
-                host.addPodcast(podcastsToAdd);
-                podcasts.add(podcastsToAdd);
-                addPodcast.setMessage(command.getUsername()
-                        + " has added new podcast successfully.");
-            }
-        }
-        if (found == 0) {
-            addPodcast.setMessage("User " + command.getUsername() + " does not exist.");
-        }
-    }
-
     private static void showTop5Albums(final GetTopSongs topAlbums) {
         List<Album> albumsToSort = new ArrayList<>();
         for (Artist artist : artists) {
@@ -1633,90 +1509,6 @@ public final class CommandRunner {
         return 0;
     }
 
-    private static void addMerchFunc(final CommandInput command, final OutputClass addMerch,
-                                     final ArrayList<User> users) {
-        int found = 0;
-        for (User user : users) {
-            if (user.getUsername().equals(command.getUsername())) {
-                found = 1;
-                if (!user.getUserType().equals("artist")) {
-                    addMerch.setMessage(user.getUsername() + " is not an artist.");
-                    break;
-                }
-            }
-        }
-        for (Artist artist : artists) {
-            if (artist.getUsername().equals(command.getUsername())) {
-                found = 1;
-                int checkMerch = checkDuplicateMerch(artist, command);
-                if (checkMerch == 0) {
-                    addMerch.setMessage(artist.getUsername()
-                            + " has merchandise with the same name.");
-                    break;
-                }
-                if (command.getPrice() < 0) {
-                    addMerch.setMessage("Price for merchandise can not be negative.");
-                    break;
-                }
-                Merch merch = new Merch(command.getName(), command.getPrice(),
-                        command.getDescription());
-                artist.addMerch(merch);
-                addMerch.setMessage(command.getUsername()
-                        + " has added new merchandise successfully.");
-            }
-        }
-        if (found == 0) {
-            addMerch.setMessage("The username " + command.getUsername() + " doesn't exist.");
-        }
-    }
-
-    private static int checkDuplicateMerch(final Artist artist, final CommandInput command) {
-        for (Merch merch : artist.getMerch()) {
-            if (merch.getName().equals(command.getName())) {
-                return 0;
-            }
-        }
-        return 1;
-    }
-
-    private static void addEventFunc(final CommandInput command, final OutputClass addEvent,
-                                     final ArrayList<User> users) throws ParseException {
-        int found = 0;
-        for (User user : users) {
-            if (user.getUsername().equals(command.getUsername())) {
-                found = 1;
-                if (!user.getUserType().equals("artist")) {
-                    addEvent.setMessage(user.getUsername() + " is not an artist.");
-                    break;
-                }
-            }
-        }
-        for (Artist artist : artists) {
-            if (artist.getUsername().equals(command.getUsername())) {
-                found = 1;
-                int checkEvent = Check.checkDuplicateEvent(artist, command);
-                if (checkEvent == 0) {
-                    addEvent.setMessage(artist.getUsername()
-                            + " has another event with the same name.");
-                    break;
-                }
-                int checkDate = Check.checkDate(command);
-                if (checkDate == 0) {
-                    addEvent.setMessage("Event for " + command.getUsername()
-                            + " does not have a valid date.");
-                    break;
-                }
-                Event event = new Event(command.getName(), command.getDescription(),
-                        command.getDate());
-                artist.addEvent(event);
-                addEvent.setMessage(command.getUsername()
-                        + " has added new event successfully.");
-            }
-        }
-        if (found == 0) {
-            addEvent.setMessage("The username " + command.getUsername() + " doesn't exist.");
-        }
-    }
     private static void printPageFunc(final PrintPage printPage,
                                       final CommandInput command, final ArrayList<User> users,
                                       final ArrayList<Song> songs) {
