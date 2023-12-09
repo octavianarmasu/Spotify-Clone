@@ -1,6 +1,13 @@
 package printcurrentpage;
 
+import artist.Artist;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import fileio.input.CommandInput;
+import host.Host;
+import songs.Song;
+import users.User;
+
+import java.util.ArrayList;
 
 public class PrintPage {
     @JsonProperty("user")
@@ -10,7 +17,7 @@ public class PrintPage {
     @JsonProperty("timestamp")
     private int timestamp;
     @JsonProperty("message")
-    private String message;
+    private String message = null;
 
     public PrintPage() {
     }
@@ -37,5 +44,41 @@ public class PrintPage {
     }
     public final void setMessage(final String message) {
         this.message = message;
+    }
+
+    public final void printPageFunc(final ArrayList<Artist> artists, final ArrayList<Host> hosts,
+                                    final CommandInput commandInput,
+                                    final ArrayList<User> users) {
+        Visitor visitor = new Print();
+        for (User userSearched : users) {
+            if (userSearched.getUsername().equals(commandInput.getUsername())) {
+                if (userSearched.getCurrentPage().equals("Home")
+                        || userSearched.getCurrentPage().equals("home")) {
+                    HomePage homePage = new HomePage(userSearched, message);
+                    homePage.accept(visitor);
+                    this.message = homePage.getMessage();
+                }
+                if (userSearched.getCurrentPage().equals("LikedContent")) {
+                    LikedContent likedContent =
+                            new LikedContent(userSearched, users, message);
+                    likedContent.accept(visitor);
+                    this.message = likedContent.getMessage();
+                }
+                for (Artist artist : artists) {
+                    if (userSearched.getCurrentPage().equals(artist.getUsername())) {
+                        ArtistPage artistPage = new ArtistPage(artist, message, commandInput);
+                        artistPage.accept(visitor);
+                        this.message = artistPage.getMessage();
+                    }
+                }
+                for (Host host : hosts) {
+                    if (userSearched.getCurrentPage().equals(host.getUsername())) {
+                        HostPage hostPage = new HostPage(host, message);
+                        hostPage.accept(visitor);
+                        this.message = hostPage.getMessage();
+                    }
+                }
+            }
+        }
     }
 }
