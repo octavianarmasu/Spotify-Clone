@@ -1,6 +1,5 @@
 package printcurrentpage;
 
-import songs.Song;
 import users.User;
 
 import java.util.ArrayList;
@@ -17,7 +16,7 @@ public class LikedContent implements Visitable {
     }
 
     @Override
-    public void accept(Visitor visitor) {
+    public final void accept(final Visitor visitor) {
         visitor.visit(this);
     }
 

@@ -2,7 +2,7 @@ package printcurrentpage;
 
 import host.Host;
 
-public class HostPage implements Visitable {
+public final class HostPage implements Visitable {
     private Host host;
     private String message;
 
@@ -12,23 +12,23 @@ public class HostPage implements Visitable {
     }
 
     @Override
-    public void accept(Visitor visitor) {
+    public void accept(final Visitor visitor) {
         visitor.visit(this);
     }
 
-    public final Host getHost() {
+    public  Host getHost() {
         return host;
     }
 
-    public final void setHost(final Host host) {
+    public  void setHost(final Host host) {
         this.host = host;
     }
 
-    public final String getMessage() {
+    public  String getMessage() {
         return message;
     }
 
-    public final void setMessage(final String message) {
+    public void setMessage(final String message) {
         this.message = message;
     }
 }

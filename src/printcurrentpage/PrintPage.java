@@ -4,7 +4,6 @@ import artist.Artist;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import fileio.input.CommandInput;
 import host.Host;
-import songs.Song;
 import users.User;
 
 import java.util.ArrayList;
@@ -46,6 +45,14 @@ public class PrintPage {
         this.message = message;
     }
 
+    /**
+     * prints the current page of the user using the visitor pattern
+     *
+     * @param artists the list of artists in the database
+     * @param hosts the list of hosts in the database
+     * @param commandInput the command that was given as input
+     * @param users the list of users in the database
+     */
     public final void printPageFunc(final ArrayList<Artist> artists, final ArrayList<Host> hosts,
                                     final CommandInput commandInput,
                                     final ArrayList<User> users) {
@@ -66,7 +73,7 @@ public class PrintPage {
                 }
                 for (Artist artist : artists) {
                     if (userSearched.getCurrentPage().equals(artist.getUsername())) {
-                        ArtistPage artistPage = new ArtistPage(artist, message, commandInput);
+                        ArtistPage artistPage = new ArtistPage(artist, message);
                         artistPage.accept(visitor);
                         this.message = artistPage.getMessage();
                     }

@@ -1,18 +1,15 @@
 package printcurrentpage;
 
 import artist.Artist;
-import fileio.input.CommandInput;
 
 
 public class ArtistPage implements Visitable {
     private final Artist artist;
     private String message;
-    private CommandInput command;
 
-    public ArtistPage(final Artist artist, final String message, CommandInput commandInput) {
+    public ArtistPage(final Artist artist, final String message) {
         this.artist = artist;
         this.message = message;
-        this.command = commandInput;
     }
 
     @Override
@@ -32,7 +29,4 @@ public class ArtistPage implements Visitable {
         this.message = message;
     }
 
-    public CommandInput getCommand() {
-        return command;
-    }
 }

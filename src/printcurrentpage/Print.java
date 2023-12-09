@@ -1,7 +1,6 @@
 package printcurrentpage;
 
 import artist.Artist;
-import fileio.input.CommandInput;
 import host.Host;
 import playlist.Playlist;
 import podcast.Podcasts;
@@ -13,7 +12,9 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Print implements Visitor {
+public final class Print implements Visitor {
+
+    static final int MAGICNUM = 5;
     @Override
     public void visit(final HomePage homePage) {
         User user = homePage.getUser();
@@ -26,8 +27,8 @@ public class Print implements Visitor {
             }
         });
         int likedSize = likedCopy.size();
-        if (likedCopy.size() > 5) {
-            likedSize = 5;
+        if (likedCopy.size() > MAGICNUM) {
+            likedSize = MAGICNUM;
         }
         message.append("Liked songs:\n\t[");
         for (int i = 0; i < likedSize; i++) {
@@ -103,7 +104,6 @@ public class Print implements Visitor {
     @Override
     public void visit(final ArtistPage artistPage) {
         Artist artist = artistPage.getArtist();
-        CommandInput commandInput = artistPage.getCommand();
         StringBuilder message = new StringBuilder();
         message.append("Albums:\n\t[");
         for (int i = 0; i < artist.getAlbum().size(); i++) {

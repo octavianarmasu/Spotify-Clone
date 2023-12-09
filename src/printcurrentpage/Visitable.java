@@ -1,5 +1,10 @@
 package printcurrentpage;
 
 public interface Visitable {
-    public void accept(Visitor visitor);
+    /**
+     * accepts the visitor, the method helps with the design pattern visitor implementation
+     *
+     * @param visitor the visitor
+     */
+     void accept(Visitor visitor);
 }

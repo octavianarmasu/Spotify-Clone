@@ -13,7 +13,7 @@ public class HomePage implements Visitable {
     }
 
     @Override
-    public final void accept(Visitor visitor) {
+    public final void accept(final Visitor visitor) {
         visitor.visit(this);
     }
 
