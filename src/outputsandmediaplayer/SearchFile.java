@@ -1,4 +1,4 @@
-package outputsAndMediaPlayer;
+package outputsandmediaplayer;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

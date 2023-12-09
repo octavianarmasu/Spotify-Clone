@@ -12,28 +12,41 @@ public class Host extends User {
 
     private ArrayList<Announcements> announcements = new ArrayList<>();
 
-    public Host(){
+    public Host() {
 
     }
 
     /**
      * adds a podcast to the host's list of podcasts
+     *
      * @param podcast the podcast to be added
      */
-    public final void addPodcast(final Podcasts podcast){
+    public final void addPodcast(final Podcasts podcast) {
         podcasts.add(podcast);
     }
-    public final ArrayList<Podcasts> getPodcasts(){
+
+    public final ArrayList<Podcasts> getPodcasts() {
         return podcasts;
     }
 
-    public final void addAnnouncement(final Announcements announcement){
+    /**
+     * adds an announcement to the host's list of announcements
+     *
+     * @param announcement the announcement to be added
+     */
+    public final void addAnnouncement(final Announcements announcement) {
         announcements.add(announcement);
     }
-    public final ArrayList<Announcements> getAnnouncements(){
+
+    public final ArrayList<Announcements> getAnnouncements() {
         return announcements;
     }
 
+    /**
+     * removes an announcement from the host's list of announcements
+     *
+     * @param name the name of the announcement to be removed
+     */
     public final void removeAnnouncement(final String name) {
         for (int i = 0; i < announcements.size(); i++) {
             if (announcements.get(i).getName().equals(name)) {
@@ -43,6 +56,11 @@ public class Host extends User {
         }
     }
 
+    /**
+     * removes a podcast from the host's list of podcasts
+     *
+     * @param name the name of the podcast to be removed
+     */
     public final void removePodcast(final String name) {
         for (int i = 0; i < podcasts.size(); i++) {
             if (podcasts.get(i).getName().equals(name)) {

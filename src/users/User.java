@@ -1,11 +1,10 @@
 package users;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import outputsAndMediaPlayer.MediaPlayer;
+import outputsandmediaplayer.MediaPlayer;
 import playlist.Playlist;
 import songs.Song;
 
@@ -335,33 +334,15 @@ public class User {
         return this.result;
     }
 
+    /**
+     * Sets the result as an unmodifiable list.
+     *
+     * @param resultToSet the result to be set
+     */
     public final void setResult(final ArrayList<String> resultToSet) {
 
         List<String> aux = Collections.unmodifiableList(resultToSet);
         this.result = new ArrayList<>(aux);
-    }
-
-
-    public final void sortLikedSongs(final ArrayList<Song> songs) {
-        for (int i = 0; i < likedSongs.size() - 1; i++) {
-            for (int j = i + 1; j < likedSongs.size(); j++) {
-                Song song1 = likedSongs.get(i);
-                Song song2 = likedSongs.get(j);
-                int like1 = 0;
-                int like2 = 0;
-                for (Song song : songs) {
-                    if (song.getName().equals(song1.getName())) {
-                        like1 = song.getLikes();
-                    }
-                    if (song.getName().equals(song2.getName())) {
-                        like2 = song.getLikes();
-                    }
-                }
-                if (like1 < like2) {
-                    Collections.swap(likedSongs, i, j);
-                }
-            }
-        }
     }
 }
 

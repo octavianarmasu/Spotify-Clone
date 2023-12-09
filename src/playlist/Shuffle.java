@@ -1,7 +1,7 @@
 package playlist;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import outputsAndMediaPlayer.MediaPlayer;
+import outputsandmediaplayer.MediaPlayer;
 
 public class Shuffle {
     @JsonProperty("command")

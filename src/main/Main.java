@@ -1,12 +1,13 @@
 package main;
 
-import outputsAndMediaPlayer.CommandRunner;
+import outputsandmediaplayer.CommandRunner;
 import checker.Checker;
 import checker.CheckerConstants;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-import fileio.input.*;
+import fileio.input.CommandInput;
+import fileio.input.LibraryInput;
 
 import java.io.File;
 
@@ -70,7 +71,8 @@ public final class Main {
      * @throws IOException in case of exceptions to reading / writing
      */
     public static <SelectFile> void action(final String filePathInput,
-                                           final String filePathOutput) throws IOException, ParseException {
+                                           final String filePathOutput)
+            throws IOException, ParseException {
         ObjectMapper objectMapper = new ObjectMapper();
         LibraryInput library = objectMapper.readValue(new File(LIBRARY_PATH), LibraryInput.class);
         String filePath = CheckerConstants.TESTS_PATH;
@@ -79,7 +81,7 @@ public final class Main {
 
         CommandInput[] commands = objectMapper.readValue(new File(filePath), CommandInput[].class);
 
-        CommandRunner.Solution(commands, outputs, library);
+        CommandRunner.solution(commands, outputs, library);
 
 
 

@@ -41,10 +41,10 @@ public class GetUsers {
 
     /**
      * Add a result to the result list
-     * @param result is the result to be added
+     * @param resultToBeAdded is the result to be added
      */
-    public final void addResult(final String result) {
-        this.result.add(result);
+    public final void addResult(final String resultToBeAdded) {
+        this.result.add(resultToBeAdded);
     }
 
 }

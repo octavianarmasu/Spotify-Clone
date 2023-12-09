@@ -28,27 +28,32 @@ public class ShowPreferredSongs {
         return user;
     }
 
-    public final int getTimestamp() {
-        return timestamp;
-    }
-
-    public final ArrayList<String> getResult() {
-        return result;
-    }
-
     public final void setUser(final String user) {
         this.user = user;
+    }
+
+    public final int getTimestamp() {
+        return timestamp;
     }
 
     public final void setTimestamp(final int timestamp) {
         this.timestamp = timestamp;
     }
 
+    public final ArrayList<String> getResult() {
+        return result;
+    }
+
     public final void setResult(final ArrayList<String> result) {
         this.result = result;
     }
 
-    public void addResult(final String name) {
+    /**
+     * adds a name to the result list
+     *
+     * @param name the name to be added
+     */
+    public final void addResult(final String name) {
         this.result.add(name);
     }
 }

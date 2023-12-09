@@ -1,4 +1,4 @@
-package outputsAndMediaPlayer;
+package outputsandmediaplayer;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import fileio.input.CommandInput;
@@ -19,49 +19,58 @@ public class OutputClass {
 
     public OutputClass() {
     }
+
     public final String getCommand() {
         return command;
     }
+
     public final void setCommand(final String command) {
         this.command = command;
     }
+
     public final String getUser() {
         return user;
     }
+
     public final void setUser(final String user) {
         this.user = user;
     }
+
     public final int getTimestamp() {
         return timestamp;
     }
+
     public final void setTimestamp(final int timestamp) {
         this.timestamp = timestamp;
     }
+
     public final String getMessage() {
         return message;
     }
+
     public final void setMessage(final String message) {
         this.message = message;
     }
 
     /**
      * Method that adds a song to the favorite list of a user or removes it
-     * @param command the command that was given
-     *                (ex: "like")
-     * @param users the list of users in the database
-     * @param songs the list of songs in the database
-     * @param player the media player
+     *
+     * @param commandInput the command that was given
+     *                     (ex: "like")
+     * @param users        the list of users in the database
+     * @param songs        the list of songs in the database
+     * @param player       the media player
      */
-    public final void addLikedSongs (final CommandInput command, final ArrayList<User> users,
-                                     final ArrayList<Song> songs, final MediaPlayer player) {
+    public final void addLikedSongs(final CommandInput commandInput, final ArrayList<User> users,
+                                    final ArrayList<Song> songs, final MediaPlayer player) {
         int found = 0;
-        for (User user : users) {
-            if (user.getUsername().equals(command.getUsername())) {
-                for (Song song : user.getLikedSongs()) {
+        for (User userSearch : users) {
+            if (userSearch.getUsername().equals(commandInput.getUsername())) {
+                for (Song song : userSearch.getLikedSongs()) {
                     if (song.getName().equals(player.getSong())
                             && player.getArtist().equals(song.getArtist())) {
                         song.removeLike();
-                        user.getLikedSongs().remove(song);
+                        userSearch.getLikedSongs().remove(song);
                         this.setMessage("Unlike registered successfully.");
                         found = 1;
                         break;
@@ -70,12 +79,12 @@ public class OutputClass {
             }
         }
         if (found == 0) {
-            for (User user : users) {
-                if (user.getUsername().equals(command.getUsername())) {
+            for (User userSearch : users) {
+                if (userSearch.getUsername().equals(commandInput.getUsername())) {
                     for (Song song : songs) {
                         if (song.getName().equals(player.getSong())
                                 && song.getArtist().equals(player.getArtist())) {
-                            user.addLikedSong(song);
+                            userSearch.addLikedSong(song);
                             this.setMessage("Like registered successfully.");
                             song.addLike();
                             break;
@@ -83,6 +92,33 @@ public class OutputClass {
                     }
                 }
             }
+        }
+    }
+
+    /**
+     * Changes the connection status of a user
+     *
+     * @param commandInput the command that was given
+     * @param users        the list of users in the database
+     */
+    public final void changeConnectionStatus(final CommandInput commandInput,
+                                             final ArrayList<User> users) {
+
+        int found = 0;
+        for (User userSearched : users) {
+            if (userSearched.getUsername().equals(commandInput.getUsername())) {
+                found = 1;
+                if (userSearched.getUserType().equals("user")) {
+                    userSearched.changeConnection();
+                    String auxUser = userSearched.getUsername();
+                    this.setMessage(auxUser + " has changed status successfully.");
+                } else {
+                    this.setMessage(userSearched.getUsername() + " is not a normal user.");
+                }
+            }
+        }
+        if (found == 0) {
+            this.setMessage("The username " + commandInput.getUsername() + " doesn't exist.");
         }
     }
 }

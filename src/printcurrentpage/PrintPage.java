@@ -1,4 +1,4 @@
-package printCurrentPage;
+package printcurrentpage;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,4 +1,4 @@
-package outputsAndMediaPlayer;
+package outputsandmediaplayer;
 
 import artist.Album;
 
@@ -232,7 +232,7 @@ public class MediaPlayer {
      * Saves the songs of the album before shuffling.
      * @return the songs of the album
      */
-    public final ArrayList<Song> changeOldAlbum(Album albumChange) {
+    public final ArrayList<Song> changeOldAlbum(final Album albumChange) {
         if (albumChange != null && albumChange.getSongs() != null) {
             List<Song> songs = Collections.unmodifiableList(albumChange.getSongs());
             return new ArrayList<>(songs);

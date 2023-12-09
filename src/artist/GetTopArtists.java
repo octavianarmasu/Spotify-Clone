@@ -32,6 +32,11 @@ public class GetTopArtists {
         this.result = result;
     }
 
+    /**
+     * Adds a result to the result list.
+     *
+     * @param resultToAdd the result to add
+     */
     public final void addResult(final String resultToAdd) {
         this.result.add(resultToAdd);
     }

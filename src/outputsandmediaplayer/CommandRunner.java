@@ -1,4 +1,4 @@
-package outputsAndMediaPlayer;
+package outputsandmediaplayer;
 
 import announcements.Announcements;
 import artist.SongsToAdd;
@@ -7,11 +7,15 @@ import events.Event;
 import users.AddUser;
 import users.GetUsers;
 import podcast.EpisodesToAdd;
-import printCurrentPage.PrintPage;
+import printcurrentpage.PrintPage;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-import fileio.input.*;
+import fileio.input.UserInput;
+import fileio.input.EpisodeInput;
+import fileio.input.LibraryInput;
+import fileio.input.SongInput;
+import fileio.input.PodcastInput;
 import artist.Artist;
 import host.ShowPodcasts;
 import host.ResultForPodcast;
@@ -37,10 +41,9 @@ import fileio.input.CommandInput;
 import users.User;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class CommandRunner {
+public final class CommandRunner {
     static final int MAGICNUM = 5;
     static final int PODCASTNUM = 90;
     static ArrayList<Artist> artists = new ArrayList<>();
@@ -49,9 +52,12 @@ public class CommandRunner {
     static SelectOutput selectOutput = new SelectOutput();
     static MediaPlayer player = new MediaPlayer();
 
-    public CommandRunner() {
+    private CommandRunner() {
     }
 
+    /**
+     * clears all the arrays
+     */
     public static void setVariables() {
         artists.clear();
         hosts.clear();
@@ -70,7 +76,7 @@ public class CommandRunner {
      * @param library  the library
      * @throws ParseException in case of exceptions to parsing
      */
-    public static void Solution(final CommandInput[] commands, final ArrayNode outputs,
+    public static void solution(final CommandInput[] commands, final ArrayNode outputs,
                                 final LibraryInput library) throws ParseException {
 
         setVariables();
@@ -176,7 +182,8 @@ public class CommandRunner {
                     loadCheck = 0;
                     loadAlbum = 0;
                     if (player.getShuffle() == 1) {
-                        ArrayList<Song> songsCopy = new ArrayList<>(player.getOldAlbum().getSongs());
+                        ArrayList<Song> aux = player.getOldAlbum().getSongs();
+                        ArrayList<Song> songsCopy = new ArrayList<>(aux);
                         for (Artist artist : artists) {
                             for (Album album : artist.getAlbum()) {
                                 if (album.getName().equals(player.getOldAlbum().getName())) {
@@ -653,7 +660,8 @@ public class CommandRunner {
                         loadPlaylist, player, loadAlbum);
                 if (player.getShuffle() == 1 && loadPlaylist == 1) {
                     assert player.getPlaylist() != null;
-                    player.getOldPlaylist().setSongs(player.changeOldPlaylist(player.getPlaylist()));
+                    Playlist aux = player.getPlaylist();
+                    player.getOldPlaylist().setSongs(player.changeOldPlaylist(aux));
                     player.getOldPlaylist().setName(player.getPlaylist().getName());
                     Collections.shuffle(player.getPlaylist().getSongs(),
                             new Random(command.getSeed()));
@@ -819,7 +827,7 @@ public class CommandRunner {
                 switchCon.setCommand("switchConnectionStatus");
                 switchCon.setUser(command.getUsername());
                 switchCon.setTimestamp(command.getTimestamp());
-                changeConnectionStatus(switchCon, command, users);
+                switchCon.changeConnectionStatus(command, users);
                 JsonNode selectNode = objectMapper.valueToTree(switchCon);
                 outputs.add(selectNode);
             }
@@ -840,7 +848,7 @@ public class CommandRunner {
                 addAlbum.setCommand("addAlbum");
                 addAlbum.setUser(command.getUsername());
                 addAlbum.setTimestamp(command.getTimestamp());
-                AddAlbumFunc(users, command, addAlbum, songs);
+                addAlbumFunc(users, command, addAlbum, songs);
                 JsonNode selectNode = objectMapper.valueToTree(addAlbum);
                 outputs.add(selectNode);
             }
@@ -916,7 +924,7 @@ public class CommandRunner {
                 GetTopSongs topAlbums = new GetTopSongs();
                 topAlbums.setCommand("getTop5Albums");
                 topAlbums.setTimestamp(command.getTimestamp());
-                showTop5Albums(topAlbums, command);
+                showTop5Albums(topAlbums);
                 JsonNode selectNode = objectMapper.valueToTree(topAlbums);
                 outputs.add(selectNode);
             }
@@ -1086,7 +1094,7 @@ public class CommandRunner {
         for (Artist artist : artists) {
             if (artist.getUsername().equals(command.getUsername())) {
                 found = 1;
-                if (checkEvent(artist, command) == 0) {
+                if (Check.checkEvent(artist, command) == 0) {
                     removeEvent.setMessage(command.getUsername()
                             + " doesn't have an event with the given name.");
                     break;
@@ -1100,15 +1108,6 @@ public class CommandRunner {
             removeEvent.setMessage("The username " + command.getUsername()
                     + " doesn't exist.");
         }
-    }
-
-    public static int checkEvent(final Artist artist, final CommandInput command) {
-        for (Event event : artist.getEvents()) {
-            if (event.getName().equals(command.getName())) {
-                return 1;
-            }
-        }
-        return 0;
     }
 
     private static void removePodcastFunc(final CommandInput command,
@@ -1193,7 +1192,6 @@ public class CommandRunner {
                     if (command.getNextPage().equals("LikedContent")) {
                         changePage.setMessage(user.getUsername()
                                 + " accessed LikedContent successfully.");
-                        ;
                     } else {
                         changePage.setMessage(user.getUsername()
                                 + " is trying to access a non-existent page.");
@@ -1270,7 +1268,7 @@ public class CommandRunner {
         for (Host host : hosts) {
             if (host.getUsername().equals(command.getUsername())) {
                 found = 1;
-                if (checkAnnouncement(host, command) == 0) {
+                if (Check.checkAnnouncement(host, command) == 0) {
                     removeAnnouncement.setMessage(command.getUsername()
                             + " has no announcement with the given name.");
                     break;
@@ -1284,15 +1282,6 @@ public class CommandRunner {
             removeAnnouncement.setMessage("The username " + command.getUsername()
                     + " doesn't exist.");
         }
-    }
-
-    private static int checkAnnouncement(final Host host, final CommandInput command) {
-        for (Announcements announcement : host.getAnnouncements()) {
-            if (announcement.getName().equals(command.getName())) {
-                return 1;
-            }
-        }
-        return 0;
     }
 
     private static void showPodcastsFunc(final ShowPodcasts showPodcasts,
@@ -1327,7 +1316,7 @@ public class CommandRunner {
         for (Host host : hosts) {
             if (host.getUsername().equals(command.getUsername())) {
                 found = 1;
-                if (Duplicates.checkDuplicateAnnouncement(host, command) == 0) {
+                if (Check.checkDuplicateAnnouncement(host, command) == 0) {
                     addAnnouncement.setMessage(command.getUsername()
                             + " has already added an announcement with this name.");
                     break;
@@ -1366,12 +1355,12 @@ public class CommandRunner {
                             episode.getDuration(), episode.getDescription());
                     episodesForPodcast.add(episodeAux);
                 }
-                if (Duplicates.checkDuplicatePodcast(host, command) == 0) {
+                if (Check.checkDuplicatePodcast(host, command) == 0) {
                     addPodcast.setMessage(command.getUsername()
                             + " has another podcast with the same name.");
                     break;
                 }
-                if (Duplicates.checkDuplicateEpisode(episodesForPodcast) == 0) {
+                if (Check.checkDuplicateEpisode(episodesForPodcast) == 0) {
                     addPodcast.setMessage(command.getUsername()
                             + " has the same episode in this podcast.");
                     break;
@@ -1389,7 +1378,7 @@ public class CommandRunner {
         }
     }
 
-    private static void showTop5Albums(final GetTopSongs topAlbums, CommandInput command) {
+    private static void showTop5Albums(final GetTopSongs topAlbums) {
         List<Album> albumsToSort = new ArrayList<>();
         for (Artist artist : artists) {
             for (Album album : artist.getAlbum()) {
@@ -1454,27 +1443,13 @@ public class CommandRunner {
     }
 
     private static void conductSearchAlbum(final CommandInput command) {
-        int numFilters = verifyFiltersForAlbum(command);
+        int numFilters = Filters.verifyFiltersForAlbum(command);
         for (Artist artist : artists) {
             artist.verifyAll(command, results, numFilters);
         }
     }
 
-    private static int verifyFiltersForAlbum(final CommandInput command) {
-        int numFilters = 0;
-        if (command.getFilters().getOwner() != null) {
-            numFilters++;
-        }
-        if (command.getFilters().getName() != null) {
-            numFilters++;
-        }
-        if (command.getFilters().getDescription() != null) {
-            numFilters++;
-        }
-        return numFilters;
-    }
-
-    private static User SearchUser(final CommandInput command, final ArrayList<User> users) {
+    private static User searchUser(final CommandInput command, final ArrayList<User> users) {
         for (User user : users) {
             if (user.getUsername().equals(command.getUsername())) {
                 return new User(user);
@@ -1487,7 +1462,7 @@ public class CommandRunner {
                                        final OutputClass deleteUser, final ArrayList<User> users,
                                        final ArrayList<Song> songs,
                                        final ArrayList<Podcasts> podcasts) {
-        User user = SearchUser(command, users);
+        User user = searchUser(command, users);
         if (user == null) {
             deleteUser.setMessage("The username " + command.getUsername() + " doesn't exist.");
             return;
@@ -1526,7 +1501,7 @@ public class CommandRunner {
                 deleteUser.setMessage(user.getUsername() + " can't be deleted.");
                 return;
             }
-            if (checkPage(users, user) == 1) {
+            if (Check.checkPage(users, user) == 1) {
                 deleteUser.setMessage(user.getUsername() + " can't be deleted.");
                 return;
             }
@@ -1554,7 +1529,7 @@ public class CommandRunner {
                 deleteUser.setMessage(user.getUsername() + " can't be deleted.");
                 return;
             }
-            if (checkPage(users, user) == 1) {
+            if (Check.checkPage(users, user) == 1) {
                 deleteUser.setMessage(user.getUsername() + " can't be deleted.");
                 return;
             }
@@ -1585,7 +1560,8 @@ public class CommandRunner {
                         if (player.getPlaylist() != null) {
                             for (Playlist playlist : owner.getPlaylists()) {
                                 if (user.getMediaPlayer().getPlaylist().getName() != null) {
-                                    if (user.getMediaPlayer().getPlaylist().getName().equals(playlist.getName())) {
+                                    Playlist aux = user.getMediaPlayer().getPlaylist();
+                                    if (aux.getName().equals(playlist.getName())) {
                                         return 1;
                                     }
                                 }
@@ -1596,15 +1572,6 @@ public class CommandRunner {
                         }
                     }
                 }
-            }
-        }
-        return 0;
-    }
-
-    private static int checkPage(final ArrayList<User> users, User userToDelete) {
-        for (User user : users) {
-            if (user.getCurrentPage().equals(userToDelete.getUsername())) {
-                return 1;
             }
         }
         return 0;
@@ -1635,7 +1602,7 @@ public class CommandRunner {
     }
 
     private static int checkPlaying(final CommandInput command,
-                                    ArrayList<User> users, final ArrayList<Song> songs,
+                                    final ArrayList<User> users, final ArrayList<Song> songs,
                                     final User artist) {
         for (User user : users) {
             if (user.getMediaPlayer() != null) {
@@ -1727,13 +1694,13 @@ public class CommandRunner {
         for (Artist artist : artists) {
             if (artist.getUsername().equals(command.getUsername())) {
                 found = 1;
-                int checkEvent = checkDuplicateEvent(artist, command);
+                int checkEvent = Check.checkDuplicateEvent(artist, command);
                 if (checkEvent == 0) {
                     addEvent.setMessage(artist.getUsername()
                             + " has another event with the same name.");
                     break;
                 }
-                int checkDate = checkDate(command);
+                int checkDate = Check.checkDate(command);
                 if (checkDate == 0) {
                     addEvent.setMessage("Event for " + command.getUsername()
                             + " does not have a valid date.");
@@ -1750,53 +1717,6 @@ public class CommandRunner {
             addEvent.setMessage("The username " + command.getUsername() + " doesn't exist.");
         }
     }
-
-    /**
-     * check if the date is valid
-     *
-     * @param command the command that contains the event
-     * @return 1 if is valid, 0 otherwise
-     */
-    private static int checkDate(final CommandInput command) throws ParseException {
-        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
-        Date date = format.parse(command.getDate());
-        int year = Integer.parseInt(command.getDate().substring(6));
-        int month = Integer.parseInt(command.getDate().substring(3, 5));
-        int day = Integer.parseInt(command.getDate().substring(0, 2));
-        if (year > 2023 || year < 1900) {
-            return 0;
-        }
-        if (month > 12 || month < 1) {
-            return 0;
-        }
-        if (month == 2) {
-            if (day > 28 || day < 1) {
-                return 0;
-            }
-        } else {
-            if (day > 31 || day < 1) {
-                return 0;
-            }
-        }
-        return 1;
-    }
-
-    /**
-     * check for duplicate events
-     *
-     * @param artist  the artist that wants to add the event
-     * @param command the command that contains the event
-     * @return 1 if the event is not duplicate, 0 otherwise
-     */
-    private static int checkDuplicateEvent(final Artist artist, final CommandInput command) {
-        for (Event event : artist.getEvents()) {
-            if (event.getName().equals(command.getName())) {
-                return 0;
-            }
-        }
-        return 1;
-    }
-
     private static void printPageFunc(final PrintPage printPage,
                                       final CommandInput command, final ArrayList<User> users,
                                       final ArrayList<Song> songs) {
@@ -1854,7 +1774,8 @@ public class CommandRunner {
                         + " - ");
                 for (User user1 : users) {
                     for (Playlist playlist : user1.getPlaylists()) {
-                        if (playlist.getName().equals(user.getFollowedPlaylists().get(i).getName())) {
+                        String aux = user.getFollowedPlaylists().get(i).getName();
+                        if (playlist.getName().equals(aux)) {
                             printPage.setMessage(printPage.getMessage()
                                     + user1.getUsername() + "]");
                         }
@@ -2035,7 +1956,7 @@ public class CommandRunner {
         }
     }
 
-    private static void AddAlbumFunc(final ArrayList<User> users,
+    private static void addAlbumFunc(final ArrayList<User> users,
                                      final CommandInput command, final OutputClass addAlbum,
                                      final ArrayList<Song> songs) {
         int found = 0;
@@ -2057,13 +1978,13 @@ public class CommandRunner {
                     songs.add(aux);
                     songForAlbum.add(aux);
                 }
-                int checkAlbum = checkDuplicateAlbum(artist, command);
+                int checkAlbum = Check.checkDuplicateAlbum(artist, command);
                 if (checkAlbum == 0) {
                     addAlbum.setMessage(command.getUsername()
                             + " has another album with the same name.");
                     break;
                 }
-                int checkSongs = checkSongsForAlbum(songForAlbum);
+                int checkSongs = Check.checkSongsForAlbum(songForAlbum);
                 if (checkSongs == 0) {
                     addAlbum.setMessage(command.getUsername()
                             + " has the same song at least twice in this album.");
@@ -2080,30 +2001,6 @@ public class CommandRunner {
             addAlbum.setMessage("The username " + command.getUsername() + " doesn't exist.");
         }
     }
-
-    private static int checkSongsForAlbum(final ArrayList<Song> songForAlbum) {
-        for (int i = 0; i < songForAlbum.size() - 1; i++) {
-            for (int j = i + 1; j < songForAlbum.size(); j++) {
-                if (songForAlbum.get(i).getName().equals(songForAlbum.get(j).getName())) {
-                    return 0;
-                }
-            }
-        }
-        return 1;
-    }
-
-    private static int checkDuplicateAlbum(final Artist artist, final CommandInput command) {
-        if (artist.getAlbum() == null) {
-            return 1;
-        }
-        for (Album album : artist.getAlbum()) {
-            if (album.getName().equals(command.getName())) {
-                return 0;
-            }
-        }
-        return 1;
-    }
-
 
     private static void createUser(final AddUser addUser, final ArrayList<User> users,
                                    final CommandInput command) {
@@ -2136,26 +2033,26 @@ public class CommandRunner {
         }
     }
 
-    private static void changeConnectionStatus(final OutputClass switchCon,
-                                               final CommandInput command,
-                                               final ArrayList<User> users) {
-
-        int found = 0;
-        for (User user : users) {
-            if (user.getUsername().equals(command.getUsername())) {
-                found = 1;
-                if (user.getUserType().equals("user")) {
-                    user.changeConnection();
-                    switchCon.setMessage(user.getUsername() + " has changed status successfully.");
-                } else {
-                    switchCon.setMessage(user.getUsername() + " is not a normal user.");
-                }
-            }
-        }
-        if (found == 0) {
-            switchCon.setMessage("The username " + command.getUsername() + " doesn't exist.");
-        }
-    }
+//    private static void changeConnectionStatus(final OutputClass switchCon,
+//                                               final CommandInput command,
+//                                               final ArrayList<User> users) {
+//
+//        int found = 0;
+//        for (User user : users) {
+//            if (user.getUsername().equals(command.getUsername())) {
+//                found = 1;
+//                if (user.getUserType().equals("user")) {
+//                    user.changeConnection();
+//                    switchCon.setMessage(user.getUsername() + " has changed status successfully.");
+//                } else {
+//                    switchCon.setMessage(user.getUsername() + " is not a normal user.");
+//                }
+//            }
+//        }
+//        if (found == 0) {
+//            switchCon.setMessage("The username " + command.getUsername() + " doesn't exist.");
+//        }
+//    }
 
     private static void choosePodcast(final int number, final ArrayList<Podcasts> podcasts,
                                       final ArrayList<String> selectResult) {
@@ -2363,6 +2260,10 @@ public class CommandRunner {
         }
     }
 
+    /**
+     * sets the song number of the song is currently playing
+     * from an album
+     */
     public static void setSongNumberAlbum() {
         for (int i = 0; i < player.getAlbum().getSongs().size(); i++) {
             if (player.getAlbum().getSongs().get(i).getName().equals(player.getSong())) {
@@ -2571,8 +2472,8 @@ public class CommandRunner {
             }
         }
         if (loadAlbum == 1) {
-            if (player.getTimeLeft() <
-                    player.getAlbum().getSongs().get(player.getSongNumber()).getDuration()) {
+            if (player.getTimeLeft()
+                    < player.getAlbum().getSongs().get(player.getSongNumber()).getDuration()) {
                 player.setTimeLeft(player.getAlbum().getSongs()
                         .get(player.getSongNumber()).getDuration());
                 prev.setMessage("Returned to previous track successfully. "

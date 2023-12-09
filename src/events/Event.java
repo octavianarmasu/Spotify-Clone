@@ -10,7 +10,7 @@ public class Event {
         this.description = description;
         this.date = date;
     }
-    public Event(){
+    public Event() {
 
     }
 

@@ -1,4 +1,4 @@
-package outputsAndMediaPlayer;
+package outputsandmediaplayer;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -77,7 +77,8 @@ public class Stats {
      */
 
     public final void changeShuffle(final int shuffleCheck, final int loadsong,
-                                    final int loadpodcast, final int loadplaylist, int loadAlbum) {
+                                    final int loadpodcast, final int loadplaylist,
+                                    final int loadAlbum) {
         if (shuffleCheck == 0) {
             this.shuffle = false;
         } else {

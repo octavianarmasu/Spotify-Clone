@@ -2,7 +2,6 @@ package artist;
 
 import events.Event;
 import fileio.input.CommandInput;
-import songs.Song;
 import users.User;
 
 import java.util.ArrayList;
@@ -20,10 +19,10 @@ public class Artist extends User {
     /**
      * Adds an album to the user's list of albums.
      *
-     * @param album the album to be added
+     * @param albumToBeAdded the album to be added
      */
-    public final void addAlbum(final Album album) {
-        this.album.add(album);
+    public final void addAlbum(final Album albumToBeAdded) {
+        this.album.add(albumToBeAdded);
     }
 
     public final ArrayList<Album> getAlbum() {
@@ -46,16 +45,23 @@ public class Artist extends User {
     /**
      * Adds a merch to the user's list of merch.
      *
-     * @param merch the merch to be added
+     * @param merchToBeAdded the merch to be added
      */
-    public final void addMerch(final Merch merch) {
-        this.merch.add(merch);
+    public final void addMerch(final Merch merchToBeAdded) {
+        this.merch.add(merchToBeAdded);
     }
 
     public final ArrayList<Merch> getMerch() {
         return this.merch;
     }
 
+    /**
+     * Searches for an album in the user's list of albums.
+     *
+     * @param command    the command that contains the album's name
+     * @param results    the list of results
+     * @param numFilters the number of filters
+     */
 
     public final void verifyAll(final CommandInput command, final ArrayList<String> results,
                                 final int numFilters) {
@@ -63,10 +69,10 @@ public class Artist extends User {
         String nameFilter = command.getFilters().getName();
         String ownerFilter = command.getFilters().getOwner();
         String descriptionFilter = command.getFilters().getDescription();
-        for (Album album : this.album) {
+        for (Album album1 : this.album) {
             checkPassed = 0;
             if (nameFilter != null) {
-                if (album.getName().startsWith(nameFilter)) {
+                if (album1.getName().startsWith(nameFilter)) {
                     checkPassed++;
                 }
             }
@@ -76,25 +82,35 @@ public class Artist extends User {
                 }
             }
             if (descriptionFilter != null) {
-                if (album.getDescription().equals(descriptionFilter)) {
+                if (album1.getDescription().equals(descriptionFilter)) {
                     checkPassed++;
                 }
             }
             if (checkPassed == numFilters) {
-                results.add(album.getName());
+                results.add(album1.getName());
             }
         }
     }
 
+    /**
+     * Removes an album from the user's list of albums.
+     *
+     * @param name the name of the album to be removed
+     */
     public final void removeAlbum(final String name) {
-        for (Album album : this.album) {
-            if (album.getName().equals(name)) {
+        for (Album album1 : this.album) {
+            if (album1.getName().equals(name)) {
                 this.album.remove(album);
                 break;
             }
         }
     }
 
+    /**
+     * Removes an enevnt from the user's list of events.
+     *
+     * @param name the name of the event to be removed
+     */
     public final void removeEvent(final String name) {
         for (Event event : this.events) {
             if (event.getName().equals(name)) {
@@ -104,11 +120,11 @@ public class Artist extends User {
         }
     }
 
-    public final void setNrOfLikes(int nrOfLikes) {
-        this.nrOfLikes = nrOfLikes;
-    }
-
     public final int getNrOfLikes() {
         return this.nrOfLikes;
+    }
+
+    public final void setNrOfLikes(final int nrOfLikes) {
+        this.nrOfLikes = nrOfLikes;
     }
 }

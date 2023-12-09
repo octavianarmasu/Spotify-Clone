@@ -1,7 +1,7 @@
 package fileio.input;
 
 import artist.SongsToAdd;
-import outputsAndMediaPlayer.Filters;
+import outputsandmediaplayer.Filters;
 import podcast.EpisodesToAdd;
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,4 +1,4 @@
-package outputsAndMediaPlayer;
+package outputsandmediaplayer;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import fileio.input.CommandInput;
@@ -55,6 +55,26 @@ public class Filters {
             numFilters++;
         }
         if (command.getFilters().getTags() != null) {
+            numFilters++;
+        }
+        return numFilters;
+    }
+
+    /**
+     * verify if the command has multiple filters for albums
+     *
+     * @param command the command to be verified
+     * @return the number of filters
+     */
+    public static int verifyFiltersForAlbum(final CommandInput command) {
+        int numFilters = 0;
+        if (command.getFilters().getOwner() != null) {
+            numFilters++;
+        }
+        if (command.getFilters().getName() != null) {
+            numFilters++;
+        }
+        if (command.getFilters().getDescription() != null) {
             numFilters++;
         }
         return numFilters;

@@ -22,28 +22,28 @@ public class ShowAlbums {
         return command;
     }
 
-    public final String getUser() {
-        return user;
-    }
-
-    public final int getTimestamp() {
-        return timestamp;
-    }
-
-    public final ArrayList<ResultForAlbum> getResult() {
-        return result;
-    }
-
     public final void setCommand(final String command) {
         this.command = command;
+    }
+
+    public final String getUser() {
+        return user;
     }
 
     public final void setUser(final String user) {
         this.user = user;
     }
 
+    public final int getTimestamp() {
+        return timestamp;
+    }
+
     public final void setTimestamp(final int timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public final ArrayList<ResultForAlbum> getResult() {
+        return result;
     }
 
     public final void setResult(final ArrayList<ResultForAlbum> result) {
@@ -52,11 +52,12 @@ public class ShowAlbums {
 
     /**
      * Add a result to the result list.
+     *
      * @param result the result to be added
      */
 
-    public final void addResult(final ResultForAlbum result) {
-        this.result.add(result);
+    public final void addResult(final ResultForAlbum resultToBeAdded) {
+        this.result.add(resultToBeAdded);
 
     }
 }

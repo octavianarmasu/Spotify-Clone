@@ -1,14 +1,13 @@
-package outputsAndMediaPlayer;
+package outputsandmediaplayer;
 
 import songs.Song;
 
 import java.util.ArrayList;
 
-public class Play {
+final class Play {
 
-    public Play() {
+    private Play() {
     }
-
     /**
      * simulates the playing of a playlist
      *
@@ -39,7 +38,8 @@ public class Play {
                         remainedTime = player.getTimeLeft() * (-1);
                         player.nextSong();
                         if (player.getPlaylist().getSongs().size() - 1 >= player.getSongNumber()) {
-                            String aux = player.getPlaylist().getSongs().get(player.getSongNumber());
+                            int number = player.getSongNumber();
+                            String aux = player.getPlaylist().getSongs().get(number);
                             player.setSong(aux);
                             for (Song song : songs) {
                                 if (song.getName().equals(player.getSong())) {

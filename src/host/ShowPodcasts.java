@@ -41,10 +41,10 @@ public class ShowPodcasts {
 
     /**
      * Add a result to the result list.
-     * @param result the result to be added
+     * @param resultToBeAdded the result to be added
      */
-    public final void addResult(final ResultForPodcast result) {
-        this.result.add(result);
+    public final void addResult(final ResultForPodcast resultToBeAdded) {
+        this.result.add(resultToBeAdded);
     }
 
 }

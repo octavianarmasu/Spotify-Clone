@@ -5,10 +5,10 @@ import songs.Song;
 import java.util.ArrayList;
 
 public class Album {
+    private final ArrayList<Song> songs = new ArrayList<>();
     private String name;
     private int releaseYear;
     private String description;
-    private final ArrayList<Song> songs = new ArrayList<>();
     private int totalLikes = 0;
 
     private String artist;
@@ -53,24 +53,14 @@ public class Album {
         return songs;
     }
 
-    /**
-     * Adds a song to the album's list of songs.
-     * @param song the song to be added
-     */
-    public final void addSong(final Song song) {
-        this.songs.add(song);
-    }
 
+    /**
+     * Adds a list of songs to the album's list of songs.
+     *
+     * @param songs the list of songs to be added
+     */
     public final void setSongs(final ArrayList<Song> songs) {
         this.songs.addAll(songs);
-    }
-
-    /**
-     * Add likes to the total likes of the album.
-     * @param likes the likes to be added
-     */
-    public final void addLikes(final int likes) {
-        this.totalLikes += likes;
     }
 
     public final int getTotalLikes() {

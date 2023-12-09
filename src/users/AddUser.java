@@ -12,31 +12,31 @@ public class AddUser {
     @JsonProperty("message")
     private String message;
 
-    public AddUser(){
+    public AddUser() {
 
     }
 
-    public final String getUser(){
+    public final String getUser() {
         return user;
     }
 
-    public final void setUser(final String user){
+    public final void setUser(final String user) {
         this.user = user;
     }
 
-    public final int getTimestamp(){
+    public final int getTimestamp() {
         return timestamp;
     }
 
-    public final void setTimestamp(final int timestamp){
+    public final void setTimestamp(final int timestamp) {
         this.timestamp = timestamp;
     }
 
-    public final String getMessage(){
+    public final String getMessage() {
         return message;
     }
 
-    public final void setMessage(final String message){
+    public final void setMessage(final String message) {
         this.message = message;
     }
 
