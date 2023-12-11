@@ -1,10 +1,10 @@
 package outputsandmediaplayer;
 
-import announcements.Announcements;
+import host.Announcements;
 import artist.Album;
 import artist.Artist;
 import artist.Merch;
-import events.Event;
+import artist.Event;
 import fileio.input.CommandInput;
 import host.Host;
 import podcast.Episode;
@@ -226,7 +226,8 @@ public final class Check {
 
     /**
      * check if a host already has a podcast with the same name
-     * @param host the host to be verified
+     *
+     * @param host    the host to be verified
      * @param command the command to be verified
      * @return 1 if the podcast is in the list, 0 otherwise
      */
@@ -238,4 +239,54 @@ public final class Check {
         }
         return 0;
     }
+
+    /**
+     * check if an artist has an album with the same name
+     *
+     * @param artist  the artist to be verified
+     * @param command the command to be verified
+     * @return 1 if the album is in the list, 0 otherwise
+     */
+    public static int checkAlbum(final Artist artist, final CommandInput command) {
+        for (Album album : artist.getAlbum()) {
+            if (album.getName().equals(command.getName())) {
+                return 1;
+            }
+        }
+        return 0;
+    }
+
+    /**
+     * checks if a user is playing a podcast from a specific host
+     *
+     * @param command  where we have the username of the host
+     * @param users    the list of users in the database
+     * @param podcasts the list of podcasts in the database
+     * @return 1 if the user is playing a podcast from the host, 0 otherwise
+     */
+    public static int checkPlayingHost(final CommandInput command,
+                                       final ArrayList<User> users,
+                                       final ArrayList<Podcasts> podcasts) {
+        MediaPlayer player;
+        for (User user : users) {
+            if (user.getMediaPlayer() != null) {
+                if (user.getMediaPlayer().getPodcast() != null) {
+                    if (user.getLoadPodcast() == 1) {
+                        player = user.getMediaPlayer();
+                        Play.playPodcasts(command.getTimestamp(), player);
+                    }
+                    for (Podcasts podcast : podcasts) {
+                        String podcastName = user.getMediaPlayer().getPodcast().getName();
+                        if (podcastName.equals(podcast.getName())) {
+                            if (podcast.getOwner().equals(command.getUsername())) {
+                                return 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return 0;
+    }
+
 }

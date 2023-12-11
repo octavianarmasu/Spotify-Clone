@@ -696,7 +696,7 @@ public final class CommandRunner {
                     next.setMessage("Please load a source before skipping to the next track.");
                 } else {
                     player.setPlay(1);
-                    skipToNext(next, songs, loadSong, loadPodcast, loadPlaylist, loadAlbum);
+                    player.skipToNext(next, songs, loadSong, loadPodcast, loadPlaylist, loadAlbum);
                 }
 
                 JsonNode selectNode = objectMapper.valueToTree(next);
@@ -714,7 +714,7 @@ public final class CommandRunner {
                             + " to the previous track.");
                 } else {
                     player.setPlay(1);
-                    skipToPrev(prev, songs, loadSong, loadPodcast, loadPlaylist,
+                    player.skipToPrev(prev, songs, loadSong, loadPodcast, loadPlaylist,
                             podcasts, loadAlbum);
                 }
                 JsonNode selectNode = objectMapper.valueToTree(prev);
@@ -732,7 +732,7 @@ public final class CommandRunner {
                     if (loadPodcast == 0) {
                         forward.setMessage("The loaded source is not a podcast.");
                     } else {
-                        skipForward(forward);
+                        player.skipForward(forward);
                     }
                 }
                 JsonNode selectNode = objectMapper.valueToTree(forward);
@@ -750,7 +750,7 @@ public final class CommandRunner {
                     if (loadPodcast == 0) {
                         backward.setMessage("The loaded source is not a podcast.");
                     } else {
-                        skipBackward(backward);
+                        player.skipBackward(backward);
                     }
                 }
                 JsonNode selectNode = objectMapper.valueToTree(backward);
@@ -779,7 +779,7 @@ public final class CommandRunner {
             if (command.getCommand().equals("getTop5Playlists")) {
                 GetTopPlaylist topPlaylist = new GetTopPlaylist();
                 topPlaylist.setTimestamp(command.getTimestamp());
-                showTop5Playlist(topPlaylist, users);
+                topPlaylist.showTop5Playlist(users);
                 JsonNode selectNode = objectMapper.valueToTree(topPlaylist);
                 outputs.add(selectNode);
             }
@@ -787,7 +787,7 @@ public final class CommandRunner {
             if (command.getCommand().equals("getTop5Songs")) {
                 GetTopSongs topSongs = new GetTopSongs();
                 topSongs.setTimestamp(command.getTimestamp());
-                showTop5Songs(topSongs, songs);
+                topSongs.showTop5Songs(songs);
                 JsonNode selectNode = objectMapper.valueToTree(topSongs);
                 outputs.add(selectNode);
             }
@@ -920,7 +920,7 @@ public final class CommandRunner {
                 GetTopSongs topAlbums = new GetTopSongs();
                 topAlbums.setCommand("getTop5Albums");
                 topAlbums.setTimestamp(command.getTimestamp());
-                showTop5Albums(topAlbums);
+                topAlbums.showTop5Albums(artists);
                 JsonNode selectNode = objectMapper.valueToTree(topAlbums);
                 outputs.add(selectNode);
             }
@@ -1207,7 +1207,7 @@ public final class CommandRunner {
         for (Artist artist : artists) {
             if (artist.getUsername().equals(command.getUsername())) {
                 found = 1;
-                if (checkAlbum(artist, command) == 0) {
+                if (Check.checkAlbum(artist, command) == 0) {
                     removeAlbum.setMessage(command.getUsername()
                             + " doesn't have an album with the given name.");
                     break;
@@ -1230,15 +1230,6 @@ public final class CommandRunner {
 
     }
 
-    private static int checkAlbum(final Artist artist, final CommandInput command) {
-        for (Album album : artist.getAlbum()) {
-            if (album.getName().equals(command.getName())) {
-                return 1;
-            }
-        }
-        return 0;
-    }
-
     private static void showPodcastsFunc(final ShowPodcasts showPodcasts,
                                          final CommandInput command) {
         for (Host host : hosts) {
@@ -1254,30 +1245,6 @@ public final class CommandRunner {
             }
         }
     }
-    private static void showTop5Albums(final GetTopSongs topAlbums) {
-        List<Album> albumsToSort = new ArrayList<>();
-        for (Artist artist : artists) {
-            for (Album album : artist.getAlbum()) {
-                int likes = 0;
-                for (Song song : album.getSongs()) {
-                    if (song.getArtist().equals(album.getArtist())) {
-                        likes += song.getLikes();
-                    }
-                }
-                album.setTotalLikes(likes);
-                albumsToSort.add(album);
-            }
-        }
-        albumsToSort.sort(Comparator.comparing(Album::getTotalLikes).reversed()
-                .thenComparing(Album::getName));
-
-        int resultCount = Math.min(MAGICNUM, albumsToSort.size());
-        for (int i = 0; i < resultCount; i++) {
-            topAlbums.addResult(albumsToSort.get(i).getName());
-        }
-    }
-
-
     private static void chooseAlbum(final int number, final ArrayList<String> selectResult,
                                     final ArrayList<User> users) {
 
@@ -1401,7 +1368,7 @@ public final class CommandRunner {
             }
         }
         if (user.getUserType().equals("host")) {
-            if (checkPlayingHost(command, users, podcasts) == 1) {
+            if (Check.checkPlayingHost(command, users, podcasts) == 1) {
                 deleteUser.setMessage(user.getUsername() + " can't be deleted.");
                 return;
             }
@@ -1422,8 +1389,16 @@ public final class CommandRunner {
 
     }
 
-    private static int checkPlaylist(final ArrayList<User> users, final User owner,
-                                     final CommandInput command, final ArrayList<Song> songs) {
+    /**
+     * checks if a user is playing the playlist of a specific user
+     * @param users the list of users in the database
+     * @param owner the owner of the playlist
+     * @param command the command input
+     * @param songs the list of songs in the database
+     * @return 1 if the user is playing the playlist, 0 otherwise
+     */
+    public static int checkPlaylist(final ArrayList<User> users, final User owner,
+                                    final CommandInput command, final ArrayList<Song> songs) {
 
         for (User user : users) {
             if (user.getMediaPlayer() != null) {
@@ -1453,30 +1428,17 @@ public final class CommandRunner {
         return 0;
     }
 
-    private static int checkPlayingHost(final CommandInput command,
-                                        final ArrayList<User> users,
-                                        final ArrayList<Podcasts> podcasts) {
-        for (User user : users) {
-            if (user.getMediaPlayer() != null) {
-                if (user.getMediaPlayer().getPodcast() != null) {
-                    if (user.getLoadPodcast() == 1) {
-                        player = user.getMediaPlayer();
-                        Play.playPodcasts(command.getTimestamp(), player);
-                    }
-                    for (Podcasts podcast : podcasts) {
-                        String podcastName = user.getMediaPlayer().getPodcast().getName();
-                        if (podcastName.equals(podcast.getName())) {
-                            if (podcast.getOwner().equals(command.getUsername())) {
-                                return 1;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        return 0;
-    }
-
+    /**
+     * checks if a user is playing a song from a specific artist,
+     * album from a specific artist or playlist that may contain
+     * songs from a specific artist
+     *
+     * @param command where we have the username of the artist
+     * @param users   the list of users in the database
+     * @param songs   the list of songs in the database
+     * @param artist  the artist to be verified
+     * @return 1 if the user is playing a song from the artist, 0 otherwise
+     */
     private static int checkPlaying(final CommandInput command,
                                     final ArrayList<User> users, final ArrayList<Song> songs,
                                     final User artist) {
@@ -1602,27 +1564,6 @@ public final class CommandRunner {
         }
     }
 
-//    private static void changeConnectionStatus(final OutputClass switchCon,
-//                                               final CommandInput command,
-//                                               final ArrayList<User> users) {
-//
-//        int found = 0;
-//        for (User user : users) {
-//            if (user.getUsername().equals(command.getUsername())) {
-//                found = 1;
-//                if (user.getUserType().equals("user")) {
-//                    user.changeConnection();
-//                    switchCon.setMessage(user.getUsername() + " has changed status successfully.");
-//                } else {
-//                    switchCon.setMessage(user.getUsername() + " is not a normal user.");
-//                }
-//            }
-//        }
-//        if (found == 0) {
-//            switchCon.setMessage("The username " + command.getUsername() + " doesn't exist.");
-//        }
-//    }
-
     private static void choosePodcast(final int number, final ArrayList<Podcasts> podcasts,
                                       final ArrayList<String> selectResult) {
         for (Podcasts podcast : podcasts) {
@@ -1692,56 +1633,6 @@ public final class CommandRunner {
                 }
             }
         }
-    }
-
-    private static void showTop5Songs(final GetTopSongs topSongs,
-                                      final ArrayList<Song> songs) {
-        List<Song> copySong = new ArrayList<>(songs);
-        copySong.sort(Comparator.comparingInt(Song::getLikes).reversed());
-
-        if (copySong.size() > MAGICNUM) {
-            copySong = copySong.subList(0, MAGICNUM);
-        }
-        for (Song song : copySong) {
-            topSongs.addResult(song.getName());
-        }
-    }
-
-    private static void showTop5Playlist(final GetTopPlaylist topPlaylist,
-                                         final ArrayList<User> users) {
-        ArrayList<Playlist> copyPlaylist = new ArrayList<>();
-        for (User user : users) {
-            copyPlaylist.addAll(user.getPlaylists());
-        }
-        for (int i = 0; i < copyPlaylist.size() - 1; i++) {
-            for (int j = i + 1; j < copyPlaylist.size(); j++) {
-                int followers1 = copyPlaylist.get(i).getFollowers();
-                int followers2 = copyPlaylist.get(j).getFollowers();
-                if (followers1 < followers2) {
-                    Playlist aux = copyPlaylist.get(i);
-                    copyPlaylist.set(i, copyPlaylist.get(j));
-                    copyPlaylist.set(j, aux);
-                } else {
-                    if (followers1 == followers2) {
-                        int timestamp1 = copyPlaylist.get(i).getTimestamp();
-                        int timestamp2 = copyPlaylist.get(j).getTimestamp();
-                        if (timestamp1 > timestamp2) {
-                            Playlist aux = copyPlaylist.get(i);
-                            copyPlaylist.set(i, copyPlaylist.get(j));
-                            copyPlaylist.set(j, aux);
-                        }
-                    }
-                }
-            }
-        }
-        List<Playlist> copyPlaylist1 = copyPlaylist;
-        if (copyPlaylist.size() > MAGICNUM) {
-            copyPlaylist1 = copyPlaylist.subList(0, MAGICNUM);
-        }
-        for (Playlist playlist : copyPlaylist1) {
-            topPlaylist.addResult(playlist.getName());
-        }
-
     }
 
     /**
@@ -1838,300 +1729,6 @@ public final class CommandRunner {
             if (player.getAlbum().getSongs().get(i).getName().equals(player.getSong())) {
                 player.setSongNumber(i);
             }
-        }
-    }
-
-    private static void skipToNext(final OutputClass next, final ArrayList<Song> songs,
-                                   final int loadsong, final int loadpodcast,
-                                   final int loadPlaylist, final int loadAlbum) {
-        if (loadsong == 1) {
-            if (player.getRepeat() == 0) {
-                next.setMessage("Please load a source before skipping to the next track.");
-                player.setPlay(0);
-                player.setTimeLeft(0);
-                player.setSong("");
-            } else {
-                if (player.getRepeat() == 1) {
-                    player.setRepeat(0);
-                }
-                for (Song song : songs) {
-                    if (song.getName().equals(player.getSong())) {
-                        player.setTimeLeft(song.getDuration());
-                    }
-                }
-                next.setMessage("Skipped to next track successfully. "
-                        + "The current track is " + player.getSong() + ".");
-            }
-        }
-        if (loadPlaylist == 1) {
-            if (player.getRepeat() != 2) {
-                player.nextSong();
-                if (player.getPlaylist().getSongs().size() - 1 >= player.getSongNumber()) {
-                    player.setSong(player.getPlaylist().getSongs().get(player.getSongNumber()));
-                    for (Song song : songs) {
-                        if (song.getName().equals(player.getSong())) {
-                            player.setTimeLeft(song.getDuration());
-                            player.setArtist(song.getArtist());
-                        }
-                    }
-                    next.setMessage("Skipped to next track successfully. "
-                            + "The current track is " + player.getSong() + ".");
-                } else {
-                    if (player.getRepeat() == 0) {
-                        next.setMessage("Please load a source before skipping to the next track.");
-                        player.setSong("");
-                        player.setTimeLeft(0);
-                        player.setPlay(0);
-
-                    }
-                    if (player.getRepeat() == 1) {
-                        player.setSongNumber(0);
-                        player.setSong(player.getPlaylist().getSongs().get(player.getSongNumber()));
-                        for (Song song : songs) {
-                            if (song.getName().equals(player.getSong())) {
-                                player.setTimeLeft(song.getDuration());
-                                player.setArtist(song.getArtist());
-                            }
-                        }
-                        next.setMessage("Skipped to next track successfully."
-                                + " The current track is " + player.getSong() + ".");
-                    }
-                }
-            } else {
-                for (Song song : songs) {
-                    if (song.getName().equals(player.getSong())) {
-                        player.setTimeLeft(song.getDuration());
-                        player.setArtist(song.getArtist());
-                    }
-                }
-                next.setMessage("Skipped to next track successfully. "
-                        + "The current track is " + player.getSong() + ".");
-            }
-        }
-
-        if (loadpodcast == 1) {
-            player.nextEpisode();
-            if (player.getPodcast().getEpisodes().get(player.getEpisodeNumber()) != null) {
-                int aux1 = player.getEpisodeNumber();
-                String aux2 = player.getPodcast().getEpisodes().get(aux1).getName();
-                player.setEpisode(aux2);
-                player.setTimeEpisode(player.getPodcast().getEpisodes().get(player.getEpisodeNumber()).getDuration());
-                next.setMessage("Skipped to next track successfully."
-                        + " The current track is " + player.getEpisode() + ".");
-            } else {
-                if (player.getRepeat() == 0) {
-                    next.setMessage("Please load a source before skipping to the next track.");
-                    player.setEpisode("");
-                    player.setTimeEpisode(0);
-                    player.setPlay(0);
-                    player.setPodcast(null);
-                }
-                if (player.getRepeat() == 1) {
-                    next.setMessage("Skipped to next track successfully."
-                            + " The current track is " + player.getEpisode() + ".");
-                    player.setRepeat(0);
-                    player.setEpisodeNumber(0);
-                    int aux1 = player.getEpisodeNumber();
-                    String aux2 = player.getPodcast().getEpisodes().get(aux1).getName();
-                    player.setEpisode(aux2);
-                    player.setTimeEpisode(player.getPodcast().getEpisodes().get(player.getEpisodeNumber()).getDuration());
-                }
-                if (player.getRepeat() == 2) {
-                    next.setMessage("Skipped to next track successfully. "
-                            + "The current track is " + player.getEpisode() + ".");
-                    player.setEpisodeNumber(0);
-                    int aux1 = player.getEpisodeNumber();
-                    String aux2 = player.getPodcast().getEpisodes().get(aux1).getName();
-                    player.setEpisode(aux2);
-                    int duration = player.getPodcast().getEpisodes().get(aux1).getDuration();
-                    player.setTimeEpisode(duration);
-                }
-            }
-        }
-        if (loadAlbum == 1) {
-            if (player.getSongNumber() == player.getAlbum().getSongs().size() - 1) {
-                next.setMessage("Please load a source before skipping to the next track.");
-            } else {
-                player.nextSong();
-                if (player.getAlbum().getSongs().size() - 1 >= player.getSongNumber()) {
-                    player.setSong(player.getAlbum().getSongs().get(player.getSongNumber()).getName());
-                    int duration = player.getAlbum().getSongs().get(player.getSongNumber()).getDuration();
-                    player.setTimeLeft(duration);
-                }
-                next.setMessage("Skipped to next track successfully. "
-                        + "The current track is " + player.getSong() + ".");
-            }
-        }
-    }
-
-    private static void skipToPrev(final OutputClass prev, final ArrayList<Song> songs,
-                                   final int loadsong, final int loadpodcast,
-                                   final int loadPlaylist, final ArrayList<Podcasts> podcasts,
-                                   final int loadAlbum) {
-        if (loadsong == 1) {
-            int duration;
-            for (Song song : songs) {
-                if (song.getName().equals(player.getSong())) {
-                    duration = song.getDuration();
-                    if (player.getTimeLeft() < duration) {
-                        player.setTimeLeft(duration);
-                        prev.setMessage("Returned to previous track successfully. "
-                                + "The current track is " + player.getSong() + ".");
-                    }
-                }
-            }
-        }
-        if (loadPlaylist == 1) {
-            int duration;
-            player.prevSong();
-            for (Song song : songs) {
-                if (song.getName().equals(player.getSong())) {
-                    duration = song.getDuration();
-                    if (player.getTimeLeft() < duration) {
-                        player.setTimeLeft(duration);
-                        player.nextSong();
-                        prev.setMessage("Returned to previous track successfully. "
-                                + "The current track is " + player.getSong() + ".");
-                    } else {
-                        if (player.getSongNumber() < 0) {
-                            player.setSongNumber(0);
-                        }
-                        int num = player.getSongNumber();
-                        String songAux = player.getPlaylist().getSongs().get(num);
-                        player.setSong(songAux);
-                        for (Song song1 : songs) {
-                            if (song1.getName().equals(player.getSong())) {
-                                player.setTimeLeft(song1.getDuration());
-                                player.setArtist(song1.getArtist());
-                            }
-                        }
-                        prev.setMessage("Returned to previous track successfully. "
-                                + "The current track is " + player.getSong() + ".");
-                    }
-                }
-            }
-        }
-
-        if (loadpodcast == 1) {
-            int duration;
-            for (Podcasts podcast : podcasts) {
-                if (player.getPodcast().getName().equals(podcast.getName())) {
-                    duration = player.getPodcast().getEpisodes().get(player.getEpisodeNumber()).getDuration();
-                    if (player.getTimeEpisode() < duration) {
-                        player.setTimeEpisode(duration);
-                        prev.setMessage("Returned to previous track successfully. "
-                                + "The current track is " + player.getEpisode() + ".");
-                    } else {
-                        if (duration == player.getTimeEpisode() && player.getEpisodeNumber() != 0) {
-                            player.prevEpisode();
-                            int num = player.getEpisodeNumber();
-                            String episodeAux = player.getPodcast().getEpisodes().get(num).getName();
-                            player.setEpisode(episodeAux);
-                            player.setTimeEpisode(player.getPodcast().getEpisodes().get(num).getDuration());
-                            prev.setMessage("Returned to previous track successfully. "
-                                    + "The current track is " + player.getEpisode() + ".");
-                        } else {
-                            if (duration == player.getTimeEpisode()) {
-                                prev.setMessage("Returned to previous track successfully. "
-                                        + "The current track is " + player.getEpisode() + ".");
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        if (loadAlbum == 1) {
-            if (player.getTimeLeft()
-                    < player.getAlbum().getSongs().get(player.getSongNumber()).getDuration()) {
-                player.setTimeLeft(player.getAlbum().getSongs()
-                        .get(player.getSongNumber()).getDuration());
-                prev.setMessage("Returned to previous track successfully. "
-                        + "The current track is " + player.getSong() + ".");
-            } else {
-                if (player.getSongNumber() != 0) {
-                    player.prevSong();
-                    int num = player.getSongNumber();
-                    String songAux = player.getAlbum().getSongs().get(num).getName();
-                    player.setSong(songAux);
-                    player.setTimeLeft(player.getAlbum().getSongs().get(num).getDuration());
-                    prev.setMessage("Returned to previous track successfully. "
-                            + "The current track is " + player.getSong() + ".");
-                } else {
-                    prev.setMessage("Returned to previous track successfully. "
-                            + "The current track is " + player.getSong() + ".");
-                }
-            }
-        }
-    }
-
-    /**
-     * skips forward in a podcast (+90sec)
-     *
-     * @param forward output class
-     */
-
-    private static void skipForward(final OutputClass forward) {
-        int timeLeft = player.getTimeEpisode();
-        if (timeLeft < PODCASTNUM) {
-            player.nextEpisode();
-            forward.setMessage("Skipped forward successfully.");
-            if (player.getPodcast().getEpisodes().get(player.getEpisodeNumber()) != null) {
-                int aux1 = player.getEpisodeNumber();
-                String aux2 = player.getPodcast().getEpisodes().get(aux1).getName();
-                player.setEpisode(aux2);
-                player.setTimeEpisode(player.getPodcast().getEpisodes().get(aux1).getDuration());
-            } else {
-                if (player.getRepeat() == 0) {
-                    player.setEpisode("");
-                    player.setTimeEpisode(0);
-                    player.setPlay(0);
-                    player.setPodcast(null);
-                }
-                if (player.getRepeat() == 1) {
-                    player.setRepeat(0);
-                    player.setEpisodeNumber(0);
-                    int aux1 = player.getEpisodeNumber();
-                    String aux2 = player.getPodcast().getEpisodes().get(aux1).getName();
-                    player.setEpisode(aux2);
-                    int duration = player.getPodcast().getEpisodes().get(aux1).getDuration();
-                    player.setTimeEpisode(duration);
-                }
-                if (player.getRepeat() == 2) {
-                    player.setEpisodeNumber(0);
-                    int aux1 = player.getEpisodeNumber();
-                    String aux2 = player.getPodcast().getEpisodes().get(aux1).getName();
-                    player.setEpisode(aux2);
-                    int duration = player.getPodcast().getEpisodes().get(aux1).getDuration();
-                    player.setTimeEpisode(duration);
-                }
-            }
-
-        } else {
-            forward.setMessage("Skipped forward successfully.");
-            player.delTimeEpisode(PODCASTNUM);
-        }
-
-    }
-
-    /**
-     * skips backward in a podcast(-90sec)
-     *
-     * @param backward output class
-     */
-    private static void skipBackward(final OutputClass backward) {
-        int timeLeft = player.getTimeEpisode();
-        int aux1 = player.getEpisodeNumber();
-        int duration = player.getPodcast().getEpisodes().get(aux1).getDuration();
-        int time = duration - timeLeft;
-        if (time < PODCASTNUM) {
-            backward.setMessage("Rewound successfully.");
-            aux1 = player.getEpisodeNumber();
-            player.setEpisode(player.getPodcast().getEpisodes().get(aux1).getName());
-            player.setTimeEpisode(player.getPodcast().getEpisodes().get(aux1).getDuration());
-
-        } else {
-            backward.setMessage("Rewound successfully.");
-            player.setTimeEpisode(timeLeft + PODCASTNUM);
         }
     }
 }

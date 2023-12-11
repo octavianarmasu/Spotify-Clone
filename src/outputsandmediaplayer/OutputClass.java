@@ -1,10 +1,10 @@
 package outputsandmediaplayer;
 
-import announcements.Announcements;
+import host.Announcements;
 import artist.Artist;
 import artist.Merch;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import events.Event;
+import artist.Event;
 import fileio.input.CommandInput;
 import host.Host;
 import podcast.Episode;

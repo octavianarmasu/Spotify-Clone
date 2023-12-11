@@ -1,7 +1,6 @@
 Starting audit...
 [ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/SelectOutput.java:15:9: Variable 'successfulSelect' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/MediaPlayer.java:13:12: Variable 'song' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:1: File length is 2,137 lines (max allowed is 2,000). [FileLength]
+[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/MediaPlayer.java:17:12: Variable 'song' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:40:17: Using the '.*' form of import should be avoided - java.util.*. [AvoidStarImport]
 [ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:45:30: Variable 'artists' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:46:28: Variable 'hosts' must be private and have accessor methods. [VisibilityModifier]
@@ -9,13 +8,5 @@ Starting audit...
 [ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:48:25: Variable 'selectOutput' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:49:24: Variable 'player' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:75:5: Method length is 965 lines (max allowed is 150). [MethodLength]
-[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:1615: Line is longer than 100 characters (found 101). [LineLength]
-[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:1918: Line is longer than 100 characters (found 118). [LineLength]
-[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:1937: Line is longer than 100 characters (found 122). [LineLength]
-[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:1957: Line is longer than 100 characters (found 103). [LineLength]
-[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:1958: Line is longer than 100 characters (found 106). [LineLength]
-[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:2019: Line is longer than 100 characters (found 110). [LineLength]
-[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:2028: Line is longer than 100 characters (found 101). [LineLength]
-[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:2030: Line is longer than 100 characters (found 108). [LineLength]
 Audit done.
-Checkstyle ends with 18 errors.
+Checkstyle ends with 9 errors.

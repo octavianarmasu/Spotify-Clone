@@ -1,6 +1,5 @@
 package artist;
 
-import events.Event;
 import fileio.input.CommandInput;
 import users.User;
 
