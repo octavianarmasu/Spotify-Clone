@@ -41,7 +41,6 @@ import java.util.*;
 
 public final class CommandRunner {
     static final int MAGICNUM = 5;
-    static final int PODCASTNUM = 90;
     static ArrayList<Artist> artists = new ArrayList<>();
     static ArrayList<Host> hosts = new ArrayList<>();
     static ArrayList<String> results = new ArrayList<>();

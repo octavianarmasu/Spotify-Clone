@@ -2,11 +2,11 @@ Starting audit...
 [ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/SelectOutput.java:15:9: Variable 'successfulSelect' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/MediaPlayer.java:17:12: Variable 'song' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:40:17: Using the '.*' form of import should be avoided - java.util.*. [AvoidStarImport]
-[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:45:30: Variable 'artists' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:46:28: Variable 'hosts' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:47:30: Variable 'results' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:48:25: Variable 'selectOutput' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:49:24: Variable 'player' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:75:5: Method length is 965 lines (max allowed is 150). [MethodLength]
+[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:44:30: Variable 'artists' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:45:28: Variable 'hosts' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:46:30: Variable 'results' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:47:25: Variable 'selectOutput' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:48:24: Variable 'player' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /home/octavian/Desktop/IIyear/OOP/Clona-Spotify/etapa2/./src/outputsandmediaplayer/CommandRunner.java:74:5: Method length is 965 lines (max allowed is 150). [MethodLength]
 Audit done.
 Checkstyle ends with 9 errors.
