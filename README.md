@@ -1,4 +1,5 @@
 # Proiect GlobalWaves - Etapa 2
+## Integration of  My Previous Implementation
 
 ## Overview of Packages and Classes
 
