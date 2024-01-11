@@ -99,7 +99,7 @@ public class Artist extends User {
     public final void removeAlbum(final String name) {
         for (Album album1 : this.album) {
             if (album1.getName().equals(name)) {
-                this.album.remove(album);
+                this.album.remove(album1);
                 break;
             }
         }
